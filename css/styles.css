@@ -1,0 +1,323 @@
+@import "fonts.css";
+@import "../vendor/icomoon/style.css";
+
+:root {
+  --section-mb: 15px;
+  --title-mb: 7px;
+  --sub-section-mb: 10px;
+  --color-1: #cbae86;
+  /* --color-1-var: #c79b5d; */
+  --color-1-var: #c6a370;
+  --color-2: #17252e;
+  --color-2-var: #1a3241;
+  --color-3: #3f1f1f;
+  --color-4: #231313;
+  --color-5: #4682b4;
+}
+
+i::before {
+  color: var(--color-2-var);
+}
+
+.text-color-1 {
+  color: var(--color-1-var) !important;
+}
+
+.my-0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.mb-3 {
+  margin-bottom: 15px !important;
+}
+
+.mb-1 {
+  margin-bottom: 5px;
+}
+
+.py-1 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.fs-0_9 {
+  font-size: 0.9em !important;
+}
+
+.fs-0_8 {
+  font-size: 0.8em !important;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto";
+  margin: 0;
+  letter-spacing: 0.05em;
+}
+
+p {
+  margin: 0;
+  line-height: 1.3em;
+  font-size: 0.9em;
+}
+
+main {
+  margin: 0 auto;
+  display: flex;
+  height: 100%;
+  width: 816px;
+  height: 1056px;
+}
+
+main > .left {
+  width: 70%;
+}
+main > .right {
+  width: 30%;
+  background-image: linear-gradient(to bottom right, #eee, #ddd, #ccc);
+  color: #222;
+  border-left: 1px solid var(--color-1-var);
+}
+
+.full-name {
+  margin: 0 0 var(--section-mb) 0;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  text-align: center;
+  background-color: #333;
+  color: #ddd;
+  position: relative;
+  box-shadow: 0 0 5px #333;
+}
+
+.section {
+  padding: 0 17px;
+  margin-bottom: 15px;
+}
+
+.section.grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  column-gap: 1.5em;
+  row-gap: 1.5em;
+}
+.section .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section .sub-section {
+  margin-bottom: var(--sub-section-mb);
+}
+.section .sub-title {
+  margin: 0;
+  font-size: 0.8em;
+  color: #666;
+}
+.section .title {
+  margin: 0 0 var(--title-mb) 0;
+  font-weight: 400;
+  border-bottom: 1px solid var(--color-1-var);
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+}
+.section .title > i {
+  margin-bottom: 0.2em;
+}
+
+.section .title > i::before {
+  margin-right: 5px;
+  font-size: 2em;
+}
+.section .title-2 {
+  margin: 0;
+  font-weight: 300;
+}
+
+.section .additional-info {
+  font-size: 0.7em;
+  border-left: 2px solid #ccc;
+  padding-left: 5px;
+  color: #555;
+}
+
+.sub-additional-info {
+  /* margin-top: 2px;
+  margin-bottom: 2px; */
+  display: block;
+  /* border-left: 1px solid #777; */
+  /* padding-left: 5px; */
+  color: #555;
+
+  border: 1px solid #eee;
+  /* padding: 3px 0 3px 5px; */
+  padding: 3px 5px;
+  text-align: justify;
+}
+
+.sub-additional-info:not(:last-child) {
+  margin-bottom: 2px;
+}
+
+
+.section .list {
+  margin: 0;
+  padding-left: 1.5em;
+}
+
+.section .list > li {
+  padding-left: 0;
+}
+
+.awards > .sub-section {
+  margin-bottom: 1.3em;
+}
+
+/* start of references */
+.section .references {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+}
+
+.references ul {
+  padding-left: 1.2em;
+  margin-top: 0;
+  list-style-type: circle;
+}
+/* end of references */
+
+/* start of links */
+.section.links {
+  padding: 17px 17px 0 17px;
+  font-size: 0.9em;
+}
+.section .link {
+  margin: 0;
+}
+.section .link:not(:last-child) {
+  margin-bottom: 10px;
+}
+/* end of links */
+
+/* start of skills */
+.section.skills {
+  padding: 0 20px;
+}
+.section.skills .title-2 {
+  font-size: 0.9em;
+  padding-bottom: 5px;
+  font-weight: 500;
+}
+
+.skills .legend {
+  padding: 1em;
+  background-color: #333;
+  color: #ccc;
+}
+
+.skills .legend h6 {
+  display: inline;
+}
+
+.skill:not(:last-child) {
+  margin-bottom: 5px;
+}
+.skill {
+  padding-bottom: 5px;
+}
+.skill .body {
+  padding-bottom: 0px;
+  font-size: 0.8em;
+}
+.skill .bar {
+  margin: 0 auto;
+}
+
+.bar {
+  height: 2px;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.bar::before {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../svg/skill-filled.svg);
+  background-repeat: no-repeat;
+}
+
+.bar.percent-1::before {
+  clip: rect(0, 20px, 3px, 0px);
+}
+.bar.percent-1::after {
+  clip: rect(0, 210px, 3px, 20px);
+}
+
+.bar.percent-2::before {
+  clip: rect(0, 41px, 3px, 0px);
+}
+.bar.percent-2::after {
+  clip: rect(0, 210px, 3px, 41px);
+}
+
+.bar.percent-3::before {
+  clip: rect(0, 62px, 3px, 0px);
+}
+.bar.percent-3::after {
+  clip: rect(0, 210px, 3px, 62px);
+}
+
+.bar.percent-4::before {
+  clip: rect(0, 83px, 3px, 0px);
+}
+.bar.percent-4::after {
+  clip: rect(0, 210px, 3px, 83px);
+}
+
+.bar.percent-5::before {
+  clip: rect(0, 102px, 3px, 0px);
+}
+.bar.percent-5::after {
+  clip: rect(0, 210px, 3px, 102px);
+}
+
+.bar.percent-6::before {
+  clip: rect(0, 123px, 3px, 0px);
+}
+.bar.percent-6::after {
+  clip: rect(0, 210px, 3px, 123px);
+}
+
+.bar.percent-7::before {
+  clip: rect(0, 145px, 3px, 0);
+}
+.bar.percent-7::after {
+  clip: rect(0, 210px, 3px, 145px);
+}
+
+.bar::after {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 100%;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url(../svg/skill-unfilled.svg);
+}
+/* end of skills */
