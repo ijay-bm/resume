@@ -1,0 +1,34 @@
+.resume {
+	margin: 0 auto;
+	display: flex;
+	width: 816px;
+	height: 1056px;
+
+	&__left {
+		width: 70%;
+	}
+
+	&__header-name {
+		margin-bottom: $section-mb;
+		font-weight: 300;
+		letter-spacing: 0.15em;
+		text-align: center;
+		background-color: $gray-900;
+		color: $gray-300;
+		position: relative;
+		box-shadow: 0 0.5rem 0.5rem -0.5rem $gray-800;
+	}
+
+	&__right {
+		color: $gray-900;
+		border-left: 1px solid $color1;
+		padding: 1rem 0;
+		width: 30%;
+		background-image: linear-gradient(
+			to bottom right,
+			$gray-100,
+			$gray-200,
+			$gray-300
+		);
+	}
+}

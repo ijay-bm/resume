@@ -1,0 +1,110 @@
+.skills {
+	$block: &;
+	list-style: none;
+	margin-bottom: 1rem;
+
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: $mb-2;
+		}
+	}
+
+	&__name {
+		display: block;
+		margin-bottom: $mb-1;
+	}
+
+	&__bar {
+		display: block;
+		height: 2px;
+		position: relative;
+		background-image: linear-gradient(to right, transparent, $gray-300);
+
+		&::before,
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		&::before {
+			height: 2px;
+			background-image: linear-gradient(to right, transparent, $color1-light);
+		}
+
+		&::after {
+			top: -5px;
+			width: 12px;
+			height: 12px;
+			border: 2px solid $color1-light;
+			border-radius: 50%;
+			background-color: rgba($color1, 0.2);
+		}
+
+		@for $i from 0 to 100 {
+			&[data-percent="#{$i}"] {
+				&::before {
+					width: $i + 0%;
+				}
+
+				&::after {
+					left: $i + 0%;
+				}
+
+				> #{$block}__percentage::after {
+					position: absolute;
+					top: -1.25rem;
+					right: 0;
+					font-size: $fs-xxs;
+					color: $gray-600;
+					font-weight: 500;
+					content: "#{calc($i / 10)}";
+				}
+			}
+		}
+	}
+}
+
+.legend {
+	&__heading {
+		font-weight: 500;
+		margin-bottom: $mb-2;
+	}
+
+	&__body {
+		padding: 1rem;
+		background-color: $gray-800;
+		color: $gray-400;
+		font-size: $fs-sm;
+	}
+
+	&__item {
+		font-size: $fs-sm;
+		position: relative;
+		padding-left: 1.5rem;
+
+		&:not(:last-child) {
+			margin-bottom: $mb-2;
+		}
+	}
+
+	&__metric {
+		color: $color1;
+		position: absolute;
+		right: calc(100% - 0.6rem);
+
+		&::after {
+			content: "\00bb";
+			position: absolute;
+			color: $gray-500;
+			margin-left: 0.2rem;
+			top: -0.07rem;
+		}
+	}
+
+	&__description {
+		display: block;
+	}
+}

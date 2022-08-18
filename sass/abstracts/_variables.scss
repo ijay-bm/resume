@@ -1,0 +1,80 @@
+$color1: #c6a370;
+$color1-light: lighten($color1, 10%);
+
+$color2: #1a3241;
+$color2-light: lighten($color2, 10%);
+
+$color3: #17252e;
+$color3-light: lighten($color3, 10%);
+
+$color4: #027fac;
+$color4-light: lighten($color4, 15%);
+
+$color5: #76101e;
+$color5-light: lighten($color5, 15%);
+
+$color6: #107e57;
+$color6-light: lighten($color6, 15%);
+
+$color7: #f8bc04;
+$color7-light: lighten($color7, 15%);
+
+$color8: #530f1e;
+$color8-light: lighten($color8, 15%);
+
+$color9: #7b337d;
+$color9-light: lighten($color9, 15%);
+
+$color10: #1f59aa;
+$color10-light: lighten($color10, 15%);
+
+$color11: #ff9900;
+$color11-light: lighten($color11, 15%);
+
+$color12: #cc3300;
+$color12-light: lighten($color12, 15%);
+
+$color13: #cbae86;
+$color13-light: lighten($color13, 15%);
+
+$color14: #3f1f1f;
+$color14-light: lighten($color14, 15%);
+
+$color15: #231313;
+$color15-light: lighten($color15, 15%);
+
+$color16: #4682b4;
+$color16-light: lighten($color16, 15%);
+
+$color17: #027fac;
+$color17-light: lighten($color17, 15%);
+
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$fs: 1rem;
+$fs-xxs: $fs * 0.625;
+$fs-xs: $fs * 0.75;
+$fs-sm: $fs * 0.875;
+$fs-lg: $fs * 1.25;
+$fs-xl: $fs * 1.5;
+
+$section-mb: 15px;
+$title-mb: 7px;
+$sub-section-mb: 10px;
+
+$mb-0: 0;
+$mb-1: 1rem * 0.25;
+$mb-2: 1rem * 0.5;
+$mb-3: 1rem;
+$mb-4: 1rem * 1.5;
+$mb-5: 1rem * 3;
