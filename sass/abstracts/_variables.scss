@@ -61,6 +61,7 @@ $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black: #000 !default;
 
+// font-size
 $fs: 1rem;
 $fs-xxs: $fs * 0.625;
 $fs-xs: $fs * 0.75;
@@ -68,13 +69,12 @@ $fs-sm: $fs * 0.875;
 $fs-lg: $fs * 1.25;
 $fs-xl: $fs * 1.5;
 
-$section-mb: 15px;
-$title-mb: 7px;
-$sub-section-mb: 10px;
+// spacer
+$s-0: 0;
+$s-1: 1rem * 0.25;
+$s-2: 1rem * 0.5;
+$s-3: 1rem;
+$s-4: 1rem * 1.5;
+$s-5: 1rem * 3;
 
-$mb-0: 0;
-$mb-1: 1rem * 0.25;
-$mb-2: 1rem * 0.5;
-$mb-3: 1rem;
-$mb-4: 1rem * 1.5;
-$mb-5: 1rem * 3;
+$transition: all 0.25s ease-in-out;

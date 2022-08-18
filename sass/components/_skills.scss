@@ -5,13 +5,13 @@
 
 	&__item {
 		&:not(:last-child) {
-			margin-bottom: $mb-2;
+			margin-bottom: $s-2;
 		}
 	}
 
 	&__name {
 		display: block;
-		margin-bottom: $mb-1;
+		margin-bottom: $s-1;
 	}
 
 	&__bar {
@@ -67,17 +67,23 @@
 	}
 }
 
-.legend {
-	&__heading {
-		font-weight: 500;
-		margin-bottom: $mb-2;
-	}
+.style-2 .skills {
+	$block: &;
 
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.legend {
 	&__body {
 		padding: 1rem;
 		background-color: $gray-800;
 		color: $gray-400;
 		font-size: $fs-sm;
+		border-radius: 3px;
 	}
 
 	&__item {
@@ -86,7 +92,7 @@
 		padding-left: 1.5rem;
 
 		&:not(:last-child) {
-			margin-bottom: $mb-2;
+			margin-bottom: $s-3;
 		}
 	}
 

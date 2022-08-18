@@ -1,17 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
-
-body {
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Oxygen:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+body.style-1 {
 	font-family: "Roboto", sans-serif;
-	letter-spacing: 0.05rem;
+	letter-spacing: 0.03rem;
+}
+
+body.style-2 {
+	font-family: "Lato", serif;
+	letter-spacing: 0.03rem;
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		font-family: "Oxygen", sans-serif;
+	}
 }
 
 @font-face {
 	font-family: "icomoon";
-	src: url("../fonts/icomoon.eot?fdcnun");
-	src: url("../fonts/icomoon.eot?fdcnun#iefix") format("embedded-opentype"),
-		url("../fonts/icomoon.ttf?fdcnun") format("truetype"),
-		url("../fonts/icomoon.woff?fdcnun") format("woff"),
-		url("../fonts/icomoon.svg?fdcnun#icomoon") format("svg");
+	src: url("../fonts/icomoon.eot?f6ud7h");
+	src: url("../fonts/icomoon.eot?f6ud7h#iefix") format("embedded-opentype"),
+		url("../fonts/icomoon.ttf?f6ud7h") format("truetype"),
+		url("../fonts/icomoon.woff?f6ud7h") format("woff"),
+		url("../fonts/icomoon.svg?f6ud7h#icomoon") format("svg");
 	font-weight: normal;
 	font-style: normal;
 	font-display: block;
@@ -33,26 +44,20 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-gmail:before {
+	content: "\e90b";
+}
+.icon-info2:before {
+	content: "\e909";
+}
 .icon-tools:before {
 	content: "\e905";
-}
-.icon-user-solid-circle:before {
-	content: "\e902";
-}
-.icon-user-circle-o:before {
-	content: "\e903";
-}
-.icon-user:before {
-	content: "\e904";
 }
 .icon-graduation-cap:before {
 	content: "\e900";
 }
 .icon-mortar-board:before {
 	content: "\e900";
-}
-.icon-user-circle:before {
-	content: "\e901";
 }
 .icon-envelop:before {
 	content: "\e945";
@@ -71,6 +76,9 @@ body {
 }
 .icon-briefcase:before {
 	content: "\e9ae";
+}
+.icon-info:before {
+	content: "\ea0c";
 }
 .icon-github:before {
 	content: "\eab0";

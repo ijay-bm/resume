@@ -7,18 +7,39 @@
 		<link rel="stylesheet" href="css/styles.css" />
 	</head>
 
-	<body>
+	<body class="style-2">
+		<div class="menu">
+			<div class="menu__group radio-menu" oninput="onInput(event)">
+				<input
+					type="radio"
+					class="radio-menu__radio-input"
+					name="radio-menu"
+					id="style-1"
+				/>
+				<label for="style-1" class="radio-menu__radio-label">Style 1</label>
+				<input
+					type="radio"
+					class="radio-menu__radio-input"
+					name="radio-menu"
+					id="style-2"
+					checked
+				/>
+				<label for="style-2" class="radio-menu__radio-label"> Style 2</label>
+				<span class="radio-menu__radio-dot"></span>
+			</div>
+		</div>
+
 		<main class="resume">
 			<div class="resume__left">
 				<h1 class="resume__header-name">IJAY MANGILI</h1>
 
-				<div class="section">
+				<div class="section section--about">
 					<div class="section__header">
 						<i class="section__header-icon icon-user-tie"></i>
 						<h2 class="section__header-title">A Bit About Me</h2>
 					</div>
 
-					<div class="section__body">
+					<div class="section__body section__item">
 						Hi, I have over a year of experience working in Full Stack web
 						development. I like to code and chose to do it as my line of work. I
 						regularly take online courses and lessons to hone and expand my
@@ -26,13 +47,13 @@
 					</div>
 				</div>
 
-				<div class="section">
+				<div class="section section--work">
 					<div class="section__header">
 						<i class="section__header-icon icon-briefcase"></i>
 						<h2 class="section__header-title">Work Experience</h2>
 					</div>
 
-					<div class="enumeration">
+					<div class="enumeration section__item">
 						<div class="enumeration__row">
 							<span class="enumeration__heading">Junior Web Developer</span>
 							<span class="enumeration__subtitle">Jun 2021 - Present</span>
@@ -63,7 +84,7 @@
 						</ul>
 					</div>
 
-					<div class="enumeration">
+					<div class="enumeration section__item">
 						<div class="enumeration__row">
 							<p class="enumeration__heading">On-The-Job Trainee</p>
 							<p class="enumeration__subtitle">Jan 2020 - March 2020</p>
@@ -84,13 +105,13 @@
 					</div>
 				</div>
 
-				<div class="section">
+				<div class="section section--education">
 					<div class="section__header">
 						<i class="section__header-icon icon-graduation-cap"></i>
 						<h2 class="section__header-title">Education</h2>
 					</div>
 
-					<div class="enumeration">
+					<div class="enumeration section__item">
 						<div class="enumeration__row">
 							<p class="enumeration__heading">BS Computer Engineering</p>
 							<p class="enumeration__subtitle">May 2020 (2013 — 2020)</p>
@@ -103,13 +124,13 @@
 					</div>
 				</div>
 
-				<div class="section">
+				<div class="section section--awards">
 					<div class="section__header">
 						<i class="section__header-icon icon-trophy"></i>
 						<h2 class="section__header-title">Recognitions & Awards</h2>
 					</div>
 
-					<div class="enumeration">
+					<div class="enumeration section__item">
 						<div class="enumeration__row">
 							<p class="enumeration__heading">Certificate of Merit</p>
 							<p class="enumeration__subtitle">March 2018</p>
@@ -132,7 +153,7 @@
 						</ul>
 					</div>
 
-					<div class="enumeration">
+					<div class="enumeration section__item">
 						<div class="enumeration__row">
 							<p class="enumeration__heading">Certificate of Recognition</p>
 							<p class="enumeration__subtitle">March 2019</p>
@@ -155,7 +176,7 @@
 						</ul>
 					</div>
 
-					<div class="enumeration">
+					<div class="enumeration section__item">
 						<div class="enumeration__row">
 							<p class="enumeration__heading">Certificate of Recognition</p>
 							<p class="enumeration__subtitle">March 2019</p>
@@ -184,9 +205,14 @@
 			</div>
 
 			<div class="resume__right">
-				<div class="section">
+				<div class="section section--contact">
+					<div class="section__header">
+						<i class="section__header-icon icon-info2"></i>
+						<h2 class="section__header-title">Deets</h2>
+					</div>
+
 					<ul class="contact-info">
-						<li class="contact-info__item">
+						<li class="contact-info__item section__item">
 							<a
 								class="contact-info__link"
 								href="https://github.com/ijay-bm"
@@ -196,7 +222,7 @@
 								<span>github.com/ijay-bm</span>
 							</a>
 						</li>
-						<li class="contact-info__item">
+						<li class="contact-info__item section__item">
 							<a
 								class="contact-info__link"
 								href="https://www.linkedin.com/in/ijaybm/"
@@ -206,22 +232,22 @@
 								<span>linkedin.com/in/ijaybm</span>
 							</a>
 						</li>
-						<li class="contact-info__item">
-							<i class="icon-envelop"></i>
+						<li class="contact-info__item section__item">
+							<i class="icon-gmail"></i>
 							<span>ijaybmangili@gmail.com</span>
 						</li>
-						<li class="contact-info__item">
+						<li class="contact-info__item section__item">
 							<i class="icon-mobile"></i>
 							<span>+63 948 513 1144</span>
 						</li>
-						<li class="contact-info__item">
+						<li class="contact-info__item section__item">
 							<i class="icon-location"></i>
 							<span>Baguio, Benguet</span>
 						</li>
 					</ul>
 				</div>
 
-				<div class="section">
+				<div class="section section--skills">
 					<div class="section__header">
 						<i class="section__header-icon icon-tools"></i>
 						<h2 class="section__header-title">Skills</h2>
@@ -229,98 +255,98 @@
 
 					<div class="section__body">
 						<ul class="skills">
-							<li class="skills__item">
+							<li class="skills__item section__item">
 								<span class="skills__name">Full Stack Web Dev</span>
 								<span class="skills__bar" data-percent="60">
 									<span class="skills__percentage"></span>
 								</span>
 							</li>
 
-							<li class="skills__item">
+							<li class="skills__item section__item">
 								<span class="skills__name">Laravel</span>
 								<span class="skills__bar" data-percent="70">
 									<span class="skills__percentage"></span>
 								</span>
 							</li>
 
-							<li class="skills__item">
+							<li class="skills__item section__item">
 								<span class="skills__name">Vue.js</span>
 								<span class="skills__bar" data-percent="60">
 									<span class="skills__percentage"></span>
 								</span>
 							</li>
 
-							<li class="skills__item">
+							<li class="skills__item section__item">
 								<span class="skills__name">Bootstrap-Vue</span>
 								<span class="skills__bar" data-percent="50">
 									<span class="skills__percentage"></span>
 								</span>
 							</li>
 
-							<li class="skills__item">
+							<li class="skills__item section__item">
 								<span class="skills__name">Bootstrap</span>
 								<span class="skills__bar" data-percent="60">
 									<span class="skills__percentage"></span>
 								</span>
 							</li>
 
-							<li class="skills__item">
+							<li class="skills__item section__item">
 								<span class="skills__name">PHP</span>
 								<span class="skills__bar" data-percent="70">
 									<span class="skills__percentage"></span>
 								</span>
 							</li>
 
-							<li class="skills__item">
+							<li class="skills__item section__item">
 								<span class="skills__name">MySQL</span>
 								<span class="skills__bar" data-percent="60">
 									<span class="skills__percentage"></span>
 								</span>
 							</li>
 
-							<li class="skills__item">
+							<li class="skills__item section__item">
 								<span class="skills__name">JavaScript</span>
 								<span class="skills__bar" data-percent="60">
 									<span class="skills__percentage"></span>
 								</span>
 							</li>
 
-							<li class="skills__item">
+							<li class="skills__item section__item">
 								<span class="skills__name">CSS/SASS</span>
 								<span class="skills__bar" data-percent="65">
 									<span class="skills__percentage"></span>
 								</span>
 							</li>
 
-							<li class="skills__item">
+							<li class="skills__item section__item">
 								<span class="skills__name">HTML</span>
 								<span class="skills__bar" data-percent="65">
 									<span class="skills__percentage"></span>
 								</span>
 							</li>
 
-							<li class="skills__item">
+							<li class="skills__item section__item">
 								<span class="skills__name">Git (via SourceTree)</span>
 								<span class="skills__bar" data-percent="50">
 									<span class="skills__percentage"></span>
 								</span>
 							</li>
 
-							<li class="skills__item">
+							<li class="skills__item section__item">
 								<span class="skills__name">REST API</span>
 								<span class="skills__bar" data-percent="60">
 									<span class="skills__percentage"></span>
 								</span>
 							</li>
 
-							<li class="skills__item">
+							<li class="skills__item section__item">
 								<span class="skills__name">jQuery</span>
 								<span class="skills__bar" data-percent="10">
 									<span class="skills__percentage"></span>
 								</span>
 							</li>
 
-							<li class="skills__item">
+							<li class="skills__item section__item">
 								<span class="skills__name">Java</span>
 								<span class="skills__bar" data-percent="10">
 									<span class="skills__percentage"></span>
@@ -329,8 +355,6 @@
 						</ul>
 
 						<div class="legend">
-							<h3 class="legend__heading">Legend</h3>
-
 							<div class="legend__body">
 								<div class="legend__item">
 									<span class="legend__metric">1</span>
@@ -343,7 +367,7 @@
 									<span class="legend__metric">5</span>
 
 									<span lass="legend__description"
-										>I have been using it a lot.</span
+										>I have been using it a lot recently.</span
 									>
 								</div>
 								<div class="legend__item">
@@ -360,4 +384,6 @@
 			</div>
 		</main>
 	</body>
+
+	<script src="js/scripts.js"></script>
 </html>

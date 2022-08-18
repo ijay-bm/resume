@@ -1,0 +1,32 @@
+.menu {
+	position: fixed;
+	top: 1rem;
+	left: 1rem;
+	z-index: 2;
+	transition: $transition;
+
+	&__group {
+		color: $gray-200;
+		padding: 1rem;
+		background-color: $color2;
+		border-radius: 5px;
+		transition: $transition;
+		position: relative;
+
+		&:not(:last-child) {
+			margin-bottom: $s-3;
+		}
+	}
+
+	@media only screen and (max-width: 1080px) {
+		opacity: 0.2;
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+	@media print {
+		display: none;
+	}
+}
