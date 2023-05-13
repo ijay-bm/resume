@@ -529,7 +529,7 @@ body.style-2 h5 {
 .skills__bar {
   display: block;
   position: relative;
-  height: 2px;
+  height: 1px;
   background-image: linear-gradient(to right, transparent, #dee2e6);
   transform: scaleY(1.1);
 }

@@ -18,7 +18,7 @@
 	&__bar {
 		display: block;
 		position: relative;
-		height: 2px;
+		height: 1px;
 		// background-color: $gray-300;
 		background-image: linear-gradient(to right, transparent, $gray-300);
 		transform: scaleY(1.1);
