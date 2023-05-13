@@ -10,15 +10,18 @@
 	}
 
 	&__name {
+		font-size: 0.8rem;
 		display: block;
 		margin-bottom: $s-1;
 	}
 
 	&__bar {
 		display: block;
-		height: 2px;
 		position: relative;
+		height: 2px;
+		// background-color: $gray-300;
 		background-image: linear-gradient(to right, transparent, $gray-300);
+		transform: scaleY(1.1);
 
 		&::before,
 		&::after {
@@ -30,14 +33,16 @@
 		}
 
 		&::before {
-			height: 2px;
+			height: 1px;
+			// background-color: $color1-light;
 			background-image: linear-gradient(to right, transparent, $color1-light);
+			transform: scaleY(1.1);
 		}
 
 		&::after {
-			top: -5px;
-			width: 12px;
-			height: 12px;
+			top: -3px;
+			width: 7px;
+			height: 7px;
 			border: 2px solid $color1-light;
 			border-radius: 50%;
 			background-color: rgba($color1, 0.2);
@@ -55,7 +60,7 @@
 
 				> #{$block}__percentage::after {
 					position: absolute;
-					top: -1.25rem;
+					top: -1rem;
 					right: 0;
 					font-size: $fs-xxs;
 					color: $gray-600;
