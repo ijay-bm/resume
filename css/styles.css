@@ -457,11 +457,11 @@ body.style-2 h5 {
   content: "";
   position: absolute;
   top: 0.32rem;
-  left: -4.5px;
-  width: 0.5rem;
-  height: 0.5rem;
+  left: 0px;
+  width: 8px;
+  height: 8px;
   background-color: #1a3241;
-  transform: rotateZ(-45deg);
+  transform: rotateZ(-45deg) translateX(-6.2px);
 }
 .style-2 .section:last-child .section__item:last-child {
   padding-bottom: 0;

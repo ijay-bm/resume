@@ -5,3 +5,5 @@ venv
 index.js
 html_to_pdf.py
 *.pdf
+puppeteer.js
+wkhtmltopdf.js
