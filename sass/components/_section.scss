@@ -47,7 +47,8 @@
 
 	&__header {
 		border-left: 1px solid $color1;
-		padding-bottom: 2rem;
+		// padding-bottom: 2rem;
+		padding-bottom: 1.5rem;
 	}
 
 	&__header-icon {
@@ -98,11 +99,11 @@
 			content: "";
 			position: absolute;
 			top: 0.32rem;
-			left: -4.5px;
-			width: 0.5rem;
-			height: 0.5rem;
+			left: 0px;
+			width: 8px;
+			height: 8px;
 			background-color: $color2;
-			transform: rotateZ(-45deg);
+			transform: rotateZ(-45deg) translateX(-6.2px);
 		}
 	}
 
