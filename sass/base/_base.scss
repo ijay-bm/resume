@@ -1,21 +1,33 @@
 *,
 *::before,
 *::after {
-	margin: 0;
-	padding: 0;
-	box-sizing: inherit;
-	transition: $transition;
-}
-
-html {
-	font-size: 16px;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  transition: all 0.25s, color 1ms;
 }
 
 body {
-	box-sizing: border-box;
+  box-sizing: border-box;
+  color: $gray-900;
+  background-color: $gray-100;
+
+  &[data-theme="dark"] {
+    background-color: $gray-925;
+    color: $gray-400;
+  }
 }
 
 ::selection {
-	background-color: $color1;
-	color: white;
+  background-color: $color1;
+  color: white;
+
+  &[data-theme="dark"] {
+    background-color: $gray-925;
+    color: $gray-200;
+  }
+}
+
+.hidden {
+  display: none !important;
 }

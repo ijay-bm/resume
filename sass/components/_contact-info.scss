@@ -1,31 +1,25 @@
 .style-1 .contact-info {
-	font-size: $fs-sm;
-	list-style: none;
+  font-size: $fs-sm;
+  list-style: none;
 
-	&__item {
-		&:not(:last-child) {
-			margin-bottom: 0.7rem;
-		}
-	}
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 0.7rem;
+    }
+  }
 
-	&__link {
-		text-decoration: none;
-		color: inherit;
-	}
+  &__link {
+    text-decoration: none;
+    color: inherit;
+  }
 }
 
 .style-2 .contact-info {
-	font-size: $fs-sm;
-	list-style: none;
+  font-size: $fs-sm;
+  list-style: none;
 
-	// &__item {
-	// 	&:not(:last-child) {
-	// 		// margin-bottom: 0.7rem;
-	// 	}
-	// }
-
-	&__link {
-		text-decoration: none;
-		color: inherit;
-	}
+  &__link {
+    text-decoration: none;
+    color: inherit;
+  }
 }

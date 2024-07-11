@@ -1,48 +1,84 @@
 .resume {
-	margin: 0 auto;
-	display: flex;
-	width: 816px;
-	height: 1056px;
+  margin: 0 auto;
+  display: flex;
+  width: 816px;
+  min-height: 1056px;
 
-	&__left {
-		width: 70%;
-	}
+  &__left {
+    width: 65%;
+    position: relative;
+  }
 
-	&__header-name {
-		margin-bottom: $s-3;
-		font-weight: 300;
-		letter-spacing: 0.15em;
-		text-align: center;
-		background-color: $gray-900;
-		color: $gray-300;
-		position: relative;
-		box-shadow: 0 0.5rem 0.5rem -0.5rem $gray-800;
-	}
+  &__header-name {
+    padding: 0.1rem 0;
+    font-family: "Oxygen", sans-serif;
+    margin-bottom: 0.75rem;
+    font-weight: 400;
+    font-size: 1.6rem;
+    letter-spacing: 0.2em;
+    text-align: center;
+    background-color: $gray-900;
+    color: $gray-300;
+    position: relative;
+    box-shadow: 0 0.5rem 0.5rem -0.5rem $gray-800;
 
-	&__right {
-		color: $gray-900;
-		border-left: 1px solid $color1;
-		padding: 1.5rem 0;
-		width: 30%;
-		background-image: linear-gradient(
-			to bottom right,
-			$gray-100,
-			$gray-200,
-			$gray-300
-		);
-	}
+    @include dark {
+      background-color: rgb(28, 30, 31);
+      box-shadow: $gray-900 0px 0.5rem 0.5rem -0.5rem;
+    }
+  }
+
+  &__right {
+    border-left: 1px solid $color1;
+    padding: 0.75rem 0;
+    width: 35%;
+    background-image: linear-gradient(to bottom right, $gray-100, $gray-200, $gray-300);
+
+    @include dark {
+      border-left-color: $color1-dark;
+      background-image: linear-gradient(
+        to right bottom,
+        rgb(27, 30, 31),
+        rgb(35, 38, 39),
+        rgb(40, 44, 45)
+      );
+    }
+  }
 }
 
 .style-2 .resume {
-	&__left {
-		width: 65%;
-	}
+  &__left {
+    width: 65%;
+    padding: 0;
+  }
 
-	&__header-name {
-		margin-bottom: $s-4;
-	}
+  &__header-name {
+    margin-bottom: $s-4;
+  }
 
-	&__right {
-		width: 35%;
-	}
+  &__right {
+    width: 35%;
+    padding: 1.5rem 0;
+  }
+}
+
+.web-version-link {
+  position: absolute;
+  bottom: 0;
+  padding: 0.5rem;
+  color: $gray-700;
+  font-size: $fs-xs;
+  text-align: center;
+  width: 100%;
+  display: none;
+
+  a {
+    text-align: center;
+    color: $color1;
+    text-decoration: none;
+  }
+
+  @media print {
+    display: block;
+  }
 }

@@ -1,0 +1,12 @@
+@mixin dark($no-space: false) {
+  @if $no-space {
+    $selector: &;
+    @at-root body[data-theme="dark"]#{$selector} {
+      @content;
+    }
+  } @else {
+    body[data-theme="dark"] & {
+      @content;
+    }
+  }
+}

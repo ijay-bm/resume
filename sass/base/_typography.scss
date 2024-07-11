@@ -1,88 +1,89 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Oxygen:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap");
-body.style-1 {
-	font-family: "Roboto", sans-serif;
-	letter-spacing: 0.03rem;
-}
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oxygen:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-body.style-2 {
-	font-family: "Lato", serif;
-	letter-spacing: 0.03rem;
-	h1,
-	h2,
-	h3,
-	h4,
-	h5 {
-		font-family: "Oxygen", sans-serif;
-	}
+body {
+  font-family: "Roboto", sans-serif;
 }
 
 @font-face {
-	font-family: "icomoon";
-	src: url("../fonts/icomoon.eot?f6ud7h");
-	src: url("../fonts/icomoon.eot?f6ud7h#iefix") format("embedded-opentype"),
-		url("../fonts/icomoon.ttf?f6ud7h") format("truetype"),
-		url("../fonts/icomoon.woff?f6ud7h") format("woff"),
-		url("../fonts/icomoon.svg?f6ud7h#icomoon") format("svg");
-	font-weight: normal;
-	font-style: normal;
-	font-display: block;
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?6222ai");
+  src:
+    url("../fonts/icomoon.eot?6222ai#iefix") format("embedded-opentype"),
+    url("../fonts/icomoon.ttf?6222ai") format("truetype"),
+    url("../fonts/icomoon.woff?6222ai") format("woff"),
+    url("../fonts/icomoon.svg?6222ai#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
 }
 
 [class^="icon-"],
 [class*=" icon-"] {
-	/* use !important to prevent issues with browser extensions that change fonts */
-	font-family: "icomoon" !important;
-	speak: never;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
 
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-gmail:before {
-	content: "\e90b";
+.icon-sun:before {
+  content: "\e904";
 }
-.icon-info2:before {
-	content: "\e909";
+.icon-moon:before {
+  content: "\e906";
 }
-.icon-tools:before {
-	content: "\e905";
+.icon-circle-user:before {
+  content: "\e903";
+}
+.icon-scroll:before {
+  content: "\e902";
+}
+.icon-code:before {
+  content: "\e900";
 }
 .icon-graduation-cap:before {
-	content: "\e900";
+  content: "\e901";
 }
-.icon-mortar-board:before {
-	content: "\e900";
+.icon-tools:before {
+  content: "\e905";
+}
+.icon-info2:before {
+  content: "\e909";
+}
+.icon-gmail:before {
+  content: "\e90b";
 }
 .icon-envelop:before {
-	content: "\e945";
+  content: "\e945";
 }
 .icon-location:before {
-	content: "\e947";
+  content: "\e947";
 }
 .icon-mobile:before {
-	content: "\e958";
+  content: "\e958";
 }
 .icon-user-tie:before {
-	content: "\e976";
+  content: "\e976";
 }
 .icon-trophy:before {
-	content: "\e99e";
+  content: "\e99e";
 }
 .icon-briefcase:before {
-	content: "\e9ae";
+  content: "\e9ae";
 }
 .icon-info:before {
-	content: "\ea0c";
+  content: "\ea0c";
 }
 .icon-github:before {
-	content: "\eab0";
+  content: "\eab0";
 }
 .icon-linkedin:before {
-	content: "\eac9";
+  content: "\eac9";
 }
