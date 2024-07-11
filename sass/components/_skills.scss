@@ -1,121 +1,206 @@
 .skills {
-	$block: &;
-	list-style: none;
-	margin-bottom: 1rem;
+  $block: &;
+  list-style: none;
+  // margin-bottom: 1rem;
 
-	&__item {
-		&:not(:last-child) {
-			margin-bottom: $s-2;
-		}
-	}
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: $s-2;
+    }
+  }
 
-	&__name {
-		font-size: 0.8rem;
-		display: block;
-		margin-bottom: $s-1;
-	}
+  &__name {
+    font-size: 0.83rem;
+    display: block;
+    margin-bottom: $s-1;
+  }
 
-	&__bar {
-		display: block;
-		position: relative;
-		height: 1px;
-		// background-color: $gray-300;
-		background-image: linear-gradient(to right, transparent, $gray-300);
-		transform: scaleY(1.1);
+  &__bar {
+    display: block;
+    position: relative;
+    height: 1px;
+    margin-top: 0.5rem;
+    background-image: linear-gradient(to right, transparent, $gray-300);
+    transform: scaleY(1.1);
 
-		&::before,
-		&::after {
-			content: "";
-			display: block;
-			position: absolute;
-			top: 0;
-			left: 0;
-		}
+    @media print {
+      background-image: none;
+      background-color: $gray-300;
+    }
 
-		&::before {
-			height: 1px;
-			// background-color: $color1-light;
-			background-image: linear-gradient(to right, transparent, $color1-light);
-			transform: scaleY(1.1);
-		}
+    @include dark() {
+      background-image: linear-gradient(to right, transparent, $gray-800);
 
-		&::after {
-			top: -3px;
-			width: 7px;
-			height: 7px;
-			border: 2px solid $color1-light;
-			border-radius: 50%;
-			background-color: rgba($color1, 0.2);
-		}
+      @media print {
+        background-image: none;
+        background-color: $gray-800;
+      }
+    }
 
-		@for $i from 0 to 100 {
-			&[data-percent="#{$i}"] {
-				&::before {
-					width: $i + 0%;
-				}
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
 
-				&::after {
-					left: $i + 0%;
-				}
+    &::before {
+      height: 1px;
+      background-image: linear-gradient(to right, transparent, $color1-light);
+      transform: scaleY(1.1);
 
-				> #{$block}__percentage::after {
-					position: absolute;
-					top: -1rem;
-					right: 0;
-					font-size: $fs-xxs;
-					color: $gray-600;
-					font-weight: 500;
-					content: "#{calc($i / 10)}";
-				}
-			}
-		}
-	}
+      @media print {
+        background-image: none;
+        background-color: $color1-light;
+      }
+
+      @include dark {
+        background-image: linear-gradient(to right, transparent, $color1-dark);
+
+        @media print {
+          background-image: none;
+          background-color: $color1-dark;
+        }
+      }
+    }
+
+    &::after {
+      top: -3px;
+      width: 7px;
+      height: 7px;
+      border: 2px solid $color1-light;
+      border-radius: 50%;
+      background-color: rgba($color1, 0.2);
+
+      @include dark {
+        border: 2px solid $color1-dark;
+      }
+    }
+
+    @for $i from 0 to 100 {
+      &[data-percent="#{$i}"] {
+        &::before {
+          width: $i + 0%;
+        }
+
+        &::after {
+          left: $i + 0%;
+        }
+
+        > #{$block}__percentage::after {
+          position: absolute;
+          top: -1rem;
+          right: 0;
+          font-size: $fs-xxs;
+          color: $gray-600;
+          font-weight: 500;
+          content: "#{calc($i / 10)}";
+        }
+      }
+    }
+  }
+
+  &__item-details {
+    font-size: 0.8rem;
+    letter-spacing: 0.02rem;
+    font-weight: 400;
+    color: $gray-700;
+
+    @include dark {
+      color: $gray-400;
+    }
+  }
 }
 
 .style-2 .skills {
-	$block: &;
+  $block: &;
 
-	&__item {
-		&:not(:last-child) {
-			margin-bottom: 0;
-		}
-	}
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .legend {
-	&__body {
-		padding: 1rem;
-		background-color: $gray-800;
-		color: $gray-400;
-		font-size: $fs-sm;
-		border-radius: 3px;
-	}
+  margin-top: 1.5rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 
-	&__item {
-		font-size: $fs-sm;
-		position: relative;
-		padding-left: 1.5rem;
+  &__body {
+    padding: 1rem;
+    background-color: $gray-800;
+    color: $gray-400;
+    font-size: $fs-sm;
+    border-radius: 3px;
 
-		&:not(:last-child) {
-			margin-bottom: $s-3;
-		}
-	}
+    @include dark {
+      background-color: rgb(44, 47, 49);
+      color: $gray-400;
+    }
+  }
 
-	&__metric {
-		color: $color1;
-		position: absolute;
-		right: calc(100% - 0.6rem);
+  &__item {
+    font-size: $fs-sm;
+    position: relative;
+    padding-left: 1.5rem;
 
-		&::after {
-			content: "\00bb";
-			position: absolute;
-			color: $gray-500;
-			margin-left: 0.2rem;
-			top: -0.07rem;
-		}
-	}
+    &:not(:last-child) {
+      margin-bottom: $s-3;
+    }
+  }
 
-	&__description {
-		display: block;
-	}
+  &__metric {
+    color: $color1;
+    position: absolute;
+    right: calc(100% - 0.6rem);
+    font-weight: 700;
+
+    &::after {
+      content: "\00bb";
+      position: absolute;
+      color: $gray-500;
+      margin-left: 0.2rem;
+      top: -0.07rem;
+    }
+  }
+
+  &__description {
+    display: block;
+  }
+}
+
+.tools {
+  margin-top: 1.5rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding: 1rem;
+  background-color: $gray-300;
+  color: $gray-800;
+  font-size: $fs-sm;
+  border-radius: 3px;
+
+  @include dark {
+    background-color: rgb(44, 47, 49);
+    color: $gray-400;
+  }
+}
+
+.interests {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding: 1rem;
+  background-color: $gray-200;
+  color: $gray-700;
+  font-size: $fs-sm;
+  border-radius: 3px;
+
+  @include dark {
+    background-color: rgb(27, 30, 31);
+    color: $gray-400;
+  }
 }

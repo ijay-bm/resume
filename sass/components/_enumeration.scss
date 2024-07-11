@@ -1,102 +1,140 @@
 .style-1 .enumeration {
-	&:not(:last-child) {
-		margin-bottom: $s-3;
-	}
+  &:not(:last-child) {
+    margin-bottom: $s-3;
+  }
 
-	&__row {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-	&__heading {
-		font-size: $fs-sm;
-		color: $color2;
-	}
+    &:not(:last-child) {
+      margin-bottom: 0.2rem;
+    }
+  }
 
-	&__subtitle {
-		font-size: $fs-xs;
-		color: $gray-600;
-	}
+  &__heading {
+    font-size: $fs-sm;
+    color: $color2;
 
-	&__subheading {
-		font-size: $fs-sm;
-		color: $color1;
-	}
+    @include dark(true) {
+      color: $gray-400;
+    }
+  }
 
-	&__description {
-		list-style: none;
-		font-size: $fs-xs;
-		border-left: 2px solid $gray-400;
-		padding: 0 0 0 5px;
-		color: $gray-700;
-		margin-top: $s-1;
-	}
+  &__subtitle {
+    font-size: $fs-xs;
+    color: $gray-600;
 
-	&__description-item {
-		// color: $gray-600;
-		border: 1px solid $gray-200;
-		padding: 3px 5px;
+    @include dark(true) {
+      color: $gray-550;
+    }
+  }
 
-		&:not(:last-child) {
-			margin-bottom: $s-1;
-		}
+  &__subheading {
+    font-size: $fs-sm;
+    color: $color1;
+  }
 
-		&--no-border {
-			border: unset;
-			padding: 0;
-		}
-	}
+  &__subheading-sub {
+    font-size: $fs-xs;
+    color: $gray-810;
+
+    @include dark(true) {
+      color: $gray-550;
+    }
+  }
+
+  &__description {
+    padding-left: 1rem;
+    font-size: $fs-xs;
+    color: $gray-700;
+    margin-top: $s-1;
+
+    @include dark(true) {
+      color: $gray-400;
+    }
+  }
+
+  &__description-item {
+    padding: 3px 5px;
+
+    &:not(:last-child) {
+      margin-bottom: $s-1;
+    }
+
+    &--no-border {
+      border: unset;
+      padding: 0;
+    }
+  }
 }
 
 .style-2 .enumeration {
-	&:not(:last-child) {
-		margin-bottom: 0;
-	}
+  &:not(:last-child) {
+    margin-bottom: 0;
+  }
 
-	&__row {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-	&__heading {
-		font-size: $fs-sm;
-		color: $color2;
-	}
+    &:not(:last-child) {
+      margin-bottom: 0.2rem;
+    }
+  }
 
-	&__subtitle {
-		font-size: $fs-xs;
-		color: $gray-600;
-	}
+  &__heading {
+    font-size: $fs-sm;
+    color: $color2;
 
-	&__subheading {
-		font-size: $fs-sm;
-		color: $color1;
-	}
+    @include dark(true) {
+      color: $gray-400;
+    }
+  }
 
-	&__description {
-		// list-style: none;
-		font-size: $fs-xs;
-		// border-left: 2px solid $gray-400;
-		// padding: 0 0 0 5px;
-		color: $gray-700;
-		margin-top: $s-2;
-		padding-left: 1rem;
-	}
+  &__subtitle {
+    text-align: right;
+    font-size: $fs-xs;
+    color: $gray-600;
 
-	&__description-item {
-		// color: $gray-600;
-		// border: 1px solid $gray-200;
-		// padding: 3px 5px;
+    @include dark(true) {
+      color: $gray-550;
+    }
+  }
 
-		&:not(:last-child) {
-			margin-bottom: $s-2;
-		}
+  &__subheading {
+    font-size: $fs-sm;
+    color: $color1;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem
+  }
 
-		// &--no-border {
-		// 	border: unset;
-		// 	padding: 0;
-		// }
-	}
+  &__subheading-sub {
+    font-size: $fs-xs;
+    color: $gray-810;
+
+    @include dark(true) {
+      color: $gray-550;
+    }
+  }
+
+  &__description {
+    font-size: $fs-xs;
+    color: $gray-700;
+    margin-top: $s-2;
+    padding-left: 1rem;
+
+    @include dark(true) {
+      color: $gray-400;
+    }
+  }
+
+  &__description-item {
+    &:not(:last-child) {
+      margin-bottom: $s-2;
+    }
+  }
 }

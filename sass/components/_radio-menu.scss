@@ -1,85 +1,93 @@
 .radio-menu {
-	$block: &;
+  $block: &;
 
-	&__radio-input {
-		display: none;
+  &__radio-input {
+    display: none;
 
-		@for $s from 1 through 3 {
-			$yPos: 2.5rem * ($s - 1);
-			&:nth-of-type(#{$s}):checked ~ #{$block}__radio-dot {
-				visibility: visible;
-				opacity: 1;
-				transform: translateY($yPos);
-				&::before {
-					animation: radioDotLaunch#{$s} 0.3s ease-in-out forwards;
-				}
-				@keyframes radioDotLaunch#{$s} {
-					from,
-					to {
-						transform: translateY(0) scale(1);
-					}
-					25% {
-						transform: translateY(0) scale(0.2);
-					}
-					50% {
-						transform: scale(0.2);
-					}
-					67% {
-						transform: scale(0.2);
-					}
-					83% {
-						transform: translateY(0.3rem) scale(1);
-					}
-					93% {
-						transform: translateY(-0.3rem) scale(1);
-					}
-					96% {
-						transform: translateY(0.3rem) scale(1);
-					}
-				}
-			}
-		}
-	}
+    @for $s from 1 through 3 {
+      $yPos: 2.5rem * ($s - 1);
+      &:nth-of-type(#{$s}):checked ~ #{$block}__radio-dot {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY($yPos);
+        &::before {
+          animation: radioDotLaunch#{$s} 0.3s ease-in-out forwards;
+        }
+        @keyframes radioDotLaunch#{$s} {
+          from,
+          to {
+            transform: translateY(0) scale(1);
+          }
+          25% {
+            transform: translateY(0) scale(0.2);
+          }
+          50% {
+            transform: scale(0.2);
+          }
+          67% {
+            transform: scale(0.2);
+          }
+          83% {
+            transform: translateY(0.3rem) scale(1);
+          }
+          93% {
+            transform: translateY(-0.3rem) scale(1);
+          }
+          96% {
+            transform: translateY(0.3rem) scale(1);
+          }
+        }
+      }
+    }
+  }
 
-	&__radio-label {
-		display: flex;
-		align-items: center;
-		transition: $transition;
-		cursor: pointer;
+  &__radio-label {
+    display: flex;
+    align-items: center;
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
 
-		&:not(:last-of-type) {
-			margin-bottom: $s-3;
-		}
+    &:not(:last-of-type) {
+      margin-bottom: $s-3;
+    }
 
-		&::before {
-			content: "";
-			display: inline-block;
-			width: 1.5rem;
-			height: 1.5rem;
-			margin-right: 0.5rem;
-			border-radius: 50%;
-			border: 2px solid $color1;
-		}
-	}
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: 0.5rem;
+      border-radius: 50%;
+      border: 2px solid $color1;
 
-	&__radio-dot {
-		position: absolute;
-		top: 1.25rem;
-		left: 1.25rem;
-		width: 1rem;
-		height: 1rem;
-		z-index: 1;
-		transition: $transition;
-		opacity: 0;
-		visibility: hidden;
+      @include dark {
+        border-color: $color1-dark;
+      }
+    }
+  }
 
-		&:before {
-			content: "";
-			display: block;
-			background-color: $color1;
-			width: 100%;
-			height: 100%;
-			border-radius: 50%;
-		}
-	}
+  &__radio-dot {
+    position: absolute;
+    top: 1.25rem;
+    left: 1.25rem;
+    width: 1rem;
+    height: 1rem;
+    z-index: 1;
+    transition: all 0.25s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+
+    &:before {
+      content: "";
+      display: block;
+      background-color: $color1;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+
+      @include dark {
+        background-color: $color1-dark;
+      }
+    }
+  }
 }

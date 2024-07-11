@@ -1,13 +1,16 @@
+@import "abstracts/mixins";
 @import "abstracts/variables";
 
 @import "base/base";
 @import "base/typography";
 
+@import "components/checkbox-menu";
 @import "components/contact-info";
 @import "components/enumeration";
 @import "components/menu";
 @import "components/radio-menu";
 @import "components/section";
 @import "components/skills";
+@import "components/theme-selector";
 
 @import "pages/resume";
