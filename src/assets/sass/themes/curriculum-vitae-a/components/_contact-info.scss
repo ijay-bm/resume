@@ -1,0 +1,13 @@
+.contact-info {
+  &__item {
+    @apply flex items-center gap-2;
+  }
+}
+
+.resume__left .contact-info {
+  @apply pl-0;
+}
+
+.contact-info {
+  @apply mb-4 flex gap-2;
+}

@@ -1,0 +1,143 @@
+.skills {
+  $block: &;
+
+  &__item {
+    @apply mb-2 last:mb-0;
+  }
+
+  &__name {
+    @apply text-[0.8rem] leading-4;
+  }
+
+  &__bar {
+    display: block;
+    position: relative;
+    height: 1px;
+    background-image: linear-gradient(to right, transparent, $gray-300);
+    transform: scaleY(1.1);
+
+    @media print {
+      background-image: none;
+      background-color: $gray-300;
+    }
+
+    @include dark() {
+      background-image: linear-gradient(to right, transparent, $gray-800);
+
+      @media print {
+        background-image: none;
+        background-color: $gray-800;
+      }
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &::before {
+      height: 1px;
+      background-image: linear-gradient(to right, transparent, $color1-light);
+      transform: scaleY(1.1);
+
+      @media print {
+        background-image: none;
+        background-color: $color1-light;
+      }
+
+      @include dark {
+        background-image: linear-gradient(to right, transparent, $color1-dark);
+
+        @media print {
+          background-image: none;
+          background-color: $color1-dark;
+        }
+      }
+    }
+
+    &::after {
+      top: -3px;
+      width: 7px;
+      height: 7px;
+      border: 2px solid $color1-light;
+      border-radius: 50%;
+      background-color: rgba($color1, 0.2);
+
+      @include dark {
+        border: 2px solid $color1-dark;
+      }
+    }
+
+    @for $i from 0 to 100 {
+      &[data-percent="#{$i}"] {
+        &::before {
+          width: $i + 0%;
+        }
+
+        &::after {
+          left: $i + 0%;
+        }
+
+        > #{$block}__percentage::after {
+          position: absolute;
+          top: -1rem;
+          right: 0;
+          // font-size: $fs-xxs;
+          color: $gray-600;
+          font-weight: 500;
+          content: "#{calc($i / 10)}";
+        }
+      }
+    }
+  }
+
+  &__item-details {
+    font-size: 0.8rem;
+    letter-spacing: 0.02rem;
+    font-weight: 400;
+    color: $gray-700;
+    margin-top: 0.25rem;
+
+    @include dark {
+      color: $gray-400;
+    }
+  }
+}
+
+.skills {
+  @apply list-none pl-0;
+}
+
+.legend {
+  @apply mb-3 mt-4;
+
+  &__body {
+    @apply list-none space-y-3 p-0;
+  }
+
+  @apply rounded bg-gray-200 p-4 text-neutral-800 dark:bg-neutral-900 dark:text-inherit dark:text-neutral-300;
+
+  &__item {
+    @apply relative pl-7 text-xs;
+  }
+
+  &__metric {
+    @apply absolute right-[calc(100%_-_0.9rem)] text-gold-500;
+
+    &::after {
+      @apply absolute top-[-0.06rem] ml-[0.2rem] text-neutral-500 content-["\00bb"];
+    }
+  }
+}
+
+.tools {
+  @apply mb-6 rounded bg-gray-200 p-4 text-xs text-neutral-800 dark:bg-neutral-900 dark:text-inherit dark:text-neutral-300;
+}
+
+.interests {
+  @apply mb-6 mt-4 rounded bg-gray-200 p-4 text-xs text-neutral-800 dark:bg-neutral-800 dark:text-inherit dark:text-neutral-300;
+}

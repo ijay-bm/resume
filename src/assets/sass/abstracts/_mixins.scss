@@ -1,0 +1,24 @@
+@mixin dark($no-space: false) {
+  @if $no-space {
+    $selector: &;
+    @at-root html.dark #{$selector} {
+      @content;
+    }
+  } @else {
+    html.dark & {
+      @content;
+    }
+  }
+}
+
+@mixin right-section-background {
+  background-image: linear-gradient(to bottom right, $gray-200, $gray-200, $gray-300);
+  @include dark {
+    background-image: linear-gradient(
+      to right bottom,
+      rgb(27, 30, 31),
+      rgb(35, 38, 39),
+      rgb(40, 44, 45)
+    );
+  }
+}

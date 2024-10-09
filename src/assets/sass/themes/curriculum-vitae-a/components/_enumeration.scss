@@ -1,0 +1,31 @@
+.enumeration {
+  &__row {
+    @apply flex items-center justify-between;
+  }
+
+  &__description {
+    @apply mt-1;
+  }
+}
+
+.enumeration {
+  &__heading {
+    @apply text-base;
+  }
+
+  &__subtitle {
+    @apply text-sm;
+  }
+
+  &__subheading {
+    @apply text-base font-medium;
+  }
+
+  &__subheading-sub {
+    @apply text-sm;
+  }
+
+  &__description {
+    @apply text-sm;
+  }
+}
