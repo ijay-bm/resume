@@ -1,0 +1,121 @@
+.theme-selector {
+  cursor: pointer;
+  border-radius: 30px;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  outline: none;
+  background-color: transparent;
+  border: 2px solid $gray-900;
+  transition:
+    box-shadow 0.25s,
+    border-color 0.25s;
+
+  @include dark {
+    border-color: $gray-500;
+  }
+
+  &:hover {
+    border-color: lighten($gray-900, 30%);
+    box-shadow: 0 0.5rem 1rem rgba($dark, 0.2);
+
+    @include dark {
+      border-color: lighten($gray-500, 30%);
+      box-shadow: 0 0.5rem 1rem rgba($white, 0.2);
+    }
+  }
+
+  &:active {
+    border-color: $gray-400;
+    box-shadow: 0 0.25rem 0.6rem rgba($dark, 0.15);
+
+    @include dark {
+    }
+  }
+
+  &__rotating-disk {
+    transform: translateY(0.8rem) translateX(-50%);
+    left: 50%;
+    z-index: 1;
+    position: relative;
+    width: 128px;
+    height: 128px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    pointer-events: none;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 128px;
+      height: 128px;
+      border-radius: 100%;
+      border: 1px dashed $gray-900;
+      opacity: 0;
+      transition: opacity 0.25s;
+
+      @include dark {
+        border-color: $gray-500;
+      }
+    }
+
+    &--rotating::after {
+      opacity: 1;
+    }
+  }
+
+  &__rotating-disk--rotating &__icontainer {
+    opacity: 1;
+    animation: spin 400ms ease-in-out infinite;
+  }
+
+  &__icontainer {
+    display: inline;
+    z-index: 1;
+    padding: 0.2rem;
+    color: $gray-900;
+    opacity: 0;
+    transition:
+      opacity 0.25s,
+      color 0.25s;
+
+    @include dark {
+      color: $gray-500;
+    }
+
+    @include dark {
+      color: $gray-500;
+    }
+  }
+
+  &__moon {
+    position: absolute;
+    bottom: -0.6rem;
+  }
+
+  &__sun {
+    position: absolute;
+    top: -0.6rem;
+  }
+
+  &--dark &__moon {
+    opacity: 1;
+  }
+
+  &--light &__sun {
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
