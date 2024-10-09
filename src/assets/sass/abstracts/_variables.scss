@@ -1,0 +1,40 @@
+$color1: #c6a370;
+$color1-light: lighten($color1, 10%);
+$color1-dark: #74572e;
+
+$color2: #1a3241;
+$color2-light: lighten($color2, 10%);
+$color2-dark: #152834;
+
+$light: #ffffff !default;
+$white: #ffffff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-550: #8d959d !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-810: #353a3c !default;
+$gray-900: #212529 !default;
+$gray-925: #181a1b !default;
+$dark: #000000 !default;
+$black: #000000 !default;
+
+// font-size
+$fs: 1rem;
+$fs-xxs: $fs * 0.625;
+$fs-xs: $fs * 0.75;
+$fs-sm: $fs * 0.875;
+$fs-lg: $fs * 1.25;
+$fs-xl: $fs * 1.5;
+
+// spacer
+$s-0: 0;
+$s-1: 1rem * 0.25;
+$s-2: 1rem * 0.5;
+$s-3: 1rem;
+$s-4: 1rem * 1.5;
+$s-5: 1rem * 3;

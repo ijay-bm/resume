@@ -1,0 +1,58 @@
+.sections {
+  @apply space-y-4;
+}
+
+.section {
+  &__header {
+    @apply mb-1 flex items-center;
+  }
+
+  &__header-icon {
+    @apply mr-1 flex text-neutral-600 dark:text-neutral-500;
+  }
+
+  &__header-title {
+  }
+}
+
+.section--about {
+  @apply block;
+}
+
+.resume__left .section {
+  &__body {
+    @apply ml-2 list-none space-y-3 pl-0;
+  }
+
+  &__item {
+    @apply list-none;
+  }
+}
+
+.resume__right .section__header {
+  @apply -translate-x-3;
+}
+
+.section--contact {
+  .section__header {
+    @apply hidden;
+  }
+
+  .section__body {
+    @apply ml-0;
+  }
+}
+
+.resume div.section > div.section__body > .section__item--extension {
+  @apply mt-1;
+}
+
+.section--certifications .section__body {
+  .section__item {
+    &:not(:first-child) {
+      @apply mt-1;
+    }
+  }
+}
+
+// enumeration section__item relative

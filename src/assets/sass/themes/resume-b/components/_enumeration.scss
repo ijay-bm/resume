@@ -1,0 +1,67 @@
+.enumeration {
+  &__row {
+    @apply flex items-center justify-between;
+  }
+
+  &__heading {
+    @apply text-sm;
+  }
+
+  &__subtitle {
+    @apply text-xs text-neutral-600 dark:text-neutral-400;
+  }
+
+  &__subheading {
+    @apply text-sm text-gold-500;
+  }
+
+  &__subheading-sub {
+    @apply text-xs text-neutral-600 dark:text-neutral-400;
+  }
+
+  &__description {
+    @apply text-neutral-600 dark:text-neutral-400;
+  }
+
+  &__description-item {
+    @apply text-xs;
+  }
+}
+
+// .section--certifications .enumeration {
+//   &__heading {
+//     @apply text-xs;
+//   }
+
+//   &__subheading {
+//     @apply text-xs;
+//   }
+// }
+
+// .section--certifications-right {
+//   .enumeration {
+//     &:not(:last-child) {
+//       margin-bottom: 0.2rem;
+//     }
+
+//     &__row {
+//       @apply block;
+//     }
+
+//     &__heading {
+//       @apply inline text-xs;
+//     }
+
+//     &__title {
+//       @apply inline text-xs;
+//     }
+
+//     &__subheading {
+//       @apply inline text-xs;
+//     }
+
+//     &__subtitle {
+//       @apply inline text-xs;
+//     }
+//   }
+// }

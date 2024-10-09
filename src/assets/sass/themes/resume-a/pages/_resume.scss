@@ -1,0 +1,45 @@
+@mixin right-section-background {
+  background-image: linear-gradient(to bottom right, $gray-200, $gray-200, $gray-300);
+  @include dark {
+    background-image: linear-gradient(
+      to right bottom,
+      rgb(27, 30, 31),
+      rgb(35, 38, 39),
+      rgb(40, 44, 45)
+    );
+  }
+}
+
+.resume {
+  @apply relative mx-auto flex h-full min-h-[1056px] w-[816px];
+
+  &__left {
+    @apply relative bg-neutral-100 text-neutral-800 dark:bg-neutral-900 dark:text-neutral-100;
+    @apply w-[62%] pb-6 pl-8 pr-6 pt-6;
+  }
+
+  &__header-name {
+    @apply font-oxygen text-2xl;
+  }
+
+  &__header {
+    @apply mb-2;
+  }
+
+  &__left .resume__header-name {
+    @apply mb-1;
+  }
+
+  &__right .resume__header-name {
+    @apply mb-1 hidden;
+  }
+
+  &__right {
+    @apply w-[38%] px-6 pt-6;
+    @include right-section-background;
+  }
+}
+
+.about-me-content {
+  @apply text-xs;
+}

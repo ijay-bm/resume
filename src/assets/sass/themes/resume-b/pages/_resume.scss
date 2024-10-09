@@ -1,0 +1,21 @@
+.resume {
+  @apply relative mx-auto flex h-full min-h-[1056px] w-[816px];
+
+  &__left {
+    @apply relative w-[62%] bg-neutral-100 pb-5 pt-8 text-neutral-800 dark:bg-neutral-900 dark:text-neutral-100;
+  }
+
+  &__header-name {
+    @apply hidden;
+  }
+
+  &__right {
+    @apply w-[38%] border-l border-gold-500 pb-5 pt-8 dark:border-gold-800;
+
+    @include right-section-background;
+  }
+}
+
+.about-me-content {
+  @apply text-xs;
+}

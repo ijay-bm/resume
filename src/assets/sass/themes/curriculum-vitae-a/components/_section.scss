@@ -1,0 +1,71 @@
+.section--certifications-right {
+  .enumeration {
+    &:not(:last-child) {
+      margin-bottom: 0.2rem;
+    }
+
+    &__row {
+      @apply block;
+    }
+
+    &__heading {
+      @apply inline text-xs;
+    }
+
+    &__title {
+      @apply inline text-xs;
+    }
+
+    &__subheading {
+      @apply inline text-xs;
+    }
+
+    &__subtitle {
+      @apply inline text-xs;
+    }
+  }
+}
+
+.resume__left .section--contact {
+  .section__header {
+    @apply hidden;
+  }
+
+  .section__body {
+  }
+
+  .section__item {
+  }
+}
+
+.sections {
+  @apply space-y-6;
+}
+
+.section {
+  &__header {
+    @apply mb-1 flex items-center border-b border-b-neutral-200 pb-1 dark:border-b-neutral-800;
+  }
+
+  &__header-icon {
+    @apply mr-1 flex w-8 items-center justify-center rounded-[50%_20%_/_10%_40%] border-2 p-1 dark:border-neutral-800;
+  }
+
+  &__body {
+    @apply space-y-3;
+  }
+}
+
+.section--about {
+  @apply hidden;
+}
+
+// .section > div.section__body > .section__item--extension {
+//   @apply mt-0;
+// }
+.section--cv-ski {
+}
+
+.resume__left .section--certifications {
+  @apply hidden;
+}

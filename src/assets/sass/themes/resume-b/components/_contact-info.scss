@@ -1,0 +1,25 @@
+.contact-info {
+  &__item {
+    @apply flex items-center gap-2;
+  }
+}
+
+.resume__left .contact-info {
+  @apply pl-0;
+}
+
+.resume__left {
+  .section--contact {
+    @apply hidden;
+  }
+}
+
+.resume__right {
+  .contact-info {
+    @apply list-none pl-0;
+  }
+}
+
+.resume__right .contact-info__item {
+  @apply text-xs;
+}
