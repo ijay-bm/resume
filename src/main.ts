@@ -16,6 +16,8 @@ if (!themeStore.theme && themeStore.currentStage === ThemeStage.Auto) {
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
   themeStore.theme = prefersDark ? Theme.Dark : Theme.Light;
 }
-document.documentElement.classList.add(themeStore.theme);
+if (themeStore.theme) {
+  document.documentElement.classList.add(themeStore.theme);
+}
 
 app.mount("#app");

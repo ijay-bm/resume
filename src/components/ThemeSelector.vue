@@ -41,7 +41,9 @@ function setTheme() {
   }
   const newStage = stages.value[stageIndex.value];
 
-  document.documentElement.classList.remove(theme.value);
+  if (theme.value) {
+    document.documentElement.classList.remove(theme.value);
+  }
   if (newStage === ThemeStage.Auto) {
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     theme.value = prefersDark ? Theme.Dark : Theme.Light;

@@ -10,7 +10,7 @@ export enum ThemeStage {
 }
 
 export interface ThemeState {
-  theme: Theme;
+  theme: Theme | null;
   stages: ThemeStage[];
   stageIndex: number;
 }
