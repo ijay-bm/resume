@@ -10,15 +10,15 @@
 
 .enumeration {
   &__heading {
-    @apply text-sm text-neutral-600;
+    @apply text-sm text-neutral-600 dark:text-neutral-400;
   }
 
   &__subtitle {
-    @apply text-sm text-neutral-600;
+    @apply text-sm text-neutral-600 dark:text-neutral-400;
   }
 
   &__right-subtitle {
-    @apply text-xs text-neutral-600;
+    @apply text-xs text-neutral-600 dark:text-neutral-400;
   }
 
   &__subheading {
@@ -30,6 +30,6 @@
   }
 
   &__description {
-    @apply text-sm text-neutral-700;
+    @apply text-sm text-neutral-700 dark:text-neutral-300;
   }
 }

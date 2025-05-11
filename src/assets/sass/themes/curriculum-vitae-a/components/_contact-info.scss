@@ -12,6 +12,6 @@
   @apply flex items-baseline gap-2;
 
   &__item {
-    @apply text-sm text-neutral-700;
+    @apply text-sm text-neutral-700 dark:text-neutral-400;
   }
 }

@@ -206,7 +206,7 @@
               <li class="enumeration__item">
                 <p class="text-sm">
                   <span class="text-sm font-medium">Skills:</span>
-                  <span class="text-neutral-700">
+                  <span class="text-neutral-700 dark:text-neutral-300">
                     Full-Stack Web Development (Vue, Laravel), Principles (OOP, SOLID, DRY), API
                     Development (REST, Resource), Integrations (APIs, SDKs, Payment Processors,
                     Video Infrastructures), Cloud Services (AWS), Containerization (Docker), Version
@@ -218,7 +218,7 @@
               <li class="enumeration__item">
                 <p class="text-sm">
                   <span class="text-sm font-medium">Certifications:</span>
-                  <span class="text-neutral-700">
+                  <span class="text-neutral-700 dark:text-neutral-300">
                     {{
                       certifications
                         .filter(({ hidden }) => !hidden)
@@ -232,7 +232,7 @@
               <li class="enumeration__item">
                 <p class="text-sm">
                   <span class="text-sm font-medium">Interests:</span>
-                  <span class="text-neutral-700">
+                  <span class="text-neutral-700 dark:text-neutral-300">
                     Guitar, Piano, Violin, Technology, Computers, Exercise, Media, History, Books,
                     Gaming
                   </span>
