@@ -9,5 +9,9 @@
 }
 
 .contact-info {
-  @apply mb-4 flex gap-2;
+  @apply flex items-baseline gap-2;
+
+  &__item {
+    @apply text-sm text-neutral-700;
+  }
 }

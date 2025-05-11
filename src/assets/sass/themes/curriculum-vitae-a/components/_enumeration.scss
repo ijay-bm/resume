@@ -10,15 +10,19 @@
 
 .enumeration {
   &__heading {
-    @apply text-base;
+    @apply text-sm text-neutral-600;
   }
 
   &__subtitle {
-    @apply text-sm;
+    @apply text-sm text-neutral-600;
+  }
+
+  &__right-subtitle {
+    @apply text-xs text-neutral-600;
   }
 
   &__subheading {
-    @apply text-base font-medium;
+    @apply text-sm font-medium;
   }
 
   &__subheading-sub {
@@ -26,6 +30,6 @@
   }
 
   &__description {
-    @apply text-sm;
+    @apply text-sm text-neutral-700;
   }
 }

@@ -7,6 +7,10 @@
       <h2 class="section__header-title">Deets</h2>
     </div>
 
+    <h1 v-if="documentStyle === DocumentStyle.CurriculumVitaeA" class="resume__header-name">
+      Ijay B. Mangili
+    </h1>
+
     <div class="section__body">
       <ul class="contact-info">
         <li class="contact-info__item section__item">
@@ -25,3 +29,11 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+import { DocumentStyle } from "@/types/resume";
+
+defineProps<{
+  documentStyle: DocumentStyle;
+}>();
+</script>

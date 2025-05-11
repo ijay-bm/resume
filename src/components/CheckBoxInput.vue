@@ -16,25 +16,19 @@
   </label>
 </template>
 
-<script setup>
-defineProps({
-  id: {
-    type: String,
-    required: true
-  },
-  text: {
-    type: String,
-    required: true
-  },
-  trueValue: {
-    default: true
-  },
-  falseValue: {
-    default: false
+<script setup lang="ts">
+withDefaults(
+  defineProps<{
+    id: string;
+    text: string;
+    trueValue: boolean;
+    falseValue: boolean;
+  }>(),
+  {
+    trueValue: true,
+    falseValue: false
   }
-});
+);
 
-const modelValue = defineModel("modelValue", {
-  required: true
-});
+const modelValue = defineModel<boolean>("modelValue", { required: true });
 </script>

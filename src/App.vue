@@ -10,10 +10,9 @@
           <h4 class="mb-2 font-bold">Document Type</h4>
           <RadioGroupInput
             :items="[
-              { label: 'Resume A', value: 'resume-a' },
-              { label: 'Resume B', value: 'resume-b' },
-              // { label: 'Resume C', value: 'resume-c' },
-              { label: 'Curriculum Vitae', value: 'curriculum-vitae-a' }
+              { label: 'Resume A', value: DocumentStyle.ResumeA },
+              { label: 'Resume B', value: DocumentStyle.ResumeB },
+              { label: 'Curriculum Vitae', value: DocumentStyle.CurriculumVitaeA }
             ]"
             name="resume-style-radio-menu"
             :modelValue="documentStyle"
@@ -49,31 +48,35 @@
           </div>
         </div>
 
-        <div v-if="documentStyle !== 'curriculum-vitae-a'">
+        <div v-if="documentStyle !== DocumentStyle.CurriculumVitaeA">
           <CheckBoxInput
             class="font-bold"
             id="hide-skill-details"
             text="Hide Skill Details"
             v-model="hideSkillDetails"
+            :true-value="true"
+            :false-value="false"
           />
         </div>
 
-        <div v-if="documentStyle !== 'curriculum-vitae-a'">
+        <div v-if="documentStyle !== DocumentStyle.CurriculumVitaeA">
           <CheckBoxInput
             class="font-bold"
             id="hide-professional-development"
             text="Hide Professional Development"
             v-model="hideProfessionalDevelopment"
+            :true-value="true"
+            :false-value="false"
           />
         </div>
 
-        <div v-if="documentStyle !== 'curriculum-vitae-a'">
+        <div v-if="documentStyle !== DocumentStyle.CurriculumVitaeA">
           <h4 class="mb-2 font-bold">Competencies</h4>
           <RadioGroupInput
             :items="[
-              { label: 'Style 1', value: 'tools-a' },
-              { label: 'Style 2', value: 'tools-b' },
-              { label: 'Hidden', value: 'hidden' }
+              { label: 'Style 1', value: ToolStyle.ToolsA },
+              { label: 'Style 2', value: ToolStyle.ToolsB },
+              { label: 'Hidden', value: ToolStyle.Hidden }
             ]"
             name="tools-style-radio-menu"
             v-model="toolsStyle"
@@ -94,25 +97,25 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from "vue";
+import type { Certification, Skill, OngoingCertification } from "./types/resume";
+import { DocumentStyle, ToolStyle } from "./types/resume";
 import CheckBoxInput from "./components/CheckBoxInput.vue";
 import Menu from "./components/Menu.vue";
 import RadioGroupInput from "./components/RadioGroupInput.vue";
 import Resume from "./components/Resume.vue";
 import ThemeSelector from "./components/ThemeSelector.vue";
 
-const documentStyle = ref(null);
-function onResumeStyleUpdateModelValue(newModelValue) {
-  if (documentStyle.value !== newModelValue) {
-    document.body.classList.remove(documentStyle.value);
-    document.body.classList.add(newModelValue);
-  }
+const documentStyle = ref<DocumentStyle>(DocumentStyle.CurriculumVitaeA);
+function onResumeStyleUpdateModelValue(newModelValue: DocumentStyle) {
+  document.body.classList.remove(documentStyle.value);
+  document.body.classList.add(newModelValue);
   documentStyle.value = newModelValue;
 }
-onResumeStyleUpdateModelValue("resume-b");
+onResumeStyleUpdateModelValue(DocumentStyle.CurriculumVitaeA);
 
-const certifications = ref([
+const certifications = ref<Certification[]>([
   {
     type: "Certificate of Completion",
     monthYear: "July 2024",
@@ -219,15 +222,15 @@ const certifications = ref([
   }
 ]);
 
-const skills = ref([
+const skills = ref<Skill[]>([
   {
     name: "Full-Stack Web Development",
-    shortname: "Full-Stack Development",
+    shortName: "Full-Stack Development",
     rating: 8,
     subSkills: [
       {
         name: "Frontend Web Development",
-        shortname: "Frontend Development",
+        shortName: "Frontend Development",
         rating: 8,
         experiences: [
           { name: "Vue", rating: 8 },
@@ -243,7 +246,7 @@ const skills = ref([
       },
       {
         name: "Backend Web Development",
-        shortname: "Backend Development",
+        shortName: "Backend Development",
         rating: 8,
         experiences: [
           { name: "Laravel", rating: 8 },
@@ -396,12 +399,12 @@ const skills = ref([
   // }
 ]);
 
-const toolsStyle = ref("hidden");
+const toolsStyle = ref<ToolStyle>(ToolStyle.Hidden);
 
 const hideSkillDetails = ref(false);
 
 const hideProfessionalDevelopment = ref(true);
-const ongoingCertifications = ref([
+const ongoingCertifications = ref<OngoingCertification[]>([
   {
     // title: "Ultimate AWS Certified Solutions Architect Associate SAA-C03",
     title: "AWS Certified Solutions Architect Associate SAA-C03",

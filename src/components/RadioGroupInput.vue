@@ -6,12 +6,12 @@
           type="radio"
           class="inline-block size-6 cursor-pointer appearance-none rounded-full border-2 border-solid border-neutral-500 transition-all checked:border-gold-500"
           :name="name"
-          :id="item.value || item"
-          :value="item.value || item"
+          :id="item.value"
+          :value="item.value"
           v-model="modelValue"
         />
-        <label :for="item.value || item" class="block cursor-pointer">
-          {{ item.label || item }}
+        <label :for="item.value" class="block cursor-pointer">
+          {{ item.label }}
         </label>
       </div>
     </div>
@@ -28,25 +28,20 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { onMounted, ref, watch } from "vue";
 
 const modelValue = defineModel("modelValue", { required: true });
 
-const props = defineProps({
-  items: {
-    type: Array
-  },
-  name: {
-    type: String,
-    required: true
-  }
-});
+const props = defineProps<{
+  items: Array<{ label: string; value: string }>;
+  name: string;
+}>();
 
 const dotTop = ref(0);
 const dotLeft = ref(0);
 
-const dot = ref(null);
+const dot = ref<HTMLElement | null>(null);
 function triggerDotLaunchingAnimation() {
   if (dot.value) {
     dot.value.animate(
@@ -69,8 +64,8 @@ function triggerDotLaunchingAnimation() {
 
 function modelValueChanged() {
   if (modelValue.value) {
-    const selectedInput = document.querySelector(`input[name="${props.name}"]:checked`);
-    if (selectedInput) {
+    const selectedInput = document.querySelector(`input[name="${props.name}"]:checked`) as HTMLElement;
+    if (selectedInput && dot.value) {
       const { offsetHeight: dotOffsetHeight, offsetWidth: dotOffsetWidth } = dot.value;
 
       const {

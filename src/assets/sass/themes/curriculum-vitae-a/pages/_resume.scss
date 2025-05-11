@@ -2,11 +2,12 @@
   @apply relative mx-auto flex h-full min-h-[1056px] w-[816px];
 
   &__left {
-    @apply relative bg-neutral-100 text-neutral-800 dark:bg-neutral-900 dark:text-neutral-100;
+    @apply relative bg-white text-neutral-800 dark:bg-neutral-900 dark:text-neutral-100;
   }
 
   &__header-name {
-    @apply font-oxygen text-2xl;
+    @apply font-oxygen text-xl;
+    letter-spacing: 0.2px;
   }
 
   &__right {
@@ -17,11 +18,6 @@
   &__left {
     @apply w-full p-8;
   }
-
-  &__header-name {
-    @apply mb-1;
-  }
-
   &__right {
     width: 0;
     overflow: hidden;

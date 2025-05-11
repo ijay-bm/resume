@@ -20,7 +20,8 @@
       @apply inline text-xs;
     }
 
-    &__subtitle {
+    &__subtitle,
+    &__right-subtitle {
       @apply inline text-xs;
     }
   }
@@ -31,15 +32,16 @@
     @apply hidden;
   }
 
-  .section__body {
-  }
-
   .section__item {
   }
 }
 
 .sections {
-  @apply space-y-6;
+  @apply space-y-4;
+}
+
+.section.section--work {
+  // margin-top: 0 !important;
 }
 
 .section {
@@ -58,12 +60,6 @@
 
 .section--about {
   @apply hidden;
-}
-
-// .section > div.section__body > .section__item--extension {
-//   @apply mt-0;
-// }
-.section--cv-ski {
 }
 
 .resume__left .section--certifications {

@@ -3,12 +3,15 @@
     class="dark-button absolute -left-10 -top-1 size-10 rounded-full bg-transparent p-2 print:hidden"
     @click="setTheme"
   >
-    <span v-if="currentStage === 'light'" class="flex items-center justify-center text-gold-500">
+    <span
+      v-if="currentStage === ThemeStage.Light"
+      class="flex items-center justify-center text-gold-500"
+    >
       <ILineMdSunnyLoop />
     </span>
 
     <span
-      v-else-if="currentStage === 'auto'"
+      v-else-if="currentStage === ThemeStage.Auto"
       class="flex items-center justify-center text-gold-500"
     >
       <ILineMdSunnyLoop />
@@ -16,7 +19,7 @@
     </span>
 
     <span
-      v-else-if="currentStage === 'dark'"
+      v-else-if="currentStage === ThemeStage.Dark"
       class="flex items-center justify-center text-gold-500"
     >
       <ILineMdMoonTwotoneLoop />
@@ -24,8 +27,9 @@
   </button>
 </template>
 
-<script setup>
-import { useTheme } from "../composables/useTheme";
+<script setup lang="ts">
+import { useTheme } from "../composables/useTheme.ts";
+import { Theme, ThemeStage } from "../types/theme";
 
 const { theme, stages, stageIndex, currentStage } = useTheme();
 
@@ -38,11 +42,11 @@ function setTheme() {
   const newStage = stages.value[stageIndex.value];
 
   document.documentElement.classList.remove(theme.value);
-  if (newStage === "auto") {
+  if (newStage === ThemeStage.Auto) {
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    theme.value = prefersDark ? "dark" : "light";
+    theme.value = prefersDark ? Theme.Dark : Theme.Light;
   } else {
-    theme.value = newStage;
+    theme.value = newStage === ThemeStage.Light ? Theme.Light : Theme.Dark;
   }
   document.documentElement.classList.add(theme.value);
 }

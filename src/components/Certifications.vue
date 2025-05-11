@@ -39,13 +39,11 @@
   </div>
 </template>
 
-<script setup>
-defineProps({
-  certifications: {
-    type: Array
-  },
-  simplified: {
-    type: Boolean
-  }
-});
+<script setup lang="ts">
+import type { Certification } from "@/types/resume";
+
+defineProps<{
+  certifications: Certification[];
+  simplified: boolean;
+}>();
 </script>

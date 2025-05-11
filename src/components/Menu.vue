@@ -11,12 +11,10 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 defineProps({
   transparentBg: {
     type: Boolean
   }
 });
 </script>
-
-<style lang="scss" scoped></style>
