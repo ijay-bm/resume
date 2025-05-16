@@ -251,7 +251,7 @@
 
       <div
         v-if="documentStyle !== DocumentStyle.CurriculumVitaeA"
-        class="invisible absolute -bottom-3 w-full py-2 text-xs text-neutral-700 print:visible"
+        class="invisible absolute bottom-0 w-full py-2 text-xs text-neutral-700 print:visible"
       >
         <div class="mx-auto w-max text-center">
           For the best viewing experience, visit the web version of this document:
@@ -266,7 +266,7 @@
 
     <div
       v-if="documentStyle === DocumentStyle.CurriculumVitaeA"
-      class="invisible absolute -bottom-3 w-full py-2 text-xs text-neutral-700 print:visible"
+      class="invisible absolute bottom-0 w-full py-2 text-xs text-neutral-700 print:visible"
     >
       <div class="mx-auto w-max text-center">
         For the best viewing experience, visit the web version of this document:

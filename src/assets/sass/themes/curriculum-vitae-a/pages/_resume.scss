@@ -1,5 +1,5 @@
 .resume {
-  @apply relative mx-auto flex h-full min-h-[1056px] w-[816px];
+  @apply relative mx-auto flex min-h-svh h-full w-[816px];
 
   &__left {
     @apply relative bg-white text-neutral-800 dark:bg-neutral-900 dark:text-neutral-100;
