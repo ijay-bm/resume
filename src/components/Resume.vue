@@ -139,7 +139,7 @@
             <div class="enumeration section__item">
               <div class="enumeration__row">
                 <span class="enumeration__subheading">On-The-Job Trainee</span>
-                <span class="enumeration__right-subtitle">Baguio, Philippines</span>
+                <span class="enumeration__right-subtitle">Philippines</span>
               </div>
 
               <div class="enumeration__row">

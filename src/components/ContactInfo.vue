@@ -23,7 +23,7 @@
         </li>
         <li class="contact-info__item section__item">
           <IMdiLocation />
-          <span>Baguio, Philippines</span>
+          <span>Philippines</span>
         </li>
       </ul>
     </div>
