@@ -22,11 +22,9 @@
 
           <div class="section__body section__item">
             <p class="about-me-content">
-              Full-Stack Web Developer with over 4 years of experience spanning front-end design to
-              DevOps and cloud management. Proficient in technologies ranging from CSS to Docker
-              configurations, focusing on Vue and Laravel. Demonstrable ability to deliver
-              high-quality solutions across projects, from Learning Management Systems to QR-based
-              Attendance Monitoring Systems.
+              Full-Stack Web Developer with 4+ years of experience spanning front-end design,
+              API development, database design, DevOps, and AWS cloud management. Primarily work
+              with Laravel and Vue.
             </p>
           </div>
         </div>
@@ -139,7 +137,7 @@
             <div class="enumeration section__item">
               <div class="enumeration__row">
                 <span class="enumeration__subheading">On-The-Job Trainee</span>
-                <span class="enumeration__right-subtitle">Philippines</span>
+                <span class="enumeration__right-subtitle">Baguio, Philippines</span>
               </div>
 
               <div class="enumeration__row">
@@ -251,7 +249,7 @@
 
       <div
         v-if="documentStyle !== DocumentStyle.CurriculumVitaeA"
-        class="invisible absolute bottom-0 w-full py-2 text-xs text-neutral-700 print:visible"
+        class="invisible absolute bottom-0 w-full py-2 text-xs text-neutral-700 print:hidden"
       >
         <div class="mx-auto w-max text-center">
           For the best viewing experience, visit the web version of this document:
@@ -266,7 +264,7 @@
 
     <div
       v-if="documentStyle === DocumentStyle.CurriculumVitaeA"
-      class="invisible absolute bottom-0 w-full py-2 text-xs text-neutral-700 print:visible"
+      class="invisible absolute bottom-0 w-full py-2 text-xs text-neutral-700 print:hidden"
     >
       <div class="mx-auto w-max text-center">
         For the best viewing experience, visit the web version of this document:
