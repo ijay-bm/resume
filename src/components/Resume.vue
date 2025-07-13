@@ -22,9 +22,9 @@
 
           <div class="section__body section__item">
             <p class="about-me-content">
-              Full-Stack Web Developer with 4+ years of experience spanning front-end design,
-              API development, database design, DevOps, and AWS cloud management. Primarily work
-              with Laravel and Vue.
+              Full-Stack Web Developer with 4+ years of experience spanning front-end design, API
+              development, database design, DevOps, and AWS cloud management. Primarily work with
+              Laravel and Vue.
             </p>
           </div>
         </div>
@@ -50,22 +50,26 @@
               </div>
 
               <ul class="enumeration__description">
+                <!-- <li class="enumeration__description-item">
+                  Developing backend APIs and CMS for LifeStyler, a job-matching platform connecting workers
+                  with short-term opportunities in remote Australia
+                </li> -->
                 <li class="enumeration__description-item">
-                  Designed and implemented backend APIs and database schemas with Laravel for a
-                  personal safety application that handles complex check-in scheduling and alert
-                  systems consumed by an iOS app
+                  Designed and implemented backend APIs and database schemas with Laravel for Solo
+                  Alert. A personal safety application that handles complex check-in scheduling and
+                  alert systems consumed by an iOS app
                 </li>
                 <li class="enumeration__description-item">
                   Vue WebApp Development and API Integration for an excursion planning platform
+                  called xcursionplanner
                 </li>
                 <li class="enumeration__description-item">
-                  Collaborated with FE/BE developers, iOS developers, designers and project managers
-                  to ensure seamless integration between frontend, backend and mobile platforms, and
-                  seamless development
+                  Collaborated with develpers (mobile & web), designers and project managers to
+                  ensure integration between platforms and development
                 </li>
                 <li class="enumeration__description-item">
-                  Participated in full product development lifecycle including planning, design
-                  reviews, implementation, and deployment
+                  Participated in product development lifecycle including design, develpment,
+                  testing, and deployment
                 </li>
               </ul>
             </div>
