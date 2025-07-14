@@ -50,19 +50,19 @@
               </div>
 
               <ul class="enumeration__description">
-                <!-- <li class="enumeration__description-item">
-                  Developing backend APIs and CMS for LifeStyler, a job-matching platform connecting workers
-                  with short-term opportunities in remote Australia
-                </li> -->
+                <li class="enumeration__description-item">
+                  Developing Laravel backend APIs and CMS for LifeStyler, a job-matching platform
+                  connecting workers with short-term opportunities in Australia
+                </li>
                 <li class="enumeration__description-item">
                   Designed and implemented backend APIs and database schemas with Laravel for Solo
-                  Alert. A personal safety application that handles complex check-in scheduling and
+                  Alert, a personal safety application that handles complex check-in scheduling and
                   alert systems consumed by an iOS app
                 </li>
                 <li class="enumeration__description-item">
-                  Vue WebApp Development and API Integration for an excursion planning platform
-                  called xcursionplanner
-                </li>
+                  Developed xcursionplanner, a Vue WebApp with integrated APIs used in planning an
+                  excursion for Australian schools
+                </li>   
                 <li class="enumeration__description-item">
                   Collaborated with develpers (mobile & web), designers and project managers to
                   ensure integration between platforms and development
