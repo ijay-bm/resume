@@ -82,7 +82,7 @@
 
               <div class="enumeration__row">
                 <span class="enumeration__heading">TheChalkboard Inc.</span>
-                <span class="enumeration__right-subtitle">Nov 2023 — Present</span>
+                <span class="enumeration__right-subtitle">Nov 2023 — Jul 2025</span>
               </div>
 
               <ul class="enumeration__description">
