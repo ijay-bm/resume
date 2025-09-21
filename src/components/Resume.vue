@@ -51,7 +51,12 @@
 
               <ul class="enumeration__description">
                 <li class="enumeration__description-item">
-                  Developing Laravel backend APIs and CMS for LifeStyler, a job-matching platform
+                  Supported development of new features for a mature project called Blended Services
+                  that indicate a tree's maintenance frequency and status in addition to supporting
+                  collaborative maintenance of trees
+                </li>
+                <li class="enumeration__description-item">
+                  Developer of a Laravel backend API and CMS for LifeStyler, a job-matching platform
                   connecting workers with short-term opportunities in Australia
                 </li>
                 <li class="enumeration__description-item">
@@ -62,9 +67,9 @@
                 <li class="enumeration__description-item">
                   Developed xcursionplanner, a Vue WebApp with integrated APIs used in planning an
                   excursion for Australian schools
-                </li>   
+                </li>
                 <li class="enumeration__description-item">
-                  Collaborated with develpers (mobile & web), designers and project managers to
+                  Collaborated with developers (mobile & web), designers and project managers to
                   ensure integration between platforms and development
                 </li>
                 <li class="enumeration__description-item">
