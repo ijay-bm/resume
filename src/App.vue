@@ -20,7 +20,7 @@
           />
         </div>
 
-        <div>
+        <!-- <div>
           <h4
             class="font-bold"
             :class="[
@@ -46,9 +46,9 @@
               </p>
             </button>
           </div>
-        </div>
+        </div> -->
 
-        <div v-if="documentStyle !== DocumentStyle.CurriculumVitaeA">
+        <!-- <div v-if="documentStyle !== DocumentStyle.CurriculumVitaeA">
           <CheckBoxInput
             class="font-bold"
             id="hide-skill-details"
@@ -81,7 +81,7 @@
             name="tools-style-radio-menu"
             v-model="toolsStyle"
           />
-        </div>
+        </div> -->
       </div>
     </Menu>
 
@@ -101,7 +101,7 @@
 import { ref } from "vue";
 import type { Certification, Skill, OngoingCertification } from "./types/resume";
 import { DocumentStyle, ToolStyle } from "./types/resume";
-import CheckBoxInput from "./components/CheckBoxInput.vue";
+// import CheckBoxInput from "./components/CheckBoxInput.vue";
 import Menu from "./components/Menu.vue";
 import RadioGroupInput from "./components/RadioGroupInput.vue";
 import Resume from "./components/Resume.vue";

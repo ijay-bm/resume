@@ -46,7 +46,7 @@
 
               <div class="enumeration__row">
                 <span class="enumeration__heading">Appetiser Apps</span>
-                <span class="enumeration__right-subtitle">Nov 2024 — Present</span>
+                <span class="enumeration__right-subtitle">Nov 2024 — Sep 2025</span>
               </div>
 
               <ul class="enumeration__description">
@@ -216,8 +216,8 @@
                   <span class="text-neutral-700 dark:text-neutral-300">
                     Full-Stack Web Development (Vue, Laravel), Principles (OOP, SOLID, DRY), API
                     Development (REST, Resource), Integrations (APIs, SDKs, Payment Processors,
-                    Video Infrastructures), Cloud Services (AWS), Containerization (Docker), Version
-                    Control (Git, Bitbucket, Gitlab), CICD pipelines, Deployments
+                    Video Infrastructures), Cloud Services (AWS), Version Control (Git, Bitbucket,
+                    Gitlab), Deployments
                   </span>
                 </p>
               </li>
@@ -256,7 +256,7 @@
         Guitar, Piano, Violin, Technology, Computers, Exercise, Media, History, Books, Gaming
       </div>
 
-      <div
+      <!-- <div
         v-if="documentStyle !== DocumentStyle.CurriculumVitaeA"
         class="invisible absolute bottom-0 w-full py-2 text-xs text-neutral-700 print:hidden"
       >
@@ -267,11 +267,11 @@
             https://ijay-bm.github.io/resume/
           </a>
         </div>
-      </div>
+      </div> -->
     </div>
     <!-- end of resume__left -->
 
-    <div
+    <!-- <div
       v-if="documentStyle === DocumentStyle.CurriculumVitaeA"
       class="invisible absolute bottom-0 w-full py-2 text-xs text-neutral-700 print:hidden"
     >
@@ -282,7 +282,7 @@
           https://ijay-bm.github.io/resume/
         </a>
       </div>
-    </div>
+    </div> -->
 
     <!-- start of resume__right -->
     <div v-if="documentStyle !== DocumentStyle.CurriculumVitaeA" class="resume__right">
