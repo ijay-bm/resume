@@ -456,12 +456,12 @@ const props = withDefaults(
   }
 );
 
-export type FlattendSkill = {
+export type FlattenedSkill = {
   name: string;
   rating: number;
 };
 
-const flattenedSkills = computed<FlattendSkill[]>(() => {
+const flattenedSkills = computed<FlattenedSkill[]>(() => {
   return [
     ...props.skills.flatMap(({ name, shortName, rating, subSkills }) => {
       if (subSkills?.length) {
