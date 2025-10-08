@@ -46,7 +46,7 @@
 
               <div class="enumeration__row">
                 <span class="enumeration__heading">Appetiser Apps</span>
-                <span class="enumeration__right-subtitle">Nov 2024 — Sep 2025</span>
+                <span class="enumeration__right-subtitle">Nov 2024 — Present</span>
               </div>
 
               <ul class="enumeration__description">
