@@ -234,14 +234,14 @@ const skills = ref<Skill[]>([
         rating: 8,
         experiences: [
           { name: "Vue", rating: 8 },
+          { name: "Nuxt", rating: 7 },
           { name: "JavaScript", rating: 8 },
           { name: "HTML", rating: 7 },
           { name: "CSS/SASS", rating: 8 },
           { name: "Tailwind CSS", rating: 7 },
-          { name: "Bootstrap", rating: 4 },
-          { name: "SPA development", rating: 7 },
           { name: "Responsive Design", rating: 6 },
-          { name: "BEM Methodology", rating: 5 }
+          { name: "BEM Methodology", rating: 4 },
+          { name: "Bootstrap", rating: 1 }
         ]
       },
       {
@@ -251,13 +251,14 @@ const skills = ref<Skill[]>([
         experiences: [
           { name: "Laravel", rating: 8 },
           { name: "PHP", rating: 7 },
-          { name: "Postman", rating: 3 },
-          { name: "Bruno", rating: 6 },
+          { name: "Filament", rating: 7 },
+          { name: "Bruno", rating: 7 },
+          { name: "Postman", rating: 1 },
+          { name: "MJML", rating: 1 }
           // { name: "Laravel ORM", rating: 7 },
           // { name: "Laravel Migrations", rating: 7 },
-          { name: "MJML", rating: 1 },
           // { name: "Laravel Blade", rating: 3 },
-          { name: "MySQL/MariaDB", rating: 6 }
+          // { name: "MySQL/MariaDB", rating: 7 }
         ]
       }
       // {
@@ -271,15 +272,15 @@ const skills = ref<Skill[]>([
     //   { name: "Version Control (Git, Bitbucket)", rating: 7 }
     // ]
   },
-  {
-    name: "API Development",
-    rating: 7,
-    experiences: [
-      { name: "RESTful API Design", rating: 7 },
-      { name: "Resource-Oriented API Design", rating: 7 },
-      { name: "Laravel MVC API development", rating: 7 }
-    ]
-  },
+  // {
+  //   name: "API Development",
+  //   rating: 7,
+  //   experiences: [
+  //     { name: "RESTful API Design", rating: 7 },
+  //     { name: "Resource-Oriented API Design", rating: 7 },
+  //     { name: "Laravel MVC API development", rating: 7 }
+  //   ]
+  // },
   // { name: "Static Site Generation (SSG)", rating: 1 },
   // { name: "Server-Side Rendering (SSR)", rating: 1 },
   // {
@@ -291,15 +292,15 @@ const skills = ref<Skill[]>([
   //     { name: "SourceTree", rating: 2 }
   //   ]
   // }
-  {
-    name: "Development Approach",
-    rating: 7,
-    experiences: [
-      { name: "Principles (OOP, SOLID, DRY)", rating: 7 },
-      { name: "Patterns (Service, DTO,  MVC)", rating: 7 },
-      { name: "FE Methodologies (Atomic, BEM, Flat, Modules, 7-1 SASS Pattern)", rating: 6 }
-    ]
-  },
+  // {
+  //   name: "Development Approach",
+  //   rating: 7,
+  //   experiences: [
+  //     { name: "Principles (SOLID, DRY)", rating: 7 },
+  //     { name: "Patterns (Service, DTO,  MVC)", rating: 7 },
+  //     { name: "FE Methodologies (Atomic, BEM, Flat, Modules, 7-1 SASS Pattern)", rating: 6 }
+  //   ]
+  // },
 
   // {
   //   name: "Development Tools",
@@ -321,14 +322,16 @@ const skills = ref<Skill[]>([
     name: "Integrations",
     rating: 7,
     experiences: [
-      { name: "APIs & SDKs", rating: 6 },
-      { name: "Payment Processors", rating: 4 },
-      { name: "Audio/Video Services", rating: 4 },
-      { name: "WebSockets", rating: 3 },
-      { name: "Geolocation Services", rating: 3 },
+      { name: "APIs & SDKs", rating: 7 },
+      { name: "Google Places", rating: 1 },
+      // { name: "iOS In-App Purchases", rating: 1 },
+      { name: "Payment Processors", rating: 1 },
+      { name: "Audio/Video Services", rating: 1 },
+      { name: "WebSockets", rating: 1 },
+      { name: "Geolocation Services", rating: 1 },
       {
         name: "Document Generation (PDF, XLS, MJML Email)",
-        rating: 2
+        rating: 1
       }
     ]
   },
@@ -337,7 +340,7 @@ const skills = ref<Skill[]>([
     name: "Database Management",
     rating: 8,
     experiences: [
-      { name: "DBeaver", rating: 4 },
+      { name: "DBeaver", rating: 3 },
       { name: "SQL (MySQL/MariaDB)", rating: 7 },
       { name: "Laravel ORM", rating: 7 },
       { name: "Laravel Migrations", rating: 7 }
@@ -348,23 +351,26 @@ const skills = ref<Skill[]>([
     name: "Project Management",
     rating: 6,
     experiences: [
-      { name: "Atlassian Jira & Bitbucket", rating: 2 },
+      { name: "Atlassian Jira & Bitbucket", rating: 1 },
       { name: "Gitlab", rating: 6 },
-      { name: "ClickUp", rating: 6 },
+      { name: "ClickUp", rating: 7 },
       { name: "Coda", rating: 6 }
     ]
   },
   {
     name: "Cloud Services",
-    rating: 6,
+    rating: 5,
     experiences: [
       { name: "AWS EC2 (instances, EBS, ALB, target groups)", shortName: "AWS EC2", rating: 5 },
-      { name: "AWS IAM", rating: 5 },
-      { name: "AWS Route 53", rating: 5 },
-      { name: "AWS Certificate Manager", rating: 5 },
-      { name: "AWS CodeDeploy", rating: 5 },
-      { name: "AWS S3", rating: 5 },
-      { name: "AWS RDS", rating: 2 }
+      { name: "AWS SES", rating: 5 },
+      { name: "AWS SNS", rating: 3 },
+      { name: "AWS CodeDeploy", rating: 1 },
+      { name: "AWS Parameter Store", rating: 1 },
+      { name: "AWS IAM", rating: 1 },
+      { name: "AWS Route 53", rating: 1 },
+      { name: "AWS Certificate Manager", rating: 1 },
+      { name: "AWS S3", rating: 1 },
+      { name: "AWS RDS", rating: 1 }
     ]
   },
   {
@@ -372,11 +378,11 @@ const skills = ref<Skill[]>([
     rating: 5,
     experiences: [
       { name: "Docker", rating: 5 },
+      { name: "AWS", rating: 5 },
       { name: "Kubernetes", rating: 1 },
-      { name: "Bitbucket Pipelines", rating: 6 },
-      { name: "AWS", rating: 6 },
-      { name: "Manual Deployment", rating: 6 },
-      { name: "WordPress Deployment", rating: 6 }
+      { name: "Bitbucket Pipelines", rating: 1 },
+      { name: "Manual Deployment", rating: 1 },
+      { name: "WordPress Deployment", rating: 1 }
     ]
   },
 
@@ -384,9 +390,9 @@ const skills = ref<Skill[]>([
     name: "Server Administration",
     rating: 3,
     experiences: [
-      { name: "Amazon Linux 2023", rating: 5 },
-      { name: "Ubuntu", rating: 2 },
-      { name: "RDM", rating: 2 }
+      { name: "Ubuntu", rating: 4 },
+      { name: "Amazon Linux 2023", rating: 1 },
+      { name: "RDM (tool)", rating: 1 }
     ]
     // experiences: ["cron", "supervisor", "httpd"]
   }

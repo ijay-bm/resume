@@ -51,13 +51,17 @@
 
               <ul class="enumeration__description">
                 <li class="enumeration__description-item">
-                  Supported development of new features for a mature project called Blended Services
+                  <!-- Supported development of new features for a mature project called Blended Services
                   that indicate a tree's maintenance frequency and status in addition to supporting
-                  collaborative maintenance of trees
+                  collaborative maintenance of trees -->
+                  Contributed features to Blended Services, a tree maintenance platform tracking frequency, status, and
+                  collaborative workflows
                 </li>
                 <li class="enumeration__description-item">
-                  Developer of a Laravel backend API and CMS for LifeStyler, a job-matching platform
-                  connecting workers with short-term opportunities in Australia
+                  <!-- Developer of a Laravel backend API and CMS for LifeStyler, a job-matching platform
+                  connecting workers with short-term opportunities in Australia -->
+                  Built Laravel backend API and CMS for LifeStyler, a job-matching platform for short-term work in
+                  Australia
                 </li>
                 <li class="enumeration__description-item">
                   Designed and implemented backend APIs and database schemas with Laravel for Solo
@@ -79,7 +83,7 @@
               </ul>
             </div>
 
-            <div class="enumeration section__item section__item--extended">
+            <div class="enumeration section__item">
               <div class="enumeration__row">
                 <span class="enumeration__subheading">Intermediate Web Developer</span>
                 <span class="enumeration__right-subtitle">Remote (Pasig City, Metro Manila)</span>
@@ -106,12 +110,22 @@
               </ul>
             </div>
 
-            <div class="enumeration section__item section__item--extension">
-              <div class="enumeration__row">
+            <div class="enumeration section__item">
+              <!-- <div class="enumeration__row">
                 <span class="enumeration__subheading">
                   Associate Web Developer
                   <span class="enumeration__subheading-sub">| Jun 2021 — Sep 2023</span>
                 </span>
+              </div> -->
+
+              <div class="enumeration__row">
+                <span class="enumeration__subheading">Associate Web Developer</span>
+                <span class="enumeration__right-subtitle">Remote (Pasig City, Metro Manila)</span>
+              </div>
+
+              <div class="enumeration__row">
+                <span class="enumeration__heading">TheChalkboard Inc.</span>
+                <span class="enumeration__right-subtitle">Jun 2021 — Sep 2023</span>
               </div>
 
               <ul class="enumeration__description">
@@ -192,15 +206,10 @@
         <!-- v-if="documentStyle === DocumentStyle.ResumeB" -->
         <Certifications :certifications="certifications" :simplified="true" />
         <!-- documentStyle === DocumentStyle.ResumeB &&  -->
-        <OngoingCertifications
-          v-if="documentStyle === DocumentStyle.ResumeB && !hideProfessionalDevelopment"
-          :ongoingCertifications="ongoingCertifications"
-        />
+        <OngoingCertifications v-if="documentStyle === DocumentStyle.ResumeB && !hideProfessionalDevelopment"
+          :ongoingCertifications="ongoingCertifications" />
 
-        <div
-          v-if="documentStyle === DocumentStyle.CurriculumVitaeA"
-          class="section section--cv-ski"
-        >
+        <div v-if="documentStyle === DocumentStyle.CurriculumVitaeA" class="section section--cv-ski">
           <div class="section__header">
             <span class="section__header-icon">
               <ITokenScroll />
@@ -214,17 +223,73 @@
                 <p class="text-sm">
                   <span class="text-sm font-medium">Skills:</span>
                   <span class="text-neutral-700 dark:text-neutral-300">
-                    Full-Stack Web Development (Vue, Laravel), Principles (OOP, SOLID, DRY), API
+                    Full-Stack Web Development (Laravel, PHP, Vue, Nuxt, Vuetify, SASS, Tailwind), Integrations (APIs,
+                    SDKs), Database Management, Project Management, Cloud Services (AWS), Containerization (Docker),
+                    Deployments, Server Administration
+                  </span>
+                  <!-- <ul class="enumeration">
+                  <li v-for="skill in skills" :key="skill.name" class="enumeration__item">
+                    <span class="text-neutral-700 dark:text-neutral-300">{{ skill.name }}</span> -
+                    <span class="text-neutral-600 dark:text-neutral-400">{{skill.subSkills
+                      ?.map(({ name }) => name)
+                      ?.join(", ")}}</span>
+                    <span class="text-neutral-600 dark:text-neutral-400">{{skill.experiences
+                      ?.map(({ name }) => name)
+                      ?.join(", ")}}</span>
+                  </li>
+
+                </ul> -->
+                  <!-- Full-Stack Web Development (Vue, Laravel), Principles (OOP, SOLID, DRY), API
                     Development (REST, Resource), Integrations (APIs, SDKs, Payment Processors,
                     Video Infrastructures), Cloud Services (AWS), Version Control (Git, Bitbucket,
-                    Gitlab), Deployments
-                  </span>
+                    Gitlab), Deployments -->
+                  <!-- COMMENT TODO - THIS SEEMS TOO LONG -->
+                  <!-- {{
+                      (() => {
+                        const yeet = skills.map((skill) => {
+                          let yeet = skill.name;
+
+                          const hasSubSkills = !!skill.subSkills?.length;
+                          const hasExperiences = !!skill.experiences?.length;
+
+                          if (hasSubSkills || hasExperiences) {
+                            yeet += " (";
+                          }
+
+                          if (hasSubSkills) {
+                            const implodedSubSkills = skill.subSkills
+                              ?.map(({ name }) => name)
+                              ?.join(", ");
+                            yeet += implodedSubSkills;
+                          }
+
+                          if (hasExperiences) {
+                            const implodedExperiences = skill.experiences
+                              ?.map(({ name }) => name)
+                              ?.join(", ");
+                            yeet += implodedExperiences;
+                          }
+
+                          if (hasSubSkills || hasExperiences) {
+                            yeet += ")";
+                          }
+
+                          return yeet;
+                        });
+
+                        return yeet.join(", ");
+                      })()
+                    }} -->
+
+                  <!-- Full-Stack Development (Vue, Nuxt, Laravel, PHP), API Development & Integrations
+                    (RESTful APIs, Payment Processors, WebSockets), Cloud & DevOps (AWS EC2/S3/RDS,
+                    Docker, Linux), Database Design (MySQL, Laravel ORM) -->
                 </p>
               </li>
 
               <li class="enumeration__item">
                 <p class="text-sm">
-                  <span class="text-sm font-medium">Certifications:</span>
+                  <span class="text-sm font-medium">Certifications: </span>
                   <span class="text-neutral-700 dark:text-neutral-300">
                     {{
                       certifications
@@ -292,10 +357,7 @@
 
       <!-- start of sections -->
       <div class="sections">
-        <ContactInfo
-          v-if="documentStyle === DocumentStyle.ResumeB"
-          :documentStyle="documentStyle"
-        />
+        <ContactInfo v-if="documentStyle === DocumentStyle.ResumeB" :documentStyle="documentStyle" />
 
         <div class="section section--skills">
           <div class="section__header">
@@ -307,54 +369,35 @@
 
           <div class="section__body">
             <div class="skills">
-              <div
-                v-for="(skill, skillIndex) in skills"
-                :key="skillIndex"
-                class="skills__item section__item"
-              >
+              <div v-for="(skill, skillIndex) in skills" :key="skillIndex" class="skills__item section__item">
                 <div class="skills__name">
                   {{ skill.name }}
                 </div>
                 <div class="skills__item-details">
-                  <ul
-                    v-if="skill.subSkills?.length && !hideSkillDetails"
-                    class="skills__item-sub-skills"
-                  >
+                  <ul v-if="skill.subSkills?.length && !hideSkillDetails" class="skills__item-sub-skills">
                     <li v-for="(subSkill, subSkillIndex) in skill.subSkills" :key="subSkillIndex">
                       <span class="block text-xs">{{ subSkill.name }}</span>
-                      <span
-                        class="block text-[0.65rem] text-neutral-600 dark:text-neutral-400"
-                        v-if="subSkill.experiences?.length"
-                      >
-                        {{ subSkill.experiences?.map(({ name }) => name).join(", ") }}
+                      <span class="block text-[0.65rem] text-neutral-600 dark:text-neutral-400"
+                        v-if="subSkill.experiences?.length">
+                        {{subSkill.experiences?.map(({ name }) => name).join(", ")}}
                       </span>
-                      <span
-                        class="skills__bar mt-[1px]"
-                        :class="[
-                          {
-                            'mb-2': subSkillIndex < skill.subSkills?.length - 1
-                          }
-                        ]"
-                        :data-percent="subSkill.rating * 10"
-                      >
+                      <span class="skills__bar mt-[1px]" :class="[
+                        {
+                          'mb-2': subSkillIndex < skill.subSkills?.length - 1
+                        }
+                      ]" :data-percent="subSkill.rating * 10">
                         <span class="skills__percentage"></span>
                       </span>
                     </li>
                   </ul>
 
-                  <span
-                    v-if="skill.experiences?.length && !hideSkillDetails"
-                    class="block text-[0.65rem] text-neutral-600 dark:text-neutral-400"
-                  >
-                    {{ skill.experiences?.map(({ name }) => name).join(", ") }}
+                  <span v-if="skill.experiences?.length && !hideSkillDetails"
+                    class="block text-[0.65rem] text-neutral-600 dark:text-neutral-400">
+                    {{skill.experiences?.map(({ name }) => name).join(", ")}}
                   </span>
                 </div>
 
-                <span
-                  v-if="!skill.subSkills?.length"
-                  class="skills__bar mt-[1px]"
-                  :data-percent="skill.rating * 10"
-                >
+                <span v-if="!skill.subSkills?.length" class="skills__bar mt-[1px]" :data-percent="skill.rating * 10">
                   <span class="skills__percentage"></span>
                 </span>
               </div>
@@ -372,11 +415,7 @@
 
           <div class="section__body">
             <ul class="skills">
-              <li
-                v-for="({ name, rating }, index) in flattenedSkills"
-                :key="index"
-                class="skills__item section__item"
-              >
+              <li v-for="({ name, rating }, index) in flattenedSkills" :key="index" class="skills__item section__item">
                 <span class="skills__name">{{ name }}</span>
                 <span v-if="rating" class="skills__bar" :data-percent="rating * 10">
                   <span class="skills__percentage"></span>
@@ -408,16 +447,13 @@
       <div v-if="toolsStyle === 'tools-b'" class="tools">
         <strong>Competencies:</strong>
         <span>
-          {{ flattenedSkills.map(({ name }) => name).join(", ") }}
+          {{flattenedSkills.map(({ name }) => name).join(", ")}}
         </span>
       </div>
 
       <div class="sections">
-        <OngoingCertifications
-          v-if="documentStyle !== DocumentStyle.ResumeB && !hideProfessionalDevelopment"
-          :ongoingCertifications="ongoingCertifications"
-          simplified
-        />
+        <OngoingCertifications v-if="documentStyle !== DocumentStyle.ResumeB && !hideProfessionalDevelopment"
+          :ongoingCertifications="ongoingCertifications" simplified />
       </div>
     </div>
     <!-- end of resume__right -->

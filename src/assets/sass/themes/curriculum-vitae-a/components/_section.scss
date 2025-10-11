@@ -50,7 +50,8 @@
   }
 
   &__header-icon {
-    @apply mr-1 flex w-8 items-center justify-center rounded-[50%_20%_/_10%_40%] border-2 p-1 dark:border-neutral-800;
+    // @apply mr-1 flex w-8 items-center justify-center rounded-[50%_20%_/_10%_40%] border-2 p-1 dark:border-neutral-800;
+    @apply hidden;
   }
 
   &__body {
