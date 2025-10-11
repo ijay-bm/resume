@@ -1,14 +1,13 @@
 .resume__left {
   .enumeration {
     @apply list-disc;
-    // @apply;
 
     &__row {
       @apply flex items-center justify-between;
     }
 
     &__heading {
-      @apply text-sm;
+      @apply text-sm text-neutral-600 dark:text-neutral-400;
     }
 
     &__subtitle {
@@ -20,7 +19,7 @@
     }
 
     &__subheading {
-      @apply text-sm text-gold-500;
+      @apply text-sm text-neutral-800 dark:text-gold-500;
     }
 
     &__subheading-sub {
