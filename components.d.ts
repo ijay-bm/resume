@@ -11,6 +11,7 @@ declare module 'vue' {
     Certifications: typeof import('./src/components/Certifications.vue')['default']
     CheckBoxInput: typeof import('./src/components/CheckBoxInput.vue')['default']
     ContactInfo: typeof import('./src/components/ContactInfo.vue')['default']
+    copy: typeof import('./src/components/Resume copy.vue')['default']
     Enumeration: typeof import('./src/components/Enumeration.vue')['default']
     IBxsBriefcase: typeof import('~icons/bxs/briefcase')['default']
     IFa6SolidCheck: typeof import('~icons/fa6-solid/check')['default']
@@ -35,6 +36,7 @@ declare module 'vue' {
     OngoingCertifications: typeof import('./src/components/OngoingCertifications.vue')['default']
     RadioGroupInput: typeof import('./src/components/RadioGroupInput.vue')['default']
     Resume: typeof import('./src/components/Resume.vue')['default']
+    'Resume copy': typeof import('./src/components/Resume copy.vue')['default']
     ThemeSelector: typeof import('./src/components/ThemeSelector.vue')['default']
   }
 }

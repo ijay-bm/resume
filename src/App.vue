@@ -120,7 +120,7 @@ const certifications = ref<Certification[]>([
     type: "Certificate of Completion",
     // title: "Complete React Developer (w/ Redux, Hooks, GraphQL)",
     title: "Complete React Developer: Redux, Hooks, GraphQL",
-    // shortTitle: "Complete React Developer",
+    shortTitle: "Complete React Developer",
     issuer: "Udemy",
     // description: "Partially Completed"
     monthYear: "Oct 2025",
@@ -130,7 +130,7 @@ const certifications = ref<Certification[]>([
     type: "Certificate of Completion",
     // title: "Complete React Developer (w/ Redux, Hooks, GraphQL)",
     title: "React Native - The Practical Guide",
-    // shortTitle: "Complete React Developer",
+    shortTitle: "React Native",
     issuer: "Udemy",
     // description: "Partially Completed"
     monthYear: "Sep 2025",
@@ -162,7 +162,7 @@ const certifications = ref<Certification[]>([
     monthYear: "Nov 2022",
     title: "Advanced CSS and SASS",
     issuer: "Udemy",
-    hidden: false
+    hidden: true
   },
   {
     type: "Certificate of Completion",
@@ -206,13 +206,13 @@ const certifications = ref<Certification[]>([
   //   issuer: "Udemy",
   //   hidden: true
   // },
-  {
-    type: "Certificate of Completion",
-    monthYear: "Aug 2020",
-    title: "Full-Stack Web Developer",
-    issuer: "Udemy",
-    hidden: false
-  },
+  // {
+  //   type: "Certificate of Completion",
+  //   monthYear: "Aug 2020",
+  //   title: "Full-Stack Web Developer",
+  //   issuer: "Udemy",
+  //   hidden: false
+  // },
   {
     type: "Certificate of Recognition",
     monthYear: "Mar 2019",
@@ -253,7 +253,8 @@ const skills = ref<Skill[]>([
         shortName: "Frontend Development",
         rating: 8,
         experiences: [
-          { name: "Vue", rating: 8 },
+          { name: "Vue", rating: 7 },
+          { name: "Vuetify", rating: 7 },
           { name: "Nuxt", rating: 7 },
           { name: "React", rating: 5 },
           { name: "React Router", rating: 5 },
@@ -261,9 +262,9 @@ const skills = ref<Skill[]>([
           { name: "JavaScript", rating: 8 },
           { name: "HTML", rating: 7 },
           { name: "CSS/SASS", rating: 8 },
-          { name: "Tailwind CSS", rating: 7 },
+          { name: "Tailwind", rating: 7 },
           { name: "Responsive Design", rating: 6 },
-          { name: "BEM Methodology", rating: 4 },
+          // { name: "BEM", rating: 4 },
           { name: "Bootstrap", rating: 1 }
         ]
       },

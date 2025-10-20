@@ -96,16 +96,16 @@
 
               <ul class="enumeration__description">
                 <li class="enumeration__description-item">
-                  Led DevOps and AWS Cloud Management initiatives to enhance existing AWS
-                  infrastructure and implement best practices.
+                  Led DevOps and AWS initiatives to enhance existing AWS infrastructure and
+                  implement best practices.
                 </li>
                 <li class="enumeration__description-item">
-                  Developed and maintained a QR code-based Attendance Monitoring System (AMS) for
-                  real-time token-based attendance tracking.
+                  Developed and maintained a QR-based Attendance Monitoring System for real-time
+                  token-based attendance tracking.
                 </li>
                 <li class="enumeration__description-item">
-                  Upgraded and refactored the Learning Management System (LMS) platform to reduce
-                  technical debt and enhance functionality.
+                  Reworked the Learning Management System (LMS) platform to reduce technical debt
+                  and enhance functionality.
                 </li>
               </ul>
             </div>
@@ -129,7 +129,7 @@
               </div>
 
               <ul class="enumeration__description">
-                <li class="enumeration__description-item">
+                <!-- <li class="enumeration__description-item">
                   Full-stack development with Vue and Laravel for a comprehensive LMS and Management
                   Portal.
                 </li>
@@ -152,7 +152,18 @@
                 <li class="enumeration__description-item">
                   Managed cloud infrastructure for deployments of Vue, Laravel, and WordPress
                   stacks.
-                </li>
+                </li> -->
+                <li class="enumeration__description-item"
+                  >Full-stack development with Vue and Laravel for LMS and Management Portal</li
+                >
+                <li class="enumeration__description-item"
+                  >Integrated card payments with geolocation-based localized pricing</li
+                >
+                <li class="enumeration__description-item"
+                  >Automated deployments with Bitbucket pipelines and managed cloud
+                  infrastructure</li
+                >
+
                 <!-- <li class="enumeration__description-item">System administration tasks</li> -->
               </ul>
             </div>
@@ -232,7 +243,7 @@
             <ul class="enumeration">
               <li class="enumeration__item">
                 <p class="text-sm">
-                  <span class="text-sm font-medium">Skills:</span>
+                  <span class="font-medium">Skills: </span>
                   <span class="text-neutral-700 dark:text-neutral-300">
                     Full-Stack Web Development (Laravel, PHP, Vue, Nuxt, React, React Router, React
                     Native, Vuetify, SASS, Tailwind), Integrations (APIs, SDKs), Database
@@ -301,12 +312,15 @@
 
               <li class="enumeration__item">
                 <p class="text-sm">
-                  <span class="text-sm font-medium">Certifications:</span>
+                  <span class="font-medium">Certifications: </span>
                   <span class="text-neutral-700 dark:text-neutral-300">
                     {{
                       certifications
                         .filter(({ hidden }) => !hidden)
-                        .map(({ title, issuer, monthYear }) => `${title} (${issuer}, ${monthYear})`)
+                        .map(
+                          ({ title, shortTitle, issuer, monthYear }) =>
+                            `${shortTitle || title} (${issuer}, ${monthYear})`
+                        )
                         .join(", ")
                     }}
                   </span>
@@ -315,7 +329,7 @@
 
               <li class="enumeration__item">
                 <p class="text-sm">
-                  <span class="text-sm font-medium">Interests:</span>
+                  <span class="font-medium">Interests: </span>
                   <span class="text-neutral-700 dark:text-neutral-300">
                     Guitar, Piano, Violin, Technology, Computers, Exercise, Media, History, Books,
                     Gaming

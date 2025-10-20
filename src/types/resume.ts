@@ -14,6 +14,7 @@ export type Certification = {
   type: string;
   monthYear: string;
   title: string;
+  shortTitle?: string;
   issuer: string;
   hidden: boolean;
 };
