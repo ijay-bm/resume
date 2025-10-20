@@ -234,9 +234,10 @@
                 <p class="text-sm">
                   <span class="text-sm font-medium">Skills:</span>
                   <span class="text-neutral-700 dark:text-neutral-300">
-                    Full-Stack Web Development (Laravel, PHP, Vue, Nuxt, Vuetify, SASS, Tailwind),
-                    Integrations (APIs, SDKs), Database Management, Project Management, Cloud
-                    Services (AWS), Containerization (Docker), Deployments, Server Administration
+                    Full-Stack Web Development (Laravel, PHP, Vue, Nuxt, React, React Router, React
+                    Native, Vuetify, SASS, Tailwind), Integrations (APIs, SDKs), Database
+                    Management, Project Management, Cloud Services (AWS), Containerization (Docker),
+                    Deployments, Server Administration
                   </span>
                   <!-- <ul class="enumeration">
                   <li v-for="skill in skills" :key="skill.name" class="enumeration__item">

@@ -118,6 +118,26 @@ onResumeStyleUpdateModelValue(DocumentStyle.CurriculumVitaeA);
 const certifications = ref<Certification[]>([
   {
     type: "Certificate of Completion",
+    // title: "Complete React Developer (w/ Redux, Hooks, GraphQL)",
+    title: "Complete React Developer: Redux, Hooks, GraphQL",
+    // shortTitle: "Complete React Developer",
+    issuer: "Udemy",
+    // description: "Partially Completed"
+    monthYear: "Oct 2025",
+    hidden: false
+  },
+  {
+    type: "Certificate of Completion",
+    // title: "Complete React Developer (w/ Redux, Hooks, GraphQL)",
+    title: "React Native - The Practical Guide",
+    // shortTitle: "Complete React Developer",
+    issuer: "Udemy",
+    // description: "Partially Completed"
+    monthYear: "Sep 2025",
+    hidden: false
+  },
+  {
+    type: "Certificate of Completion",
     monthYear: "July 2024",
     title: "Docker Mastery",
     issuer: "Udemy",
@@ -200,7 +220,7 @@ const certifications = ref<Certification[]>([
     issuer: "University of Baguio",
     // description:
     //   "Robotics Sumobot Competition during the 8th Brainwave at the School of Information Technology, University of Baguio.",
-    hidden: true
+    hidden: false
   },
   {
     type: "Certificate of Recognition",
@@ -209,7 +229,7 @@ const certifications = ref<Certification[]>([
     issuer: "University of Baguio",
     // description:
     //   "Regional 2018 Institute of Computer Engineers of the Philippines, Inc. (ICpEP) Challenge Competition",
-    hidden: true
+    hidden: false
   },
   {
     type: "Certificate of Merit",
@@ -218,7 +238,7 @@ const certifications = ref<Certification[]>([
     issuer: "University of Baguio",
     // description:
     //   "Regional 2017 Institute of Computer Engineers of the Philippines, Inc. (ICpEP) Challenge Competition",
-    hidden: true
+    hidden: false
   }
 ]);
 
@@ -235,6 +255,9 @@ const skills = ref<Skill[]>([
         experiences: [
           { name: "Vue", rating: 8 },
           { name: "Nuxt", rating: 7 },
+          { name: "React", rating: 5 },
+          { name: "React Router", rating: 5 },
+          { name: "React Native", rating: 4 },
           { name: "JavaScript", rating: 8 },
           { name: "HTML", rating: 7 },
           { name: "CSS/SASS", rating: 8 },
@@ -417,13 +440,6 @@ const ongoingCertifications = ref<OngoingCertification[]>([
     shortTitle: "AWS Solutions Architect Associate SAA-C03",
     platform: "Udemy",
     description: "Need To Know"
-  },
-  {
-    // title: "Complete React Developer (w/ Redux, Hooks, GraphQL)",
-    title: "Complete React Developer: Redux, Hooks, GraphQL",
-    shortTitle: "Complete React Developer",
-    platform: "Udemy",
-    description: "Partially Completed"
   },
   {
     // title: "The Ultimate React Course 2024: React, Next.js, Redux & More",
