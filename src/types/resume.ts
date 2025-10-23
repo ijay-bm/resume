@@ -1,7 +1,7 @@
 export enum DocumentStyle {
-  ResumeA = "resume-a",
-  ResumeB = "resume-b",
-  CurriculumVitaeA = "curriculum-vitae-a"
+  TypeA = "type-a",
+  TypeB = "type-b",
+  TypeC = "type-c"
 }
 
 export enum ToolStyle {

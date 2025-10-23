@@ -10,9 +10,9 @@
           <h4 class="mb-2 font-bold">Document Type</h4>
           <RadioGroupInput
             :items="[
-              { label: 'Resume A', value: DocumentStyle.ResumeA },
-              { label: 'Resume B', value: DocumentStyle.ResumeB },
-              { label: 'Curriculum Vitae', value: DocumentStyle.CurriculumVitaeA }
+              { label: 'Type A', value: DocumentStyle.TypeA },
+              { label: 'Type B', value: DocumentStyle.TypeB },
+              { label: 'Type C', value: DocumentStyle.TypeC }
             ]"
             name="resume-style-radio-menu"
             :modelValue="documentStyle"
@@ -48,7 +48,7 @@
           </div>
         </div> -->
 
-        <!-- <div v-if="documentStyle !== DocumentStyle.CurriculumVitaeA">
+        <!-- <div v-if="documentStyle !== DocumentStyle.TypeC">
           <CheckBoxInput
             class="font-bold"
             id="hide-skill-details"
@@ -59,7 +59,7 @@
           />
         </div>
 
-        <div v-if="documentStyle !== DocumentStyle.CurriculumVitaeA">
+        <div v-if="documentStyle !== DocumentStyle.TypeC">
           <CheckBoxInput
             class="font-bold"
             id="hide-professional-development"
@@ -70,7 +70,7 @@
           />
         </div>
 
-        <div v-if="documentStyle !== DocumentStyle.CurriculumVitaeA">
+        <div v-if="documentStyle !== DocumentStyle.TypeC">
           <h4 class="mb-2 font-bold">Competencies</h4>
           <RadioGroupInput
             :items="[
@@ -107,13 +107,13 @@ import RadioGroupInput from "./components/RadioGroupInput.vue";
 import Resume from "./components/Resume.vue";
 import ThemeSelector from "./components/ThemeSelector.vue";
 
-const documentStyle = ref<DocumentStyle>(DocumentStyle.CurriculumVitaeA);
+const documentStyle = ref<DocumentStyle>(DocumentStyle.TypeC);
 function onResumeStyleUpdateModelValue(newModelValue: DocumentStyle) {
   document.body.classList.remove(documentStyle.value);
   document.body.classList.add(newModelValue);
   documentStyle.value = newModelValue;
 }
-onResumeStyleUpdateModelValue(DocumentStyle.CurriculumVitaeA);
+onResumeStyleUpdateModelValue(DocumentStyle.TypeC);
 
 const certifications = ref<Certification[]>([
   {

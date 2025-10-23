@@ -2,7 +2,7 @@
   <div class="resume">
     <!-- start of resume__left -->
     <div class="resume__left">
-      <h1 v-if="documentStyle === DocumentStyle.ResumeA" class="resume__header-name">
+      <h1 v-if="documentStyle === DocumentStyle.TypeA" class="resume__header-name">
         Ijay B. Mangili
       </h1>
 
@@ -14,7 +14,7 @@
             <span class="section__header-icon">
               <IHeroiconsUserCircle16Solid />
             </span>
-            <h1 v-if="documentStyle === DocumentStyle.ResumeB" class="section__header-title">
+            <h1 v-if="documentStyle === DocumentStyle.TypeB" class="section__header-title">
               Ijay B. Mangili
             </h1>
             <h2 v-else class="section__header-title">About</h2>
@@ -192,10 +192,7 @@
         </div>
 
         <div
-          v-if="
-            documentStyle === DocumentStyle.ResumeB ||
-            documentStyle === DocumentStyle.CurriculumVitaeA
-          "
+          v-if="documentStyle === DocumentStyle.TypeB || documentStyle === DocumentStyle.TypeC"
           class="section"
         >
           <div class="section__header">
@@ -220,18 +217,15 @@
           </div>
         </div>
 
-        <!-- v-if="documentStyle === DocumentStyle.ResumeB" -->
+        <!-- v-if="documentStyle === DocumentStyle.TypeB" -->
         <!-- <Certifications :certifications="certifications" :simplified="true" /> -->
-        <!-- documentStyle === DocumentStyle.ResumeB &&  -->
+        <!-- documentStyle === DocumentStyle.TypeB &&  -->
         <OngoingCertifications
-          v-if="documentStyle === DocumentStyle.ResumeB && !hideProfessionalDevelopment"
+          v-if="documentStyle === DocumentStyle.TypeB && !hideProfessionalDevelopment"
           :ongoingCertifications="ongoingCertifications"
         />
 
-        <div
-          v-if="documentStyle === DocumentStyle.CurriculumVitaeA"
-          class="section section--cv-ski"
-        >
+        <div v-if="documentStyle === DocumentStyle.TypeC" class="section section--cv-ski">
           <div class="section__header">
             <span class="section__header-icon">
               <ITokenScroll />
@@ -342,13 +336,13 @@
       </div>
       <!-- end of sections -->
 
-      <div v-if="documentStyle !== DocumentStyle.CurriculumVitaeA" class="interests">
+      <div v-if="documentStyle !== DocumentStyle.TypeC" class="interests">
         <strong>Interests:</strong>
         Guitar, Piano, Violin, Technology, Computers, Exercise, Media, History, Books, Gaming
       </div>
 
       <!-- <div
-        v-if="documentStyle !== DocumentStyle.CurriculumVitaeA"
+        v-if="documentStyle !== DocumentStyle.TypeC"
         class="invisible absolute bottom-0 w-full py-2 text-xs text-neutral-700 print:hidden"
       >
         <div class="mx-auto w-max text-center">
@@ -363,7 +357,7 @@
     <!-- end of resume__left -->
 
     <!-- <div
-      v-if="documentStyle === DocumentStyle.CurriculumVitaeA"
+      v-if="documentStyle === DocumentStyle.TypeC"
       class="invisible absolute bottom-0 w-full py-2 text-xs text-neutral-700 print:hidden"
     >
       <div class="mx-auto w-max text-center">
@@ -376,19 +370,16 @@
     </div> -->
 
     <!-- start of resume__right -->
-    <div v-if="documentStyle !== DocumentStyle.CurriculumVitaeA" class="resume__right">
+    <div v-if="documentStyle !== DocumentStyle.TypeC" class="resume__right">
       <h1 class="resume__header-name">
         {{ "Ijay B. Mangili" }}
       </h1>
 
       <!-- start of sections -->
       <div class="sections">
-        <ContactInfo
-          v-if="documentStyle === DocumentStyle.ResumeB"
-          :documentStyle="documentStyle"
-        />
+        <ContactInfo v-if="documentStyle === DocumentStyle.TypeB" :documentStyle="documentStyle" />
 
-        <div v-if="documentStyle === DocumentStyle.ResumeA" class="section">
+        <div v-if="documentStyle === DocumentStyle.TypeA" class="section">
           <div class="section__header">
             <span class="section__header-icon">
               <IGameIconsGraduateCap />
@@ -539,7 +530,7 @@
 
       <div class="sections">
         <OngoingCertifications
-          v-if="documentStyle !== DocumentStyle.ResumeB && !hideProfessionalDevelopment"
+          v-if="documentStyle !== DocumentStyle.TypeB && !hideProfessionalDevelopment"
           :ongoingCertifications="ongoingCertifications"
           simplified
         />

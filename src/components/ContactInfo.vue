@@ -7,7 +7,7 @@
       <h2 class="section__header-title">Deets</h2>
     </div>
 
-    <h1 v-if="documentStyle === DocumentStyle.CurriculumVitaeA" class="resume__header-name">
+    <h1 v-if="documentStyle === DocumentStyle.TypeC" class="resume__header-name">
       Ijay B. Mangili
     </h1>
 
