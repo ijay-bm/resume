@@ -338,7 +338,7 @@
 
       <div v-if="documentStyle !== DocumentStyle.TypeC" class="interests">
         <strong>Interests:</strong>
-        Guitar, Piano, Violin, Technology, Computers, Exercise, Media, History, Books, Gaming
+        Gaming, Media, Guitar, Piano, Violin, Exercise, Computers, Technology, History, Books
       </div>
 
       <!-- <div
