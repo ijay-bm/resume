@@ -20,7 +20,8 @@
         }"
       >
         <button
-          class="dark-button absolute -left-6 top-[-2px] size-5 rounded-full p-1 opacity-5 hover:opacity-100 print:hidden"
+          class="dark-button absolute -left-6 top-[-2px] hidden size-5 rounded-full p-1 opacity-5
+            hover:opacity-100 print:hidden"
           @click="certification.hidden = true"
         >
           <IMdiRemoveBold />

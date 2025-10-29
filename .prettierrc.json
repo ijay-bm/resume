@@ -7,7 +7,16 @@
   "arrowParens": "always",
   "printWidth": 100,
   "bracketSameLine": false,
-  "htmlWhitespaceSensitivity": "strict",
   "endOfLine": "auto",
-  "plugins": ["prettier-plugin-tailwindcss"]
+  "plugins": [
+    "prettier-plugin-merge",
+    "@trivago/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss",
+    "prettier-plugin-classnames"
+  ],
+  "importOrder": ["^@core/(.*)$", "^@server/(.*)$", "^@ui/(.*)$", "^[./]"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "quoteProps": "as-needed",
+  "htmlWhitespaceSensitivity": "css"
 }

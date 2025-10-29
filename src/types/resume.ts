@@ -39,11 +39,3 @@ export type Skill = {
   subSkills?: SubSkill[];
   experiences?: Experience[];
 };
-
-export type OngoingCertification = {
-  title: string;
-  shortTitle: string;
-  platform: string;
-  description: string;
-  hidden?: boolean;
-};

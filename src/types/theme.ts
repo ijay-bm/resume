@@ -9,8 +9,13 @@ export enum ThemeStage {
   Dark = "dark"
 }
 
-export interface ThemeState {
+export type ThemeState = {
   theme: Theme | null;
   stages: ThemeStage[];
   stageIndex: number;
-}
+};
+
+export type FlattenedSkill = {
+  name: string;
+  rating: number;
+};

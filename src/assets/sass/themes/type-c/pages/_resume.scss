@@ -1,8 +1,8 @@
 .resume {
-  @apply relative mx-auto flex h-full min-h-svh w-[816px];
+  @apply relative mx-auto flex h-[1122.5px] w-[793.7px];
 
   &__left {
-    @apply relative bg-white text-neutral-800 dark:bg-neutral-900 dark:text-neutral-100;
+    @apply relative h-full bg-white text-neutral-800 dark:bg-neutral-900 dark:text-neutral-100;
   }
 
   &__header-name {
@@ -11,6 +11,7 @@
   }
 
   &__right {
+    @apply h-full;
   }
 }
 

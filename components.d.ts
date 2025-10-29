@@ -37,6 +37,8 @@ declare module 'vue' {
     RadioGroupInput: typeof import('./src/components/RadioGroupInput.vue')['default']
     Resume: typeof import('./src/components/Resume.vue')['default']
     'Resume copy': typeof import('./src/components/Resume copy.vue')['default']
+    ResumeLeft: typeof import('./src/components/ResumeLeft.vue')['default']
+    ResumeRight: typeof import('./src/components/ResumeRight.vue')['default']
     ThemeSelector: typeof import('./src/components/ThemeSelector.vue')['default']
   }
 }

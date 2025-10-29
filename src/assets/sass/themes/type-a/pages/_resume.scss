@@ -11,11 +11,10 @@
 }
 
 .resume {
-  @apply relative mx-auto flex h-full min-h-[1056px] w-[816px];
+  @apply relative mx-auto flex h-[1122.5px] w-[793.7px];
 
   &__left {
-    @apply relative bg-neutral-100 text-neutral-800 dark:bg-neutral-900 dark:text-neutral-100;
-    @apply w-[62%] pb-6 pl-8 pr-6 pt-6;
+    @apply relative w-[62%] bg-neutral-100 pb-6 pl-8 pr-6 pt-6 text-neutral-800 dark:bg-neutral-900 dark:text-neutral-100;
   }
 
   &__header-name {
