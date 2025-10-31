@@ -1,18 +1,15 @@
 <template>
-  <button
-    class="dark-button absolute -left-10 -top-1 size-10 rounded-full bg-transparent p-2 print:hidden"
-    @click="setTheme"
-  >
+  <button class="dark-button size-10 rounded-full p-2 print:hidden" @click="setTheme">
     <span
       v-if="currentStage === ThemeStage.Light"
-      class="flex items-center justify-center text-gold-500"
+      class="flex items-center justify-center text-bronze-500"
     >
       <ILineMdSunnyLoop />
     </span>
 
     <span
       v-else-if="currentStage === ThemeStage.Auto"
-      class="flex items-center justify-center text-gold-500"
+      class="flex items-center justify-center text-bronze-500"
     >
       <ILineMdSunnyLoop />
       <ILineMdMoonTwotoneLoop />
@@ -20,7 +17,7 @@
 
     <span
       v-else-if="currentStage === ThemeStage.Dark"
-      class="flex items-center justify-center text-gold-500"
+      class="flex items-center justify-center text-bronze-500"
     >
       <ILineMdMoonTwotoneLoop />
     </span>

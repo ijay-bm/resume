@@ -10,15 +10,17 @@
       <h2 class="section__header-title">Certifications</h2>
     </div>
 
-    <ul class="section__body">
-      <li
+    <div class="section__body">
+      <div
         v-for="(certification, index) in certifications.filter(({ hidden }) => !hidden)"
         :key="index"
-        class="enumeration section__item relative"
+        class="enumeration section__item"
         :class="{
           'pl-0': simplified
         }"
       >
+        <div class="section__item-disc"></div>
+        <div class="section__item-line"></div>
         <button
           class="dark-button absolute -left-6 top-[-2px] hidden size-5 rounded-full p-1 opacity-5
             hover:opacity-100 print:hidden"
@@ -35,8 +37,8 @@
             {{ `(${certification.issuer}, ${certification.monthYear})` }}
           </span>
         </p>
-      </li>
-    </ul>
+      </div>
+    </div>
   </div>
 </template>
 

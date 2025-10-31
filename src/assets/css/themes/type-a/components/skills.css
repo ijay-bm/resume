@@ -1,0 +1,59 @@
+.skills {
+  @apply list-none pl-0;
+
+  .skills__item {
+    @apply mb-2 last:mb-0;
+  }
+
+  .skills__name {
+    @apply text-[0.8rem] leading-4;
+  }
+
+  .skills__bar-container {
+    @apply relative;
+  }
+
+  .skills__bar {
+    @apply block h-[1px] bg-gradient-to-r from-transparent to-neutral-300 dark:to-neutral-800 print:bg-neutral-300 print:bg-none print:dark:bg-neutral-800;
+  }
+
+  .skills__bar-fill {
+    @apply to-bronze-500 dark:to-bronze-700 print:bg-bronze-500 print:dark:bg-bronze-700 absolute top-0 left-0 block h-[1px] bg-gradient-to-r from-transparent;
+  }
+
+  .skills__bar-dot {
+    @apply border-bronze-500 dark:border-bronze-700 bg-bronze-600/20 absolute -top-[3px] top-0 block h-[7px] w-[7px] rounded-full border border-[2px];
+  }
+
+  .skills__item-details {
+    @apply font-[0.8rem] font-normal tracking-[0.02em] text-neutral-700 dark:text-neutral-400;
+  }
+}
+
+.legend {
+  @apply mt-4 mb-3 rounded bg-gray-200 p-4 text-neutral-800 dark:bg-neutral-900 dark:text-inherit dark:text-neutral-300;
+
+  .legend__body {
+    @apply list-none space-y-3 p-0;
+  }
+
+  .legend__item {
+    @apply relative pl-7 text-xs;
+  }
+
+  .legend__metric {
+    @apply text-bronze-500 absolute right-[calc(100%_-_0.9rem)];
+
+    .legend__metric::after {
+      @apply absolute top-[-0.06rem] ml-[0.2rem] text-neutral-500 content-["\00bb"];
+    }
+  }
+}
+
+.tools {
+  @apply mb-6 rounded bg-gray-200 p-4 text-xs text-neutral-800 dark:bg-neutral-900 dark:text-inherit dark:text-neutral-300;
+}
+
+.interests {
+  @apply mt-4 mb-6 rounded bg-gray-200 p-4 text-xs text-neutral-800 dark:bg-neutral-800 dark:text-inherit dark:text-neutral-300;
+}

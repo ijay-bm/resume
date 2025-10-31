@@ -2,7 +2,7 @@ import { createPinia } from "pinia";
 import piniaPluginPersistedstate from "pinia-plugin-persistedstate";
 import { createApp } from "vue";
 import App from "./App.vue";
-import "./assets/sass/main.scss";
+import "./assets/css/main.css";
 import { useThemeStore } from "./stores/theme.ts";
 import { Theme, ThemeStage } from "./types/theme.ts";
 

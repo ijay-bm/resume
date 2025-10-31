@@ -1,12 +1,14 @@
 <template>
   <div class="resume__left">
-    <h1 v-if="documentStyle === DocumentStyle.TypeA" class="resume__header-name">
-      Ijay B. Mangili
-    </h1>
+    <div
+      v-if="[DocumentStyle.TypeA, DocumentStyle.TypeC].includes(documentStyle)"
+      class="resume__header-container"
+    >
+      <h1 class="resume__header-name mb-1">Ijay B. Mangili</h1>
+      <ContactInfo :document-style="documentStyle" class="mb-2" />
+    </div>
 
     <div class="sections">
-      <ContactInfo :document-style="documentStyle" />
-
       <div class="section section--about">
         <div class="section__header">
           <span class="section__header-icon">
@@ -19,33 +21,24 @@
           <h2 v-else class="section__header-title">About</h2>
         </div>
 
-        <div class="section__body section__item">
-          <div class="flex gap-2 text-neutral-500">
-            <li class="flex list-none text-xs">
-              <IMiEmail />
-              <span>ijaybmangili@gmail.com</span>
-            </li>
-            <li class="flex list-none text-xs">
-              <ISolarLinkBroken />
-              <span>
-                <a href="https://ijay-bm.github.io/portfolio" target="_blank" title="Portfolio">
-                  ijay-bm.github.io/portfolio
-                </a>
-              </span>
-            </li>
-            <li class="flex list-none text-xs">
-              <IMdiLocation />
-              <span>Philippines</span>
-            </li>
+        <div class="section__body">
+          <div class="section__item">
+            <div class="section__item-diamond"></div>
+            <ContactInfo
+              v-if="documentStyle === DocumentStyle.TypeB"
+              :document-style="documentStyle"
+              class="flex justify-between text-xs dark:text-neutral-400"
+            />
           </div>
-        </div>
 
-        <div class="section__body section__item">
-          <p class="about-me-content">
-            Full-Stack Web Developer with 4+ years of experience spanning front-end design, API
-            development, database design, DevOps, and AWS cloud management. Primarily work with
-            Laravel and Vue.
-          </p>
+          <div class="section__item">
+            <div class="section__item-diamond"></div>
+            <p class="about-me-content dark:text-neutral-400">
+              Full-Stack Web Developer with 4+ years of experience spanning front-end design, API
+              development, database design, DevOps, and AWS cloud management. Primarily work with
+              Laravel and Vue.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -59,97 +52,105 @@
 
         <div class="section__body">
           <div class="enumeration section__item">
-            <div class="enumeration__row">
-              <span class="enumeration__subheading">Web Developer</span>
-              <span class="enumeration__right-subtitle">Remote (Richmond, Australia)</span>
-            </div>
+            <div class="section__item-diamond"></div>
+            <div class="enumeration">
+              <div class="enumeration__row">
+                <span class="enumeration__subheading">Web Developer</span>
+                <span class="enumeration__right-subtitle">Remote (Richmond, Australia)</span>
+              </div>
 
-            <div class="enumeration__row">
-              <span class="enumeration__heading">Appetiser Apps</span>
-              <span class="enumeration__right-subtitle">Nov 2024 — Present</span>
-            </div>
+              <div class="enumeration__row">
+                <span class="enumeration__heading">Appetiser Apps</span>
+                <span class="enumeration__right-subtitle">Nov 2024 — Present</span>
+              </div>
 
-            <ul class="enumeration__description">
-              <li class="enumeration__description-item">
-                <!-- Supported development of new features for a mature project called Blended Services
+              <ul class="enumeration__description">
+                <li class="enumeration__description-item">
+                  <!-- Supported development of new features for a mature project called Blended Services
                   that indicate a tree's maintenance frequency and status in addition to supporting
                   collaborative maintenance of trees -->
-                Contributed features to Blended Services, a tree maintenance platform tracking
-                frequency, status, and collaborative workflows
-              </li>
-              <li class="enumeration__description-item">
-                <!-- Developer of a Laravel backend API and CMS for LifeStyler, a job-matching platform
+                  Contributed features to Blended Services, a tree maintenance platform tracking
+                  frequency, status, and collaborative workflows
+                </li>
+                <li class="enumeration__description-item">
+                  <!-- Developer of a Laravel backend API and CMS for LifeStyler, a job-matching platform
                   connecting workers with short-term opportunities in Australia -->
-                Built Laravel backend API and CMS for LifeStyler, a job-matching platform for
-                short-term work in Australia
-              </li>
-              <li class="enumeration__description-item">
-                Designed and implemented backend APIs and database schemas with Laravel for Solo
-                Alert, a personal safety application that handles complex check-in scheduling and
-                alert systems consumed by an iOS app
-              </li>
-              <li class="enumeration__description-item">
-                Developed xcursionplanner, a Vue WebApp with integrated APIs used in planning an
-                excursion for Australian schools
-              </li>
-              <li class="enumeration__description-item">
-                Collaborated with developers (mobile & web), designers and project managers to
-                ensure integration between platforms and development
-              </li>
-              <li class="enumeration__description-item">
-                Participated in product development lifecycle including design, develpment, testing,
-                and deployment
-              </li>
-            </ul>
+                  Built Laravel backend API and CMS for LifeStyler, a job-matching platform for
+                  short-term work in Australia
+                </li>
+                <li class="enumeration__description-item">
+                  Designed and implemented backend APIs and database schemas with Laravel for Solo
+                  Alert, a personal safety application that handles complex check-in scheduling and
+                  alert systems consumed by an iOS app
+                </li>
+                <li class="enumeration__description-item">
+                  Developed xcursionplanner, a Vue WebApp with integrated APIs used in planning an
+                  excursion for Australian schools
+                </li>
+                <li class="enumeration__description-item">
+                  Collaborated with developers (mobile & web), designers and project managers to
+                  ensure integration between platforms and development
+                </li>
+                <li class="enumeration__description-item">
+                  Participated in product development lifecycle including design, develpment,
+                  testing, and deployment
+                </li>
+              </ul>
+            </div>
           </div>
 
           <div class="enumeration section__item">
-            <div class="enumeration__row">
-              <span class="enumeration__subheading">Intermediate Web Developer</span>
-              <span class="enumeration__right-subtitle">Remote (Pasig City, Metro Manila)</span>
-            </div>
+            <div class="section__item-diamond"></div>
+            <div class="enumeration">
+              <div class="enumeration__row">
+                <span class="enumeration__subheading">Intermediate Web Developer</span>
+                <span class="enumeration__right-subtitle">Remote (Pasig City, Metro Manila)</span>
+              </div>
 
-            <div class="enumeration__row">
-              <span class="enumeration__heading">TheChalkboard Inc.</span>
-              <span class="enumeration__right-subtitle">Nov 2023 — Jul 2025</span>
-            </div>
+              <div class="enumeration__row">
+                <span class="enumeration__heading">TheChalkboard Inc.</span>
+                <span class="enumeration__right-subtitle">Nov 2023 — Jul 2025</span>
+              </div>
 
-            <ul class="enumeration__description">
-              <li class="enumeration__description-item">
-                Led DevOps and AWS initiatives to enhance existing AWS infrastructure and implement
-                best practices.
-              </li>
-              <li class="enumeration__description-item">
-                Developed and maintained a QR-based Attendance Monitoring System for real-time
-                token-based attendance tracking.
-              </li>
-              <li class="enumeration__description-item">
-                Reworked the Learning Management System (LMS) platform to reduce technical debt and
-                enhance functionality.
-              </li>
-            </ul>
+              <ul class="enumeration__description">
+                <li class="enumeration__description-item">
+                  Led DevOps and AWS initiatives to enhance existing AWS infrastructure and
+                  implement best practices.
+                </li>
+                <li class="enumeration__description-item">
+                  Developed and maintained a QR-based Attendance Monitoring System for real-time
+                  token-based attendance tracking.
+                </li>
+                <li class="enumeration__description-item">
+                  Reworked the Learning Management System (LMS) platform to reduce technical debt
+                  and enhance functionality.
+                </li>
+              </ul>
+            </div>
           </div>
 
           <div class="enumeration section__item">
-            <!-- <div class="enumeration__row">
+            <div class="section__item-diamond"></div>
+            <div class="enumeration">
+              <!-- <div class="enumeration__row">
                 <span class="enumeration__subheading">
                   Associate Web Developer
                   <span class="enumeration__subheading-sub">| Jun 2021 — Sep 2023</span>
                 </span>
               </div> -->
 
-            <div class="enumeration__row">
-              <span class="enumeration__subheading">Associate Web Developer</span>
-              <span class="enumeration__right-subtitle">Remote (Pasig City, Metro Manila)</span>
-            </div>
+              <div class="enumeration__row">
+                <span class="enumeration__subheading">Associate Web Developer</span>
+                <span class="enumeration__right-subtitle">Remote (Pasig City, Metro Manila)</span>
+              </div>
 
-            <div class="enumeration__row">
-              <span class="enumeration__heading">TheChalkboard Inc.</span>
-              <span class="enumeration__right-subtitle">Jun 2021 — Sep 2023</span>
-            </div>
+              <div class="enumeration__row">
+                <span class="enumeration__heading">TheChalkboard Inc.</span>
+                <span class="enumeration__right-subtitle">Jun 2021 — Sep 2023</span>
+              </div>
 
-            <ul class="enumeration__description">
-              <!-- <li class="enumeration__description-item">
+              <ul class="enumeration__description">
+                <!-- <li class="enumeration__description-item">
                   Full-stack development with Vue and Laravel for a comprehensive LMS and Management
                   Portal.
                 </li>
@@ -173,39 +174,43 @@
                   Managed cloud infrastructure for deployments of Vue, Laravel, and WordPress
                   stacks.
                 </li> -->
-              <li class="enumeration__description-item">
-                Full-stack development with Vue and Laravel for LMS and Management Portal
-              </li>
-              <li class="enumeration__description-item">
-                Integrated card payments with geolocation-based localized pricing
-              </li>
-              <li class="enumeration__description-item">
-                Automated deployments with Bitbucket pipelines and managed cloud infrastructure
-              </li>
+                <li class="enumeration__description-item">
+                  Full-stack development with Vue and Laravel for LMS and Management Portal
+                </li>
+                <li class="enumeration__description-item">
+                  Integrated card payments with geolocation-based localized pricing
+                </li>
+                <li class="enumeration__description-item">
+                  Automated deployments with Bitbucket pipelines and managed cloud infrastructure
+                </li>
 
-              <!-- <li class="enumeration__description-item">System administration tasks</li> -->
-            </ul>
+                <!-- <li class="enumeration__description-item">System administration tasks</li> -->
+              </ul>
+            </div>
           </div>
 
           <div class="enumeration section__item">
-            <div class="enumeration__row">
-              <span class="enumeration__subheading">On-The-Job Trainee</span>
-              <span class="enumeration__right-subtitle">Baguio, Philippines</span>
-            </div>
+            <div class="section__item-diamond"></div>
+            <div class="enumeration">
+              <div class="enumeration__row">
+                <span class="enumeration__subheading">On-The-Job Trainee</span>
+                <span class="enumeration__right-subtitle">Baguio, Philippines</span>
+              </div>
 
-            <div class="enumeration__row">
-              <span class="enumeration__heading">PLDT</span>
-              <span class="enumeration__right-subtitle">Jan 2020 — Mar 2020</span>
-            </div>
+              <div class="enumeration__row">
+                <span class="enumeration__heading">PLDT</span>
+                <span class="enumeration__right-subtitle">Jan 2020 — Mar 2020</span>
+              </div>
 
-            <ul class="enumeration__description">
-              <li class="enumeration__description-item">
-                My experience here can be summed up into
-                <i>customer experience</i>
-                and
-                <i>service technician.</i>
-              </li>
-            </ul>
+              <ul class="enumeration__description">
+                <li class="enumeration__description-item">
+                  My experience here can be summed up into
+                  <i>customer experience</i>
+                  and
+                  <i>service technician.</i>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -223,14 +228,17 @@
 
         <div class="section__body">
           <div class="enumeration section__item">
-            <div class="enumeration__row">
-              <span class="enumeration__subheading">BS Computer Engineering</span>
-              <span class="enumeration__right-subtitle">Baguio, Philippines</span>
-            </div>
+            <div class="section__item-diamond"></div>
+            <div class="enumeration">
+              <div class="enumeration__row">
+                <span class="enumeration__subheading">BS Computer Engineering</span>
+                <span class="enumeration__right-subtitle">Baguio, Philippines</span>
+              </div>
 
-            <div class="enumeration__row">
-              <span class="enumeration__heading">University of Baguio</span>
-              <span class="enumeration__right-subtitle">May 2020 (2013 — 2020)</span>
+              <div class="enumeration__row">
+                <span class="enumeration__heading">University of Baguio</span>
+                <span class="enumeration__right-subtitle">May 2020 (2013 — 2020)</span>
+              </div>
             </div>
           </div>
         </div>
@@ -302,7 +310,7 @@
         <div class="mx-auto w-max text-center">
           For the best viewing experience, visit the web version of this document:
           <br />
-          <a href="https://ijay-bm.github.io/resume/" target="_blank" class="text-gold-500">
+          <a href="https://ijay-bm.github.io/resume/" target="_blank" class="text-bronze-500">
             https://ijay-bm.github.io/resume/
           </a>
         </div>

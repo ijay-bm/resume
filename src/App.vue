@@ -1,8 +1,8 @@
 <template>
   <div class="relative">
-    <div class="absolute right-6 top-6">
+    <Menu class="absolute left-[unset] right-4 w-min-content">
       <ThemeSelector />
-    </div>
+    </Menu>
 
     <Menu class="max-w-80">
       <div class="space-y-8">

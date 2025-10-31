@@ -1,0 +1,33 @@
+.resume {
+  @apply relative mx-auto flex h-[1122.5px] w-[793.7px];
+
+  .resume__left {
+    @apply relative h-full bg-white text-neutral-800 dark:bg-neutral-900 dark:text-neutral-100;
+  }
+
+  .resume__header-name {
+    @apply font-oxygen mb-2 text-xl tracking-[0.2px];
+  }
+
+  .resume__right {
+    @apply h-full;
+  }
+}
+
+.resume {
+  .resume__left {
+    @apply w-full p-8;
+  }
+  .resume__right {
+    width: 0;
+    overflow: hidden;
+  }
+}
+
+.about-me-content {
+  @apply text-xs;
+}
+
+.about-me-content {
+  @apply hidden;
+}

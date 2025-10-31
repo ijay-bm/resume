@@ -1,0 +1,47 @@
+.sections {
+  @apply space-y-4;
+}
+
+.section {
+  .section__header {
+    @apply mb-1 flex items-center;
+  }
+
+  .section__header-icon {
+    @apply mr-1 flex text-neutral-600 dark:text-neutral-500;
+  }
+}
+
+.section--about {
+  @apply block;
+}
+
+.resume__left .section {
+  .section__body {
+    @apply list-none space-y-3;
+  }
+
+  .section__item {
+    @apply list-none;
+  }
+}
+
+.section--contact {
+  .section__header {
+    @apply hidden;
+  }
+
+  .section__body {
+    @apply ml-0;
+  }
+}
+
+.resume div.section > div.section__body > .section__item--extension {
+  @apply mt-1;
+}
+
+.section--certifications .section__body {
+  .section__item:not(:first-child) {
+    @apply mt-1;
+  }
+}

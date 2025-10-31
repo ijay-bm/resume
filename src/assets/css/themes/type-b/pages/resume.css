@@ -1,0 +1,21 @@
+.resume {
+  @apply relative mx-auto flex h-[1122.5px] w-[793.7px];
+
+  .resume__left {
+    @apply relative w-[62%] bg-neutral-100 pt-6 pb-5 text-neutral-800 dark:bg-neutral-900 dark:text-neutral-100;
+  }
+
+  .resume__header-name {
+    @apply hidden;
+  }
+
+  .resume__right {
+    @apply border-bronze-500 dark:border-bronze-800 w-[38%] border-l pt-5 pb-5;
+    @apply bg-linear-to-br from-gray-200 to-gray-100;
+    @apply dark:bg-[linear-gradient(to_right_bottom,#1b1e1f,#232627,#282c2d)];
+  }
+}
+
+.about-me-content {
+  @apply text-xs;
+}

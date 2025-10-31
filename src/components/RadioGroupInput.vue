@@ -4,7 +4,8 @@
       <div v-for="(item, index) in items" :key="index" class="flex items-center gap-2">
         <input
           type="radio"
-          class="inline-block size-6 cursor-pointer appearance-none rounded-full border-2 border-solid border-neutral-500 transition-all checked:border-gold-500"
+          class="inline-block size-6 cursor-pointer appearance-none rounded-full border-2
+            border-solid border-neutral-500 transition-all checked:border-bronze-500"
           :name="name"
           :id="item.value"
           :value="item.value"
@@ -17,7 +18,8 @@
     </div>
 
     <span
-      class="absolute block size-4 origin-center rounded-full bg-gold-500 transition-all duration-200 ease-in-out"
+      class="absolute block size-4 origin-center rounded-full bg-bronze-500 transition-all
+        duration-200 ease-in-out"
       ref="dot"
       :class="[modelValue ? 'opacity-1-0' : 'opacity-0']"
       :style="{
@@ -64,7 +66,9 @@ function triggerDotLaunchingAnimation() {
 
 function modelValueChanged() {
   if (modelValue.value) {
-    const selectedInput = document.querySelector(`input[name="${props.name}"]:checked`) as HTMLElement;
+    const selectedInput = document.querySelector(
+      `input[name="${props.name}"]:checked`
+    ) as HTMLElement;
     if (selectedInput && dot.value) {
       const { offsetHeight: dotOffsetHeight, offsetWidth: dotOffsetWidth } = dot.value;
 

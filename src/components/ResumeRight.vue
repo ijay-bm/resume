@@ -1,13 +1,6 @@
 <template>
   <div v-if="documentStyle !== DocumentStyle.TypeC" class="resume__right">
-    <h1 class="resume__header-name">
-      {{ "Ijay B. Mangili" }}
-    </h1>
-
-    <!-- start of sections -->
     <div class="sections">
-      <!-- <ContactInfo v-if="documentStyle === DocumentStyle.TypeB" :documentStyle="documentStyle" /> -->
-
       <div v-if="documentStyle === DocumentStyle.TypeA" class="section">
         <div class="section__header">
           <span class="section__header-icon">
@@ -19,6 +12,8 @@
         <div class="section__body">
           <div class="skills">
             <div class="skills__item section__item">
+              <div class="section__item-disc"></div>
+              <div class="section__item-line"></div>
               <div class="skills__name">BS Computer Engineering</div>
               <div class="skills__item-details">
                 <ul class="skills__item-sub-skills">
@@ -27,16 +22,6 @@
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="section__body">
-          <!-- <div class="section__item">
-              <span class="text-xs">BS Computer Engineering</span>
-              <small class="text-[0.65rem] text-neutral-600 dark:text-neutral-400"> - Baguio PH</small>
-            </div>
-
-              <span class="text-xs">University of Baguio</span>
-              <span class="text-[0.65rem] text-neutral-600 dark:text-neutral-400"> - Jun 2013 — May 2020</span> -->
         </div>
       </div>
 
@@ -55,6 +40,8 @@
               :key="skillIndex"
               class="skills__item section__item"
             >
+              <div class="section__item-disc"></div>
+              <div class="section__item-line"></div>
               <div class="skills__name">
                 {{ skill.name }}
               </div>
@@ -68,17 +55,7 @@
                     >
                       {{ subSkill.experiences?.map(({ name }) => name).join(", ") }}
                     </span>
-                    <span
-                      class="skills__bar mt-[1px]"
-                      :class="[
-                        {
-                          'mb-2': subSkillIndex < skill.subSkills?.length - 1
-                        }
-                      ]"
-                      :data-percent="subSkill.rating * 10"
-                    >
-                      <span class="skills__percentage"></span>
-                    </span>
+                    <SkillBar :rating="subSkill.rating * 10" />
                   </li>
                 </ul>
 
@@ -90,13 +67,7 @@
                 </span>
               </div>
 
-              <span
-                v-if="!skill.subSkills?.length"
-                class="skills__bar mt-[1px]"
-                :data-percent="skill.rating * 10"
-              >
-                <span class="skills__percentage"></span>
-              </span>
+              <SkillBar v-if="!skill.subSkills?.length" :rating="skill.rating * 10" />
             </div>
           </div>
         </div>
@@ -136,17 +107,16 @@
               :key="index"
               class="skills__item section__item"
             >
+              <div class="section__item-disc"></div>
+              <div class="section__item-line"></div>
               <span class="skills__name">{{ name }}</span>
-              <span v-if="rating" class="skills__bar" :data-percent="rating * 10">
-                <span class="skills__percentage"></span>
-              </span>
+              <SkillBar v-if="rating" :rating="rating * 10" />
             </li>
           </ul>
         </div>
       </div>
 
       <Certifications :certifications="certifications" :simplified="true" />
-      <!-- end of sections -->
     </div>
 
     <div v-if="toolsStyle === 'tools-b'" class="tools">
@@ -164,6 +134,7 @@ import type { FlattenedSkill } from "@/types/theme";
 import { computed } from "vue";
 
 import Certifications from "./Certifications.vue";
+import SkillBar from "./SkillBar.vue";
 
 const certifications = defineModel<Certification[]>("certifications", {
   required: true

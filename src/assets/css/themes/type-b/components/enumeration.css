@@ -1,0 +1,33 @@
+.enumeration {
+  .enumeration__row {
+    @apply flex items-center justify-between;
+  }
+
+  .enumeration__heading {
+    @apply text-sm text-neutral-600 dark:text-neutral-400;
+  }
+
+  .enumeration__subtitle {
+    @apply text-xs text-neutral-600 dark:text-neutral-400;
+  }
+
+  .enumeration__right-subtitle {
+    @apply text-xs text-neutral-500 dark:text-neutral-400;
+  }
+
+  .enumeration__subheading {
+    @apply dark:text-bronze-500 text-sm text-neutral-800;
+  }
+
+  .enumeration__subheading-sub {
+    @apply text-xs text-neutral-600 dark:text-neutral-400;
+  }
+
+  .enumeration__description {
+    @apply text-neutral-600 dark:text-neutral-400;
+  }
+
+  .enumeration__description-item {
+    @apply text-xs;
+  }
+}

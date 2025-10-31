@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oxygen:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@mixin dark {
+  @media (prefers-color-scheme: dark), .dark &, .dark * & {
+    @content;
+  }
+}
+
+@theme {
+  --color-neutral-150: rgb(237 237 237);
+  --color-neutral-250: rgb(220 220 220);
+  --color-neutral-350: rgb(188 188 188);
+  --color-neutral-450: rgb(139 139 139);
+  --color-neutral-550: rgb(98 98 98);
+  --color-neutral-650: rgb(73 73 73);
+  --color-neutral-750: rgb(51 51 51);
+  --color-neutral-850: rgb(30 30 30);
+
+  --color-bronze-100: rgb(250 232 219);
+  --color-bronze-200: rgb(225 209 183);
+  --color-bronze-300: rgb(210 186 147);
+  --color-bronze-400: rgb(195 163 111);
+  --color-bronze-500: rgb(198 163 112);
+  --color-bronze-600: rgb(177 140 90);
+  --color-bronze-700: rgb(156 117 68);
+  --color-bronze-800: rgb(135 94 46);
+  --color-bronze-900: rgb(114 71 24);
+
+  --color-color2-100: rgb(199 209 214);
+  --color-color2-200: rgb(159 170 179);
+  --color-color2-300: rgb(119 131 144);
+  --color-color2-400: rgb(79 92 109);
+  --color-color2-500: rgb(39 53 74);
+  --color-color2-600: rgb(26 50 65);
+  --color-color2-700: rgb(13 43 56);
+  --color-color2-800: rgb(0 36 47);
+  --color-color2-900: rgb(0 29 38);
+
+  --font-lato: "Lato", ui-sans-serif, system-ui, sans-serif;
+  --font-oxygen: "Oxygen", ui-sans-serif, system-ui, sans-serif;
+  --font-roboto: "Roboto", ui-sans-serif, system-ui, sans-serif;
+
+  --font-sans: "Roboto", system-ui, sans-serif;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+body {
+  @apply bg-neutral-100 font-sans text-neutral-900 dark:bg-neutral-900 dark:text-neutral-400;
+}
+
+.button {
+  @apply inline-flex w-max items-center justify-center gap-2 rounded border-2 px-4 py-2 transition duration-300 ease-in-out focus:ring-2 focus:outline-none active:ring-4;
+}
+
+.dark-button {
+  @extend .button;
+  @apply border-[rgb(51,51,51)] bg-[rgb(51,51,51)] text-neutral-50 hover:bg-[rgb(41,41,41)] focus:ring-neutral-600 disabled:bg-neutral-500;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 1rem;
+
+  li::marker {
+    font-size: 0.7rem;
+  }
+}
+
+.type-a {
+  @import "./themes/type-a/main.css";
+}
+
+.type-b {
+  @import "./themes/type-b/main.css";
+}
+
+.type-c {
+  @import "./themes/type-c/main.css";
+}
+
+*,
+*:before,
+*:after {
+  transition:
+    all 0.15s,
+    color 0s,
+    border-color 0s,
+    border-color 0s,
+    border 0s;
+}

@@ -1,0 +1,6 @@
+@import "./components/contact-info";
+@import "./components/enumeration";
+@import "./components/section";
+@import "./components/skills";
+
+@import "./pages/resume";
