@@ -66,6 +66,10 @@
 
               <ul class="enumeration__description">
                 <li class="enumeration__description-item">
+                  Designed and implemented backend APIs and database schemas with Laravel for Better
+                  Fit, a fitness application that matches workouts with users' fitness goals
+                </li>
+                <li class="enumeration__description-item">
                   <!-- Supported development of new features for a mature project called Blended Services
                   that indicate a tree's maintenance frequency and status in addition to supporting
                   collaborative maintenance of trees -->
