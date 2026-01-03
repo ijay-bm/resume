@@ -34,7 +34,7 @@
           <div class="section__item">
             <div class="section__item-diamond"></div>
             <p class="about-me-content dark:text-neutral-400">
-              Full-Stack Web Developer with 4+ years of experience spanning front-end design, API
+              Full-Stack Web Developer with 5+ years of experience spanning front-end design, API
               development, database design, DevOps, and AWS cloud management. Primarily work with
               Laravel and Vue.
             </p>
