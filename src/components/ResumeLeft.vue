@@ -33,10 +33,18 @@
 
           <div class="section__item">
             <div class="section__item-diamond"></div>
+            <p class="about-me-content dark:text-neutral-400 mb-1">
+              Full-Stack Developer with 5+ years building web applications end-to-end. Expertise in
+              Laravel (backend architecture, API design, performance optimization) and
+              Vue.js/TypeScript frontends.
+            </p>
+            <p class="about-me-content dark:text-neutral-400 mb-1">
+              Shipped production projects, including a tutoring marketplace, a safety check-in app,
+              and a personalized fitness platform.
+            </p>
             <p class="about-me-content dark:text-neutral-400">
-              Full-Stack Web Developer with 5+ years of experience spanning front-end design, API
-              development, database design, DevOps, and AWS cloud management. Primarily work with
-              Laravel and Vue.
+              Experienced in AWS, Docker, CI/CD pipelines, and daily use of AI coding tools to aid
+              development while maintaining clean, testable code.
             </p>
           </div>
         </div>
