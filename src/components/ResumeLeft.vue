@@ -74,15 +74,24 @@
 
               <ul class="enumeration__description">
                 <li class="enumeration__description-item">
+                  <!-- Supported production readiness of a secure donation/crowdfunding platform (Laravel
+                  backend with Stripe recurring payments, Sumsub KYC integration, and AWS SNS/SES
+                  infrastructure) during resumed development phase, including bug fixes, CI/CD
+                  pipeline validation, environment configuration, and transition to live production
+                  settings ahead of APEX and beta testing. -->
+                  Supported production readiness of a crowdfunding platform (Laravel backend) during
+                  a resumed development phase for the ADRF Foundation.
+                </li>
+                <li class="enumeration__description-item">
                   Designed and implemented backend APIs and database schemas with Laravel for Better
-                  Fit, a fitness application that matches workouts with users' fitness goals
+                  Fit, a fitness application that matches workouts with user's fitness goals
                 </li>
                 <li class="enumeration__description-item">
                   <!-- Supported development of new features for a mature project called Blended Services
                   that indicate a tree's maintenance frequency and status in addition to supporting
                   collaborative maintenance of trees -->
-                  Contributed features to Blended Services, a tree maintenance platform tracking
-                  frequency, status, and collaborative workflows
+                  Supported development of new features for Blended Services, a tree maintenance
+                  platform tracking frequency, status, and collaborative workflows
                 </li>
                 <li class="enumeration__description-item">
                   <!-- Developer of a Laravel backend API and CMS for LifeStyler, a job-matching platform
