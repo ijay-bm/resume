@@ -34,7 +34,7 @@
           <div class="section__item">
             <div class="section__item-diamond"></div>
             <p class="about-me-content dark:text-neutral-400 mb-1">
-              Full-Stack Developer with 5+ years building web applications end-to-end. Expertise in
+              Full-Stack Developer with 5 years building web applications end-to-end. Expertise in
               Laravel (backend architecture, API design, performance optimization) and
               Vue.js/TypeScript frontends.
             </p>
@@ -69,7 +69,7 @@
 
               <div class="enumeration__row">
                 <span class="enumeration__heading">Appetiser Apps</span>
-                <span class="enumeration__right-subtitle">Nov 2024 — Present</span>
+                <span class="enumeration__right-subtitle">Nov 2024 — Mar 2026</span>
               </div>
 
               <ul class="enumeration__description">
