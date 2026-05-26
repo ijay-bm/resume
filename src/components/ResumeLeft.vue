@@ -63,7 +63,7 @@
             <div class="section__item-diamond"></div>
             <div class="enumeration">
               <div class="enumeration__row">
-                <span class="enumeration__subheading">Web Developer</span>
+                <span class="enumeration__subheading">Full Stack Web Developer</span>
                 <span class="enumeration__right-subtitle">Remote (Richmond, Australia)</span>
               </div>
 
@@ -124,7 +124,7 @@
             <div class="section__item-diamond"></div>
             <div class="enumeration">
               <div class="enumeration__row">
-                <span class="enumeration__subheading">Intermediate Web Developer</span>
+                <span class="enumeration__subheading">Intermediate Full Stack Web Developer</span>
                 <span class="enumeration__right-subtitle">Remote (Pasig City, Metro Manila)</span>
               </div>
 
@@ -153,15 +153,8 @@
           <div class="enumeration section__item">
             <div class="section__item-diamond"></div>
             <div class="enumeration">
-              <!-- <div class="enumeration__row">
-                <span class="enumeration__subheading">
-                  Associate Web Developer
-                  <span class="enumeration__subheading-sub">| Jun 2021 — Sep 2023</span>
-                </span>
-              </div> -->
-
               <div class="enumeration__row">
-                <span class="enumeration__subheading">Associate Web Developer</span>
+                <span class="enumeration__subheading">Associate Full Stack Web Developer</span>
                 <span class="enumeration__right-subtitle">Remote (Pasig City, Metro Manila)</span>
               </div>
 
@@ -282,7 +275,7 @@
                   Full-Stack Web Development (Laravel, PHP, Vue, Nuxt, React, React Router, React
                   Native, Vuetify, SASS, Tailwind), Integrations (APIs, SDKs), Database Management,
                   Project Management, Cloud Services (AWS), Containerization (Docker), Deployments,
-                  Server Administration
+                  Server Administration, Microservices Architecture
                 </span>
               </p>
             </li>

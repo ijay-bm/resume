@@ -14,12 +14,19 @@
         block h-[7px] w-[7px] rounded-full border border-[2px]"
       :style="`left: ${rating}%;`"
     ></div>
+
+    <span
+      class="text-bronze-500 dark:text-bronze-700 text-[0.65rem] absolute -right-0.5 top-1/2
+        -translate-y-1/2 block"
+    >
+      {{ rating / 10 }}
+    </span>
   </div>
 </template>
 
 <script setup lang="ts">
 const { rating } = defineProps<{
-  rating: Number;
+  rating: number;
 }>();
 </script>
 

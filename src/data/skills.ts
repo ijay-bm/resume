@@ -166,7 +166,8 @@ export const SKILLS: Skill[] = [
       { name: "Kubernetes", rating: 1 },
       { name: "Bitbucket Pipelines", rating: 1 },
       { name: "Manual Deployment", rating: 1 },
-      { name: "WordPress Deployment", rating: 1 }
+      { name: "WordPress Deployment", rating: 1 },
+      { name: "Microservices Architecture", rating: 2 }
     ]
   },
 
@@ -179,7 +180,7 @@ export const SKILLS: Skill[] = [
       // { name: "RDM (tool)", rating: 1 }
     ]
     // experiences: ["cron", "supervisor", "httpd"]
-  }
+  },
 
   // {
   //   name: "Others",
@@ -187,4 +188,14 @@ export const SKILLS: Skill[] = [
   //     { name: "VS Code", rating: 8 }
   //   ]
   // }
+  {
+    name: "Microservices Architecture",
+    rating: 2,
+    experiences: [
+      { name: "API Gateway Pattern", rating: 2 },
+      { name: "Service Isolation", rating: 2 },
+      { name: "JWT-based Inter-service Auth", rating: 2 },
+      { name: "Docker", rating: 1 }
+    ]
+  }
 ];
