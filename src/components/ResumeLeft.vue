@@ -113,7 +113,7 @@
                   ensure integration between platforms and development
                 </li>
                 <li class="enumeration__description-item">
-                  Participated in product development lifecycle including design, develpment,
+                  Participated in product development lifecycle including design, development,
                   testing, and deployment
                 </li>
               </ul>
@@ -135,7 +135,7 @@
 
               <ul class="enumeration__description">
                 <li class="enumeration__description-item">
-                  Led DevOps and AWS initiatives to enhance existing AWS infrastructure and
+                  Led DevOps and AWS initiatives to improve existing AWS infrastructure and
                   implement best practices.
                 </li>
                 <li class="enumeration__description-item">
@@ -143,8 +143,8 @@
                   token-based attendance tracking.
                 </li>
                 <li class="enumeration__description-item">
-                  Reworked the Learning Management System (LMS) platform to reduce technical debt
-                  and enhance functionality.
+                  Led rewrite of an LMS platform with Laravel 10 and Vue 3 to reduce technical debt
+                  and modernize the codebase.
                 </li>
               </ul>
             </div>
@@ -189,7 +189,9 @@
                   stacks.
                 </li> -->
                 <li class="enumeration__description-item">
-                  Full-stack development with Vue and Laravel for LMS and Management Portal
+                  Supported bug fixes and feature development for an existing LMS platform and its
+                  Management Portal, built with Laravel 6 and Vue 2, alongside maintaining the cloud
+                  infrastructure.
                 </li>
                 <li class="enumeration__description-item">
                   Integrated card payments with geolocation-based localized pricing
@@ -272,10 +274,11 @@
               <p class="text-sm">
                 <span class="font-medium">Skills: </span>
                 <span class="text-neutral-700 dark:text-neutral-300">
-                  Full-Stack Web Development (Laravel, PHP, Vue, Nuxt, React, React Router, React
-                  Native, Vuetify, SASS, Tailwind), Integrations (APIs, SDKs), Database Management,
-                  Project Management, Cloud Services (AWS), Containerization (Docker), Deployments,
-                  Server Administration, Microservices Architecture
+                  Full-Stack Web Development (Laravel, Filament, PHP, Vue, Nuxt, React, React
+                  Router, React Native, Vuetify, SASS, Tailwind, JavaScript, TypeScript, Test-Driven
+                  Development), Integrations (APIs, SDKs), Database Management, Project Management,
+                  Cloud Services (AWS), Containerization (Docker), Deployments, Server
+                  Administration, Microservices, AI-Assisted Development (Claude Code)
                 </span>
               </p>
             </li>
@@ -301,8 +304,7 @@
               <p class="text-sm">
                 <span class="font-medium">Interests: </span>
                 <span class="text-neutral-700 dark:text-neutral-300">
-                  Guitar, Piano, Violin, Technology, Computers, Exercise, Media, History, Books,
-                  Gaming
+                  Gaming, YouTube, Anime, Movies, Guitar, History, Books
                 </span>
               </p>
             </li>
@@ -314,7 +316,7 @@
 
     <div v-if="documentStyle !== DocumentStyle.TypeC" class="interests">
       <strong>Interests:</strong>
-      Gaming, Media, Guitar, Piano, Violin, Exercise, Computers, Technology, History, Books
+      Gaming, YouTube, Anime, Movies, Guitar, History, Books
     </div>
 
     <!-- <div

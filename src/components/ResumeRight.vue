@@ -17,7 +17,7 @@
               <div class="skills__name">BS Computer Engineering</div>
               <div class="skills__item-details">
                 <ul class="skills__item-sub-skills">
-                  <li class="text-xs">Baguio PH (Jun 2013 — May 2020)</li>
+                  <li class="text-xs">University of Baguio, PH (Jun 2013 — May 2020)</li>
                 </ul>
               </div>
             </div>

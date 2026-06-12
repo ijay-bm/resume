@@ -14,9 +14,7 @@
     </li>
     <li class="contact-info__item">
       <IMdiLocation />
-      <span>Philippines</span>
+      <span>Angeles City, PH</span>
     </li>
   </ul>
 </template>
-
-<script setup lang="ts"></script>

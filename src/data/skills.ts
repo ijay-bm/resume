@@ -18,6 +18,7 @@ export const SKILLS: Skill[] = [
           { name: "React Router", rating: 5 },
           { name: "React Native", rating: 4 },
           { name: "JavaScript", rating: 8 },
+          { name: "TypeScript", rating: 8 },
           { name: "HTML", rating: 7 },
           { name: "CSS/SASS", rating: 8 },
           { name: "Tailwind", rating: 7 }
@@ -32,11 +33,13 @@ export const SKILLS: Skill[] = [
         rating: 8,
         experiences: [
           { name: "Laravel", rating: 8 },
-          { name: "PHP", rating: 7 },
+          { name: "PHP", rating: 8 },
           { name: "Filament", rating: 7 },
-          { name: "Bruno", rating: 7 },
-          { name: "Postman", rating: 1 },
-          { name: "MJML", rating: 1 }
+          // { name: "Bruno", rating: 8 },
+          // { name: "Postman", rating: 1 },
+          { name: "Unit/Function Tests", rating: 7 },
+          { name: "Test Driven Development", rating: 7 }
+          // { name: "MJML", rating: 1 }
           // { name: "Laravel ORM", rating: 7 },
           // { name: "Laravel Migrations", rating: 7 },
           // { name: "Laravel Blade", rating: 3 },
@@ -54,6 +57,7 @@ export const SKILLS: Skill[] = [
     //   { name: "Version Control (Git, Bitbucket)", rating: 7 }
     // ]
   },
+
   // {
   //   name: "API Development",
   //   rating: 7,
@@ -66,6 +70,7 @@ export const SKILLS: Skill[] = [
   // { name: "Static Site Generation (SSG)", rating: 1 },
   // { name: "Server-Side Rendering (SSR)", rating: 1 },
   // {
+
   //   name: "Source Control",
   //   rating: 7,
   //   experiences: [
@@ -74,6 +79,7 @@ export const SKILLS: Skill[] = [
   //     { name: "SourceTree", rating: 2 }
   //   ]
   // }
+
   // {
   //   name: "Development Approach",
   //   rating: 7,
@@ -84,28 +90,39 @@ export const SKILLS: Skill[] = [
   //   ]
   // },
 
-  // {
-  //   name: "Development Tools",
-  //   rating: 7,
-  //   experiences: [
-  //     { name: "Git", rating: 5 },
-  //     { name: "Bitbucket", rating: 5 },
-  //     { name: "SourceTree", rating: 2 },
-  //     { name: "Jira", rating: 5 },
-  //     { name: "VS Code", rating: 8 },
-  //     { name: "browser addons" },
-  //     { name: "Devolutions RDM", rating: 3 },
-  //     { name: "Postman" },
-  //     { name: "DBeaver", rating: 4 }
-  //   ]
-  // },
+  {
+    name: "Development Tools",
+    rating: 7,
+    experiences: [
+      { name: "Git", rating: 5 },
+      //     { name: "Github", rating: 6 }, // more of a platform
+      //     { name: "Gitlab", rating: 6 }, // more of a platform
+      { name: "Bitbucket", rating: 1 },
+      { name: "SourceTree", rating: 1 },
+      { name: "Jira", rating: 1 },
+      { name: "ClickUp", rating: 1 },
+      { name: "Coda", rating: 1 },
+      { name: "VS Code", rating: 8 },
+      // { name: "browser addons" },
+      // { name: "Devolutions RDM", rating: 3 },
+      // { name: "Postman", rating: 1 },
+      // { name: "DBeaver", rating: 4 }
+      { name: "Bruno", rating: 1 },
+      { name: "Claude Code", rating: 5 }
+
+      //     { name: "Atlassian Jira & Bitbucket", rating: 1 },
+      //     { name: "Gitlab", rating: 6 },
+      //     { name: "ClickUp", rating: 7 },
+      //     { name: "Coda", rating: 6 }
+    ]
+  },
 
   {
     name: "Integrations",
     rating: 7,
     experiences: [
       { name: "APIs & SDKs", rating: 7 },
-      { name: "Google Places", rating: 1 },
+      // { name: "Google Places", rating: 1 },
       // { name: "iOS In-App Purchases", rating: 1 },
       { name: "Payment Processors", rating: 1 },
       { name: "Audio/Video Services", rating: 1 },
@@ -130,16 +147,17 @@ export const SKILLS: Skill[] = [
   //   ]
   // },
 
-  {
-    name: "Project Management",
-    rating: 6,
-    experiences: [
-      { name: "Atlassian Jira & Bitbucket", rating: 1 },
-      { name: "Gitlab", rating: 6 },
-      { name: "ClickUp", rating: 7 },
-      { name: "Coda", rating: 6 }
-    ]
-  },
+  // {
+  //   name: "Project Management",
+  //   rating: 6,
+  //   experiences: [
+  //     { name: "Atlassian Jira & Bitbucket", rating: 1 },
+  //     { name: "Gitlab", rating: 6 },
+  //     { name: "ClickUp", rating: 7 },
+  //     { name: "Coda", rating: 6 }
+  //   ]
+  // },
+
   {
     name: "Cloud Services",
     rating: 5,
@@ -157,13 +175,14 @@ export const SKILLS: Skill[] = [
       { name: "AWS RDS", rating: 1 }
     ]
   },
+
   {
     name: "Containerization and Deployments",
     rating: 5,
     experiences: [
       { name: "AWS", rating: 5 },
       { name: "Docker", rating: 1 },
-      { name: "Kubernetes", rating: 1 },
+      // { name: "Kubernetes", rating: 1 },
       { name: "Bitbucket Pipelines", rating: 1 },
       { name: "Manual Deployment", rating: 1 },
       { name: "WordPress Deployment", rating: 1 },
@@ -171,16 +190,16 @@ export const SKILLS: Skill[] = [
     ]
   },
 
-  {
-    name: "Server Administration",
-    rating: 3,
-    experiences: [
-      { name: "Ubuntu", rating: 4 },
-      { name: "Amazon Linux 2023", rating: 1 }
-      // { name: "RDM (tool)", rating: 1 }
-    ]
-    // experiences: ["cron", "supervisor", "httpd"]
-  },
+  // {
+  //   name: "Server Administration",
+  //   rating: 3,
+  //   experiences: [
+  //     { name: "Ubuntu", rating: 4 },
+  //     { name: "Amazon Linux 2023", rating: 1 }
+  //     // { name: "RDM (tool)", rating: 1 }
+  //   ]
+  //   // experiences: ["cron", "supervisor", "httpd"]
+  // },
 
   // {
   //   name: "Others",
@@ -190,12 +209,22 @@ export const SKILLS: Skill[] = [
   // }
   {
     name: "Microservices Architecture",
-    rating: 2,
+    rating: 1,
     experiences: [
-      { name: "API Gateway Pattern", rating: 2 },
-      { name: "Service Isolation", rating: 2 },
-      { name: "JWT-based Inter-service Auth", rating: 2 },
-      { name: "Docker", rating: 1 }
+      { name: "API Gateway Pattern", rating: 1 },
+      { name: "Service Isolation", rating: 1 },
+      { name: "JWT-based Inter-service Auth", rating: 1 },
+      // { name: "Docker", rating: 1 }
     ]
   }
+
+  // // potential skills, or perhaps add them to other skills in the list
+  // { name: "Cline (VS Code extension)", rating: 7 },
+  // { name: "Claude LLM", rating: 7 },
+  // { name: "Claude (VS Code extension)", rating: 3 },
+  // { name: "AI-assisted development", rating: 7 }
+
+  // section for Testing (such as TDD)?
+
+  // missing automation somewhere, a dedicated seciton or somesubsection?
 ];
