@@ -64,7 +64,7 @@
             <div class="enumeration">
               <div class="enumeration__row">
                 <span class="enumeration__subheading">Full Stack Web Developer</span>
-                <span class="enumeration__right-subtitle">Remote (Richmond, Australia)</span>
+                <span class="enumeration__right-subtitle">Remote (Richmond, AU)</span>
               </div>
 
               <div class="enumeration__row">
@@ -125,7 +125,7 @@
             <div class="enumeration">
               <div class="enumeration__row">
                 <span class="enumeration__subheading">Intermediate Full Stack Web Developer</span>
-                <span class="enumeration__right-subtitle">Remote (Pasig City, Metro Manila)</span>
+                <span class="enumeration__right-subtitle">Remote (Pasig City, PH)</span>
               </div>
 
               <div class="enumeration__row">
@@ -155,7 +155,7 @@
             <div class="enumeration">
               <div class="enumeration__row">
                 <span class="enumeration__subheading">Associate Full Stack Web Developer</span>
-                <span class="enumeration__right-subtitle">Remote (Pasig City, Metro Manila)</span>
+                <span class="enumeration__right-subtitle">Remote (Pasig City, PH)</span>
               </div>
 
               <div class="enumeration__row">
@@ -210,7 +210,7 @@
             <div class="enumeration">
               <div class="enumeration__row">
                 <span class="enumeration__subheading">On-The-Job Trainee</span>
-                <span class="enumeration__right-subtitle">Baguio, Philippines</span>
+                <span class="enumeration__right-subtitle">Baguio City, PH</span>
               </div>
 
               <div class="enumeration__row">
@@ -218,14 +218,14 @@
                 <span class="enumeration__right-subtitle">Jan 2020 — Mar 2020</span>
               </div>
 
-              <ul class="enumeration__description">
+              <!-- <ul class="enumeration__description">
                 <li class="enumeration__description-item">
                   My experience here can be summed up into
                   <i>customer experience</i>
                   and
                   <i>service technician.</i>
                 </li>
-              </ul>
+              </ul> -->
             </div>
           </div>
         </div>
@@ -248,7 +248,7 @@
             <div class="enumeration">
               <div class="enumeration__row">
                 <span class="enumeration__subheading">BS Computer Engineering</span>
-                <span class="enumeration__right-subtitle">Baguio, Philippines</span>
+                <span class="enumeration__right-subtitle">Baguio City, PH</span>
               </div>
 
               <div class="enumeration__row">
@@ -273,13 +273,14 @@
             <li class="enumeration__item">
               <p class="text-sm">
                 <span class="font-medium">Skills: </span>
-                <span class="text-neutral-700 dark:text-neutral-300">
+                <!-- <span class="text-neutral-700 dark:text-neutral-300">
                   Full-Stack Web Development (Laravel, Filament, PHP, Vue, Nuxt, React, React
                   Router, React Native, Vuetify, SASS, Tailwind, JavaScript, TypeScript, Test-Driven
                   Development), Integrations (APIs, SDKs), Database Management, Project Management,
                   Cloud Services (AWS), Containerization (Docker), Deployments, Server
                   Administration, Microservices, AI-Assisted Development (Claude Code)
-                </span>
+                </span> -->
+                {{ SKILLS_SUMMARY }}
               </p>
             </li>
 
@@ -336,8 +337,8 @@
 
 <script setup lang="ts">
 import { type Certification, DocumentStyle, ToolStyle } from "@/types/resume";
-
 import ContactInfo from "./ContactInfo.vue";
+import { SKILLS_SUMMARY } from "@/data/skills.ts";
 
 const certifications = defineModel<Certification[]>("certifications", {
   required: true
