@@ -43,8 +43,9 @@
               and a personalized fitness platform.
             </p>
             <p class="about-me-content dark:text-neutral-400">
-              Experienced in AWS, Docker, CI/CD pipelines, and daily use of AI coding tools to aid
-              development while maintaining clean, testable code.
+              Experienced in AWS, Docker, microservices, and CI/CD pipelines, with a test-driven
+              workflow (unit, feature, and load testing) and daily use of AI coding tools while
+              keeping code clean and maintainable.
             </p>
           </div>
         </div>
@@ -79,12 +80,13 @@
                   infrastructure) during resumed development phase, including bug fixes, CI/CD
                   pipeline validation, environment configuration, and transition to live production
                   settings ahead of APEX and beta testing. -->
-                  Supported production readiness of a crowdfunding platform (Laravel backend) during
-                  a resumed development phase for the ADRF Foundation.
+                  Supported production readiness of the ADRF Foundation crowdfunding platform
+                  (Laravel with a Filament admin, Stripe payments, and Sumsub KYC) during a resumed
+                  development phase.
                 </li>
                 <li class="enumeration__description-item">
-                  Designed and implemented backend APIs and database schemas with Laravel for Better
-                  Fit, a fitness application that matches workouts with user's fitness goals
+                  Built a test-driven Laravel backend (APIs and database schemas) for Better Fit, a
+                  fitness app matching workouts to user goals.
                 </li>
                 <li class="enumeration__description-item">
                   <!-- Supported development of new features for a mature project called Blended Services
@@ -96,26 +98,30 @@
                 <li class="enumeration__description-item">
                   <!-- Developer of a Laravel backend API and CMS for LifeStyler, a job-matching platform
                   connecting workers with short-term opportunities in Australia -->
-                  Built Laravel backend API and CMS for LifeStyler, a job-matching platform for
-                  short-term work in Australia
+                  Built a test-driven Laravel backend API and Filament admin CMS for LifeStyler, a
+                  job-matching platform for short-term work in Australia
                 </li>
                 <li class="enumeration__description-item">
                   Designed and implemented backend APIs and database schemas with Laravel for Solo
                   Alert, a personal safety application that handles complex check-in scheduling and
                   alert systems consumed by an iOS app
+
+                  <!-- Built a test-driven Laravel backend for Solo Alert, a personal-safety app:
+                  check-in scheduling and alert escalation as queued jobs, with APIs consumed by an
+                  iOS app -->
                 </li>
                 <li class="enumeration__description-item">
-                  Developed xcursionplanner, a Vue WebApp with integrated APIs used in planning an
-                  excursion for Australian schools
+                  Developed xcursionplanner, a Vue (Nuxt) Web App with integrated APIs used in
+                  planning an excursion for Australian schools
                 </li>
-                <li class="enumeration__description-item">
+                <!-- <li class="enumeration__description-item">
                   Collaborated with developers (mobile & web), designers and project managers to
                   ensure integration between platforms and development
-                </li>
-                <li class="enumeration__description-item">
+                </li> -->
+                <!-- <li class="enumeration__description-item">
                   Participated in product development lifecycle including design, development,
                   testing, and deployment
-                </li>
+                </li> -->
               </ul>
             </div>
           </div>
@@ -143,8 +149,8 @@
                   token-based attendance tracking.
                 </li>
                 <li class="enumeration__description-item">
-                  Led rewrite of an LMS platform with Laravel 10 and Vue 3 to reduce technical debt
-                  and modernize the codebase.
+                  Led a modernization of the LMS platform from Laravel 6 / Vue 2 to Laravel 10 / Vue
+                  3, rebuilding feature parity to reduce technical debt.
                 </li>
               </ul>
             </div>
@@ -194,7 +200,8 @@
                   infrastructure.
                 </li>
                 <li class="enumeration__description-item">
-                  Integrated card payments with geolocation-based localized pricing
+                  Integrated card (Xendit) and e-wallet (DragonPay) payments with MaxMind
+                  geolocation-based localized pricing
                 </li>
                 <li class="enumeration__description-item">
                   Automated deployments with Bitbucket pipelines and managed cloud infrastructure

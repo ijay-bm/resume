@@ -23,7 +23,14 @@ export const SKILLS: Skill[] = [
             shortName: "Test-Driven Development",
             rating: 7,
             includeInSummary: true
-          }
+          },
+          {
+            name: "Load/Performance Testing (k6)",
+            shortName: "Load Testing (k6)",
+            rating: 4,
+            includeInSummary: true
+          },
+          { name: "Node.js / Express", rating: 2, includeInSummary: true }
           // { name: "MJML", rating: 1 }
           // { name: "Laravel ORM", rating: 7 },
           // { name: "Laravel Migrations", rating: 7 },
