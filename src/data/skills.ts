@@ -1,4 +1,4 @@
-import type { Skill } from "@/types/resume";
+import type { Experience, Skill } from "@/types/resume";
 
 export const SKILLS: Skill[] = [
   {
@@ -132,8 +132,8 @@ export const SKILLS: Skill[] = [
 
       // { name: "DBeaver", rating: 4 }
 
-      { name: "Postman", rating: 1 },
-      { name: "Bruno", rating: 1 }
+      { name: "Postman", rating: 7 },
+      { name: "Bruno", rating: 7 }
       // { name: "Claude Code", rating: 5 },
       // { name: "General AI Assistance", rating: 5 }
     ]
@@ -188,17 +188,23 @@ export const SKILLS: Skill[] = [
     rating: 5,
     includeInSummary: true,
     experiences: [
-      // { name: "AWS EC2 (instances, EBS, ALB, target groups)", shortName: "AWS EC2", rating: 5 },
-      { name: "AWS EC2", shortName: "AWS EC2", rating: 5, includeInSummary: true },
-      { name: "AWS SES", rating: 3 },
-      { name: "AWS SNS", rating: 3 },
-      { name: "AWS CodeDeploy", rating: 1 },
-      { name: "AWS Parameter Store", rating: 1 },
-      { name: "AWS IAM", rating: 1 },
-      { name: "AWS Route 53", rating: 1 },
-      { name: "AWS Certificate Manager", rating: 1 },
-      { name: "AWS S3", rating: 1 },
-      { name: "AWS RDS", rating: 1 }
+      {
+        name: "AWS",
+        rating: 3,
+        includeInSummary: true,
+        subExperiences: [
+          { name: "EC2", shortName: "EC2", rating: 5 },
+          { name: "SES", rating: 3 },
+          { name: "SNS", rating: 3 },
+          { name: "CodeDeploy", rating: 1 },
+          { name: "Parameter Store", rating: 1 },
+          { name: "IAM", rating: 1 },
+          { name: "Route 53", rating: 1 },
+          { name: "Certificate Manager", rating: 1 },
+          { name: "S3", rating: 1 },
+          { name: "RDS", rating: 1 }
+        ]
+      }
     ]
   },
 
@@ -237,6 +243,7 @@ export const SKILLS: Skill[] = [
   //     { name: "VS Code", rating: 8 }
   //   ]
   // }
+
   {
     name: "Microservices Architecture",
     rating: 1,
@@ -270,16 +277,34 @@ export const SKILLS: Skill[] = [
   // missing automation somewhere, a dedicated seciton or somesubsection?
 ];
 
-const summaryLabel = (exp: { name: string; shortName?: string }): string =>
-  exp.shortName ?? exp.name;
+const summaryLabel = (x: { name: string; shortName?: string }): string => x.shortName ?? x.name;
 
-function collectSummaryTechs(skill: Skill): string[] {
+function collectSubExperiences(experience: Experience): string[] {
+  return (
+    experience.subExperiences
+      ?.filter(({ includeInSummary }) => includeInSummary)
+      ?.map(summaryLabel) ?? []
+  );
+}
+
+function labelExperience(experience: Experience): string {
+  const subExperiences = collectSubExperiences(experience);
+  return subExperiences.length
+    ? `${summaryLabel(experience)} - ${subExperiences.join(", ")}`
+    : summaryLabel(experience);
+}
+
+function collectExperiences(skill: Skill): string[] {
   const fromSubSkills =
-    skill.subSkills?.flatMap(
-      (sub) => sub.experiences?.filter((e) => e.includeInSummary).map(summaryLabel) ?? []
-    ) ?? [];
+    skill.subSkills?.flatMap((subSkill) => {
+      const subSkillExperiences =
+        subSkill.experiences?.filter(({ includeInSummary }) => includeInSummary).map(labelExperience) ??
+        [];
+      return [summaryLabel(subSkill), ...subSkillExperiences];
+    }) ?? [];
 
-  const fromDirect = skill.experiences?.filter((e) => e.includeInSummary).map(summaryLabel) ?? [];
+  const fromDirect =
+    skill.experiences?.filter(({ includeInSummary }) => includeInSummary).map(labelExperience) ?? [];
 
   return [...fromSubSkills, ...fromDirect];
 }
@@ -288,7 +313,7 @@ export function buildSkillsSummary(skills: Skill[] = SKILLS): string {
   return skills
     .filter((skill) => skill.includeInSummary)
     .map((skill) => {
-      const techs = collectSummaryTechs(skill);
+      const techs = collectExperiences(skill);
       return techs.length ? `${skill.name} (${techs.join(", ")})` : skill.name;
     })
     .join(", ");

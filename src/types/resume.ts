@@ -24,13 +24,14 @@ export type Experience = {
   shortName?: string;
   rating: number;
   includeInSummary?: boolean;
+  subExperiences?: SubExperience[];
 };
 
-export type SubSkill = {
+export type SubExperience = {
   name: string;
-  shortName: string;
+  shortName?: string;
   rating: number;
-  experiences: Experience[];
+  includeInSummary?: boolean;
 };
 
 export type Skill = {
@@ -40,4 +41,11 @@ export type Skill = {
   subSkills?: SubSkill[];
   experiences?: Experience[];
   includeInSummary?: boolean;
+};
+
+export type SubSkill = {
+  name: string;
+  shortName: string;
+  rating: number;
+  experiences: Experience[];
 };

@@ -53,7 +53,16 @@
                       class="block text-[0.65rem] text-neutral-600 dark:text-neutral-400"
                       v-if="subSkill.experiences?.length"
                     >
-                      {{ subSkill.experiences?.map(({ name }) => name).join(", ") }}
+                      {{
+                        subSkill.experiences
+                          ?.map(({ name, subExperiences }) => {
+                            if (subExperiences?.length) {
+                              return `${name} - ${subExperiences.map(({ name }) => name).join(", ")}`;
+                            }
+                            return name;
+                          })
+                          .join(", ")
+                      }}
                     </span>
                     <SkillBar :rating="subSkill.rating * 10" />
                   </li>
@@ -63,7 +72,16 @@
                   v-if="skill.experiences?.length"
                   class="block text-[0.65rem] text-neutral-600 dark:text-neutral-400"
                 >
-                  {{ skill.experiences?.map(({ name }) => name).join(", ") }}
+                  {{
+                    skill.experiences
+                      ?.map(({ name, subExperiences }) => {
+                        if (subExperiences?.length) {
+                          return `${name} - ${subExperiences.map(({ name }) => name).join(", ")}`;
+                        }
+                        return name;
+                      })
+                      .join(", ")
+                  }}
                 </span>
               </div>
 
