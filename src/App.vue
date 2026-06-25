@@ -45,8 +45,12 @@ import { DocumentStyle, ToolStyle } from "./types/resume";
 
 const documentStyle = ref<DocumentStyle>(DocumentStyle.TypeC);
 function onResumeStyleUpdateModelValue(newModelValue: DocumentStyle) {
-  document.body.classList.remove(documentStyle.value);
-  document.body.classList.add(newModelValue);
+  // Runs once during setup() too, which executes on the server during SSG
+  // where `document` does not exist — guard the DOM access.
+  if (typeof document !== "undefined") {
+    document.body.classList.remove(documentStyle.value);
+    document.body.classList.add(newModelValue);
+  }
   documentStyle.value = newModelValue;
 }
 onResumeStyleUpdateModelValue(DocumentStyle.TypeC);

@@ -30,7 +30,7 @@ export const SKILLS: Skill[] = [
             rating: 4,
             includeInSummary: true
           },
-          { name: "Node.js / Express", rating: 2, includeInSummary: true }
+          { name: "Node.js - Express.js", rating: 2, includeInSummary: true }
           // { name: "MJML", rating: 1 }
           // { name: "Laravel ORM", rating: 7 },
           // { name: "Laravel Migrations", rating: 7 },
