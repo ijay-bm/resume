@@ -205,6 +205,23 @@ export const SKILLS: Skill[] = [
           { name: "RDS", rating: 1 }
         ]
       }
+      // {
+      //   name: "Digital Ocean",
+      //   rating: 5,
+      //   subExperiences: [{ name: "Droplets", rating: 5 }]
+      // },
+      // {
+      //   name: "GoDaddy",
+      //   rating: 1
+      // },
+      // {
+      //   name: "Google Firebase",
+      //   rating: 1
+      // },
+      // {
+      //   name: "Google Cloud Platform",
+      //   rating: 1
+      // }
     ]
   },
 
@@ -261,12 +278,11 @@ export const SKILLS: Skill[] = [
     rating: 5,
     includeInSummary: true,
     experiences: [
-      { name: "Claude Code", rating: 5, includeInSummary: true }
-      // { name: "Cline (VS Code extension)", rating: 7 },
+      { name: "Claude Code", rating: 5, includeInSummary: true },
+      { name: "Cline ", rating: 1 }
       // { name: "Claude Chat", rating: 7 },
-      // { name: "Claude (VS Code extension)", rating: 3 },
-
       // Gemini
+      // ChatGPT
     ]
   }
 
@@ -298,13 +314,15 @@ function collectExperiences(skill: Skill): string[] {
   const fromSubSkills =
     skill.subSkills?.flatMap((subSkill) => {
       const subSkillExperiences =
-        subSkill.experiences?.filter(({ includeInSummary }) => includeInSummary).map(labelExperience) ??
-        [];
+        subSkill.experiences
+          ?.filter(({ includeInSummary }) => includeInSummary)
+          .map(labelExperience) ?? [];
       return [summaryLabel(subSkill), ...subSkillExperiences];
     }) ?? [];
 
   const fromDirect =
-    skill.experiences?.filter(({ includeInSummary }) => includeInSummary).map(labelExperience) ?? [];
+    skill.experiences?.filter(({ includeInSummary }) => includeInSummary).map(labelExperience) ??
+    [];
 
   return [...fromSubSkills, ...fromDirect];
 }

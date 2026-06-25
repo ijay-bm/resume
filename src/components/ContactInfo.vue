@@ -7,8 +7,8 @@
     <li class="contact-info__item">
       <ISolarLinkBroken />
       <span>
-        <a href="https://ijay-bm.github.io/portfolio" target="_blank" title="Portfolio">
-          ijay-bm.github.io/portfolio
+        <a href="https://ijay.dev/portfolio" target="_blank" title="Portfolio">
+          ijay.dev/portfolio
         </a>
       </span>
     </li>

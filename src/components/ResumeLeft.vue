@@ -327,18 +327,20 @@
       Gaming, YouTube, Anime, Movies, Guitar, History, Books
     </div>
 
-    <!-- <div
-        v-if="documentStyle !== DocumentStyle.TypeC"
-        class="invisible absolute bottom-0 w-full py-2 text-xs text-neutral-700 print:hidden"
-      >
-        <div class="mx-auto w-max text-center">
-          For the best viewing experience, visit the web version of this document:
-          <br />
-          <a href="https://ijay-bm.github.io/resume/" target="_blank" class="text-bronze-500">
-            https://ijay-bm.github.io/resume/
-          </a>
-        </div>
-      </div> -->
+    <!-- <div class="invisible absolute bottom-0 w-full py-2 text-xs text-neutral-700 print:visible">
+      <div class="mx-auto w-max text-center">
+        For the best viewing experience, visit the web version of this document:
+        <br />
+        <a
+          href="https://ijay.dev/portfolio"
+          target="_blank"
+          title="Portfolio"
+          class="text-bronze-500"
+        >
+          ijay.dev/portfolio
+        </a>
+      </div>
+    </div> -->
   </div>
 </template>
 
