@@ -230,16 +230,14 @@ export const SKILLS: Skill[] = [
     rating: 5,
     includeInSummary: true,
     experiences: [
-      { name: "AWS", rating: 2 },
+      // { name: "AWS", rating: 2 },
       { name: "Docker", rating: 5, includeInSummary: true },
       // { name: "Kubernetes", rating: 1 },
-      // "Bitbucket Pipelines" is your CI/CD — consider shortName: "CI/CD" +
-      // includeInSummary if a post asks for CI/CD by name:
       { name: "Bitbucket Pipelines", rating: 1 },
       { name: "Github Actions", rating: 1 },
       { name: "Manual Deployment", rating: 1 },
-      { name: "WordPress Deployment", rating: 1 },
-      { name: "Microservices Architecture", rating: 1 }
+      { name: "WordPress Deployment", rating: 1 }
+      // { name: "Microservices Architecture", rating: 1 }
     ]
   },
 
