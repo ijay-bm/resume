@@ -1,7 +1,12 @@
 <template>
   <div class="relative">
     <div class="space-y-2">
-      <div v-for="(item, index) in items" :key="index" class="flex items-center gap-2">
+      <label
+        v-for="(item, index) in items"
+        :key="index"
+        class="flex items-center gap-2 cursor-pointer"
+        :for="item.value"
+      >
         <input
           type="radio"
           class="inline-block size-6 cursor-pointer appearance-none rounded-full border-2
@@ -11,10 +16,10 @@
           :value="item.value"
           v-model="modelValue"
         />
-        <label :for="item.value" class="block cursor-pointer">
+        <label>
           {{ item.label }}
         </label>
-      </div>
+      </label>
     </div>
 
     <span

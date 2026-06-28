@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import { type Certification, DocumentStyle, type Skill, ToolStyle } from "@/types/resume";
+import { type Certification, DocumentStyle, type SkillNode, ToolStyle } from "@/types/resume";
 
 import ResumeLeft from "./ResumeLeft.vue";
 import ResumeRight from "./ResumeRight.vue";
@@ -26,7 +26,7 @@ const certifications = defineModel<Certification[]>("certifications", {
 });
 
 defineProps<{
-  skills: Skill[];
+  skills: SkillNode[];
   toolsStyle: ToolStyle;
   documentStyle: DocumentStyle;
 }>();

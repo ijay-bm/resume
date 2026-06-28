@@ -1,20 +1,22 @@
-import type { Experience, Skill } from "@/types/resume";
+import type { SkillNode } from "@/types/resume";
 
-export const SKILLS: Skill[] = [
+export const SKILLS: SkillNode[] = [
   {
     name: "Full-Stack Web Development",
-    shortName: "Full-Stack Development",
+    // shortName: "Full-Stack Development",
     rating: 8,
     includeInSummary: true,
-    subSkills: [
+    children: [
       {
         name: "Backend Web Development",
-        shortName: "Backend Development",
+        // shortName: "Backend Development",
         rating: 8,
-        experiences: [
+        includeInSummary: true,
+        children: [
           { name: "Laravel", rating: 8, includeInSummary: true },
           { name: "PHP", rating: 8, includeInSummary: true },
           { name: "Filament", rating: 7, includeInSummary: true },
+          { name: "REST APIs", rating: 7, includeInSummary: true },
           // { name: "Bruno", rating: 8 },
           // { name: "Postman", rating: 1 },
           { name: "Unit/Function Tests", rating: 7 },
@@ -25,12 +27,16 @@ export const SKILLS: Skill[] = [
             includeInSummary: true
           },
           {
-            name: "Load/Performance Testing (k6)",
-            shortName: "Load Testing (k6)",
-            rating: 4,
-            includeInSummary: true
+            name: "Load Testing",
+            rating: 1,
+            includeInSummary: true,
+            children: [{ name: "k6", rating: 1, includeInSummary: true }]
           },
-          { name: "Node.js - Express.js", rating: 2, includeInSummary: true }
+          {
+            name: "Node.js - Express.js",
+            rating: 2,
+            includeInSummary: true
+          }
           // { name: "MJML", rating: 1 }
           // { name: "Laravel ORM", rating: 7 },
           // { name: "Laravel Migrations", rating: 7 },
@@ -40,10 +46,11 @@ export const SKILLS: Skill[] = [
       },
       {
         name: "Frontend Web Development",
-        shortName: "Frontend Development",
+        // shortName: "Frontend Development",
         rating: 8,
-        experiences: [
-          { name: "Vue", rating: 7, includeInSummary: true },
+        includeInSummary: true,
+        children: [
+          { name: "Vue.js", rating: 7, includeInSummary: true },
           { name: "Vuetify", rating: 2 },
           { name: "Nuxt", rating: 2, includeInSummary: true },
           { name: "React", rating: 2, includeInSummary: true },
@@ -64,7 +71,7 @@ export const SKILLS: Skill[] = [
       //   rating: 7
       // },
     ]
-    // experiences: [
+    // children: [
     //   { name: "Principles (OOP, SOLID, DRY)", rating: 7 },
     //   { name: "Patterns (Service, DTO)", rating: 7 },
     //   { name: "Version Control (Git, Bitbucket)", rating: 7 }
@@ -74,35 +81,10 @@ export const SKILLS: Skill[] = [
   // {
   //   name: "API Development",
   //   rating: 7,
-  //   experiences: [
+  //   children: [
   //     { name: "RESTful API Design", rating: 7 },
   //     { name: "Resource-Oriented API Design", rating: 7 },
   //     { name: "Laravel MVC API development", rating: 7 }
-  //   ]
-  // },
-
-  // { name: "Static Site Generation (SSG)", rating: 1 },
-
-  // { name: "Server-Side Rendering (SSR)", rating: 1 },
-
-  // {
-
-  //   name: "Source Control",
-  //   rating: 7,
-  //   experiences: [
-  //     { name: "Git", rating: 5 },
-  //     { name: "Bitbucket", rating: 5 },
-  //     { name: "SourceTree", rating: 2 }
-  //   ]
-  // }
-
-  // {
-  //   name: "Development Approach",
-  //   rating: 7,
-  //   experiences: [
-  //     { name: "Principles (SOLID, DRY)", rating: 7 },
-  //     { name: "Patterns (Service, DTO,  MVC)", rating: 7 },
-  //     { name: "FE Methodologies (Atomic, BEM, Flat, Modules, 7-1 SASS Pattern)", rating: 6 }
   //   ]
   // },
 
@@ -112,7 +94,7 @@ export const SKILLS: Skill[] = [
     // includeInSummary intentionally omitted: tool chrome (Git, VS Code, etc.)
     // is low-signal in the one-line summary. Claude Code is surfaced separately
     // below as "AI-Assisted Development".
-    experiences: [
+    children: [
       { name: "Git", rating: 5 },
       // { name: "Github", rating: 6 }, // more of a platform
       // { name: "Gitlab", rating: 6 }, // more of a platform
@@ -143,20 +125,68 @@ export const SKILLS: Skill[] = [
     name: "Integrations",
     rating: 7,
     includeInSummary: true,
-    experiences: [
-      { name: "APIs & SDKs", rating: 7, includeInSummary: true },
-      // { name: "Google Places", rating: 1 },
-      // { name: "Apple In-App Purchases", rating: 1 },
-      // { name: "Android In-App Purchases", rating: 1 },
-      { name: "Payment Processors - Xendit, DragonPay", rating: 1 },
-      { name: "Audio/Video Services - Twilio", rating: 1 },
-      { name: "WebSockets - Pusher", rating: 1 },
-      { name: "Geolocation Services - MaxMind", rating: 1 }
-      // { name: "Google Tag Manager", rating: 1 },
-      // {
-      //   name: "Document Generation (PDF, XLS, MJML)",
-      //   rating: 1
-      // }
+    // experiences: [
+    //   // { name: "Apple In-App Purchases", rating: 1 },
+    //   // { name: "Android In-App Purchases", rating: 1 },
+    //   { name: "Audio/Video Services - Twilio", rating: 1 },
+    //   { name: "WebSockets - Pusher", rating: 1 },
+    //   { name: "Geolocation Services - MaxMind", rating: 1 }
+    //   // { name: "Google Tag Manager", rating: 1 },
+    children: [
+      {
+        name: "Payment Processors",
+        rating: 7,
+        includeInSummary: true,
+        children: [
+          { name: "Stripe", rating: 1, includeInSummary: true },
+          { name: "Xendit", rating: 6, includeInSummary: true },
+          { name: "DragonPay", rating: 6, includeInSummary: true }
+        ]
+      },
+      {
+        name: "Communications",
+        shortName: "Comms (Audio, Video, SMS, Email)",
+        rating: 6,
+        includeInSummary: true,
+        children: [
+          { name: "Twilio", rating: 1, includeInSummary: true },
+          { name: "AWS SNS / SES", rating: 1, includeInSummary: true },
+          { name: "GoDaddy SMTP", rating: 1, includeInSummary: false }
+        ]
+      },
+      {
+        name: "WebSockets",
+        rating: 6,
+        includeInSummary: true,
+        children: [{ name: "Pusher", rating: 1, includeInSummary: true }]
+      },
+      {
+        name: "Geolocation",
+        rating: 5,
+        includeInSummary: true,
+        children: [{ name: "MaxMind", rating: 6, includeInSummary: true }]
+      },
+      {
+        name: "Google",
+        rating: 1,
+        includeInSummary: false,
+        children: [
+          { name: "Tag Manager", rating: 1, includeInSummary: false },
+          { name: "Places", rating: 1, includeInSummary: false },
+          { name: "Analytics", rating: 1, includeInSummary: false },
+          { name: "Firebase", rating: 1, includeInSummary: false }
+        ]
+      }
+      // { name: "Maps & Places", children: [{ name: "Google Places", rating: 4 }] },
+      // { name: "In-App Purchases", children: [
+      //   { name: "Apple IAP", rating: 3 },
+      //   { name: "Google Play Billing", rating: 3 }
+      // ] },
+      // { name: "Analytics", children: [{ name: "Google Tag Manager", rating: 3 }] },
+      //   // {
+      //   //   name: "Document Generation (PDF, XLS, MJML)",
+      //   //   rating: 1
+      //   // }
     ]
   },
 
@@ -164,7 +194,7 @@ export const SKILLS: Skill[] = [
     name: "Databases",
     rating: 8,
     includeInSummary: true,
-    experiences: [
+    children: [
       { name: "SQL - MySQL/MariaDB", rating: 7, includeInSummary: true }
       // { name: "DBeaver", rating: 3 },
       // { name: "Laravel ORM", rating: 7 },
@@ -175,7 +205,7 @@ export const SKILLS: Skill[] = [
   // {
   //   name: "Project Management",
   //   rating: 6,
-  //   experiences: [
+  //   children: [
   //     { name: "Atlassian Jira & Bitbucket", rating: 1 },
   //     { name: "Gitlab", rating: 6 },
   //     { name: "ClickUp", rating: 7 },
@@ -187,13 +217,13 @@ export const SKILLS: Skill[] = [
     name: "Cloud Services",
     rating: 5,
     includeInSummary: true,
-    experiences: [
+    children: [
       {
         name: "AWS",
         rating: 3,
         includeInSummary: true,
-        subExperiences: [
-          { name: "EC2", shortName: "EC2", rating: 5 },
+        children: [
+          { name: "EC2", rating: 6 },
           { name: "SES", rating: 3 },
           { name: "SNS", rating: 3 },
           { name: "CodeDeploy", rating: 1 },
@@ -208,15 +238,7 @@ export const SKILLS: Skill[] = [
       // {
       //   name: "Digital Ocean",
       //   rating: 5,
-      //   subExperiences: [{ name: "Droplets", rating: 5 }]
-      // },
-      // {
-      //   name: "GoDaddy",
-      //   rating: 1
-      // },
-      // {
-      //   name: "Google Firebase",
-      //   rating: 1
+      //   children: [{ name: "Droplets", rating: 5 }]
       // },
       // {
       //   name: "Google Cloud Platform",
@@ -229,7 +251,7 @@ export const SKILLS: Skill[] = [
     name: "Containerization and Deployments",
     rating: 5,
     includeInSummary: true,
-    experiences: [
+    children: [
       // { name: "AWS", rating: 2 },
       { name: "Docker", rating: 5, includeInSummary: true },
       // { name: "Kubernetes", rating: 1 },
@@ -244,26 +266,27 @@ export const SKILLS: Skill[] = [
   {
     name: "Server Administration",
     rating: 3,
-    experiences: [
+    children: [
       { name: "Ubuntu", rating: 1 },
       { name: "Amazon Linux 2023", rating: 1 }
       // { name: "RDM (tool)", rating: 1 }
     ]
-    // experiences: ["cron", "supervisor", "httpd"]
+    // children: ["cron", "supervisor", "httpd"]
   },
 
   // {
   //   name: "Others",
-  //   experiences: [
+  //   children: [
   //     { name: "VS Code", rating: 8 }
   //   ]
   // }
 
   {
     name: "Microservices Architecture",
+    shortName: "Microservices",
     rating: 1,
     includeInSummary: true,
-    experiences: [
+    children: [
       { name: "API Gateway Pattern", rating: 1 },
       { name: "Service Isolation", rating: 1 },
       { name: "JWT-based Inter-service Auth", rating: 1 }
@@ -275,7 +298,7 @@ export const SKILLS: Skill[] = [
     name: "AI-Assisted Development",
     rating: 5,
     includeInSummary: true,
-    experiences: [
+    children: [
       { name: "Claude Code", rating: 5, includeInSummary: true },
       { name: "Cline ", rating: 1 }
       // { name: "Claude Chat", rating: 7 },
@@ -288,48 +311,55 @@ export const SKILLS: Skill[] = [
 
   // section for Testing (such as TDD)?
 
-  // missing automation somewhere, a dedicated seciton or somesubsection?
+  // missing automation somewhere, a dedicated section or some subsection?
+
+  // Hosting?
+  // GoDaddy DNS
+  // CLoudfare DNS
+  // AWS Route 53
+  // AWS Certificate Manager
+  // ssl2buy
 ];
 
-const summaryLabel = (x: { name: string; shortName?: string }): string => x.shortName ?? x.name;
+const summaryLabel = (node: SkillNode): string => node.shortName ?? node.name;
 
-function collectSubExperiences(experience: Experience): string[] {
-  return (
-    experience.subExperiences
-      ?.filter(({ includeInSummary }) => includeInSummary)
-      ?.map(summaryLabel) ?? []
-  );
+const summaryChildren = (node: SkillNode): SkillNode[] =>
+  node.children?.filter(({ includeInSummary }) => includeInSummary) ?? [];
+
+const isSummaryLeaf = (node: SkillNode): boolean => summaryChildren(node).length === 0;
+
+function summarizeNode(node: SkillNode): string[] {
+  const children = summaryChildren(node);
+  if (children.length === 0) {
+    return [summaryLabel(node)];
+  }
+  if (children.every(isSummaryLeaf)) {
+    return [`${summaryLabel(node)} - ${children.map(summaryLabel).join(", ")}`];
+  }
+  return [summaryLabel(node), ...children.flatMap(summarizeNode)];
 }
 
-function labelExperience(experience: Experience): string {
-  const subExperiences = collectSubExperiences(experience);
-  return subExperiences.length
-    ? `${summaryLabel(experience)} - ${subExperiences.join(", ")}`
-    : summaryLabel(experience);
+export type SkillSummaryGroup = { label: string; items: string[] };
+
+function collectLeafLabels(node: SkillNode): string[] {
+  const children = summaryChildren(node);
+  return children.length === 0 ? [summaryLabel(node)] : children.flatMap(collectLeafLabels);
 }
 
-function collectExperiences(skill: Skill): string[] {
-  const fromSubSkills =
-    skill.subSkills?.flatMap((subSkill) => {
-      const subSkillExperiences =
-        subSkill.experiences
-          ?.filter(({ includeInSummary }) => includeInSummary)
-          .map(labelExperience) ?? [];
-      return [summaryLabel(subSkill), ...subSkillExperiences];
-    }) ?? [];
-
-  const fromDirect =
-    skill.experiences?.filter(({ includeInSummary }) => includeInSummary).map(labelExperience) ??
-    [];
-
-  return [...fromSubSkills, ...fromDirect];
+export function buildSkillsSummaryGroups(skills: SkillNode[] = SKILLS): SkillSummaryGroup[] {
+  return skills
+    .filter((skill) => skill.includeInSummary)
+    .map((skill) => ({
+      label: summaryLabel(skill),
+      items: summaryChildren(skill).flatMap(collectLeafLabels)
+    }));
 }
 
-export function buildSkillsSummary(skills: Skill[] = SKILLS): string {
+export function buildSkillsSummary(skills: SkillNode[] = SKILLS): string {
   return skills
     .filter((skill) => skill.includeInSummary)
     .map((skill) => {
-      const techs = collectExperiences(skill);
+      const techs = summaryChildren(skill).flatMap(summarizeNode);
       return techs.length ? `${skill.name} (${techs.join(", ")})` : skill.name;
     })
     .join(", ");

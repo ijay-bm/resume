@@ -7,12 +7,12 @@
     <Menu class="max-w-80">
       <div class="space-y-8">
         <div>
-          <h4 class="mb-2 font-bold">Document Type</h4>
+          <h4 class="mb-2 font-bold">Document</h4>
           <RadioGroupInput
             :items="[
-              { label: 'Type A', value: DocumentStyle.TypeA },
-              { label: 'Type B', value: DocumentStyle.TypeB },
-              { label: 'Type C', value: DocumentStyle.TypeC }
+              { label: 'A', value: DocumentStyle.TypeA },
+              { label: 'B', value: DocumentStyle.TypeB },
+              { label: 'C', value: DocumentStyle.TypeC }
             ]"
             name="resume-style-radio-menu"
             :modelValue="documentStyle"
@@ -40,7 +40,7 @@ import Resume from "./components/Resume.vue";
 import ThemeSelector from "./components/ThemeSelector.vue";
 import { CERTIFICATIONS } from "./data/certifications";
 import { SKILLS } from "./data/skills";
-import type { Certification, Skill } from "./types/resume";
+import type { Certification, SkillNode } from "./types/resume";
 import { DocumentStyle, ToolStyle } from "./types/resume";
 
 const documentStyle = ref<DocumentStyle>(DocumentStyle.TypeC);
@@ -57,7 +57,7 @@ onResumeStyleUpdateModelValue(DocumentStyle.TypeC);
 
 const certifications = ref<Certification[]>(CERTIFICATIONS);
 
-const skills = ref<Skill[]>(SKILLS);
+const skills = ref<SkillNode[]>(SKILLS);
 
 const toolsStyle = ref<ToolStyle>(ToolStyle.Hidden);
 </script>

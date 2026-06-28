@@ -9,10 +9,10 @@
 
     <span
       v-else-if="currentStage === ThemeStage.Auto"
-      class="flex items-center justify-center text-bronze-500"
+      class="theme-auto relative block h-full w-full text-bronze-500"
     >
-      <ILineMdSunnyLoop />
-      <ILineMdMoonTwotoneLoop />
+      <ILineMdSunnyLoop class="theme-auto__sun" />
+      <ILineMdMoonTwotoneLoop class="theme-auto__moon" />
     </span>
 
     <span
@@ -50,3 +50,21 @@ function setTheme() {
   document.documentElement.classList.add(theme.value);
 }
 </script>
+
+<style scoped>
+.theme-auto__sun,
+.theme-auto__moon {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.theme-auto__sun {
+  clip-path: polygon(0 0, calc(100% - 1px) 0, 0 calc(100% - 1px));
+}
+
+.theme-auto__moon {
+  clip-path: polygon(100% 1px, 100% 100%, 1px 100%);
+}
+</style>

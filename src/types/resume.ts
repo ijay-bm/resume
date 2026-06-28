@@ -19,33 +19,10 @@ export type Certification = {
   hidden: boolean;
 };
 
-export type Experience = {
+export type SkillNode = {
   name: string;
   shortName?: string;
   rating: number;
   includeInSummary?: boolean;
-  subExperiences?: SubExperience[];
-};
-
-export type SubExperience = {
-  name: string;
-  shortName?: string;
-  rating: number;
-  includeInSummary?: boolean;
-};
-
-export type Skill = {
-  name: string;
-  shortName?: string;
-  rating: number;
-  subSkills?: SubSkill[];
-  experiences?: Experience[];
-  includeInSummary?: boolean;
-};
-
-export type SubSkill = {
-  name: string;
-  shortName: string;
-  rating: number;
-  experiences: Experience[];
+  children?: SkillNode[];
 };

@@ -46,46 +46,28 @@
                 {{ skill.name }}
               </div>
               <div class="skills__item-details">
-                <ul v-if="skill.subSkills?.length" class="skills__item-sub-skills">
-                  <li v-for="(subSkill, subSkillIndex) in skill.subSkills" :key="subSkillIndex">
-                    <span class="block text-xs">{{ subSkill.name }}</span>
+                <ul v-if="hasBranchChildren(skill)" class="skills__item-sub-skills">
+                  <li v-for="(child, childIndex) in skill.children" :key="childIndex">
+                    <span class="block text-xs">{{ child.name }}</span>
                     <span
                       class="block text-[0.65rem] text-neutral-600 dark:text-neutral-400"
-                      v-if="subSkill.experiences?.length"
+                      v-if="child.children?.length"
                     >
-                      {{
-                        subSkill.experiences
-                          ?.map(({ name, subExperiences }) => {
-                            if (subExperiences?.length) {
-                              return `${name} - ${subExperiences.map(({ name }) => name).join(", ")}`;
-                            }
-                            return name;
-                          })
-                          .join(", ")
-                      }}
+                      {{ flattenChildren(child.children) }}
                     </span>
-                    <SkillBar :rating="subSkill.rating * 10" />
+                    <SkillBar :rating="child.rating * 10" />
                   </li>
                 </ul>
 
                 <span
-                  v-if="skill.experiences?.length"
+                  v-else-if="skill.children?.length"
                   class="block text-[0.65rem] text-neutral-600 dark:text-neutral-400"
                 >
-                  {{
-                    skill.experiences
-                      ?.map(({ name, subExperiences }) => {
-                        if (subExperiences?.length) {
-                          return `${name} - ${subExperiences.map(({ name }) => name).join(", ")}`;
-                        }
-                        return name;
-                      })
-                      .join(", ")
-                  }}
+                  {{ flattenChildren(skill.children) }}
                 </span>
               </div>
 
-              <SkillBar v-if="!skill.subSkills?.length" :rating="skill.rating * 10" />
+              <SkillBar v-if="!hasBranchChildren(skill)" :rating="skill.rating * 10" />
             </div>
           </div>
         </div>
@@ -147,7 +129,7 @@
 </template>
 
 <script setup lang="ts">
-import { type Certification, DocumentStyle, type Skill, ToolStyle } from "@/types/resume";
+import { type Certification, DocumentStyle, type SkillNode, ToolStyle } from "@/types/resume";
 import type { FlattenedSkill } from "@/types/theme";
 import { computed } from "vue";
 
@@ -159,52 +141,31 @@ const certifications = defineModel<Certification[]>("certifications", {
 });
 
 const props = defineProps<{
-  skills: Skill[];
+  skills: SkillNode[];
   toolsStyle: ToolStyle;
   documentStyle: DocumentStyle;
 }>();
 
-const flattenedSkills = computed<FlattenedSkill[]>(() => {
-  return [
-    ...props.skills.flatMap(({ name, shortName, rating, subSkills }) => {
-      if (subSkills?.length) {
-        return [
-          {
-            name: shortName || name,
-            rating
-          },
-          ...(subSkills?.flatMap(({ name, shortName, rating, experiences }) => {
-            if (experiences.length) {
-              return [
-                {
-                  name: shortName || name,
-                  rating
-                },
-                ...(experiences?.flatMap(({ name, shortName, rating }) => ({
-                  name: shortName || name,
-                  rating
-                })) || [])
-              ];
-            }
-            return {
-              name: shortName || name,
-              rating
-            };
-          }) || [])
-        ];
-      }
-      return {
-        name: shortName || name,
-        rating
-      };
-    }),
+function hasBranchChildren(skill: SkillNode): boolean {
+  return skill.children?.some((child) => child.children?.length) ?? false;
+}
 
-    ...props.skills.flatMap(({ experiences }) => {
-      return (experiences || []).map(({ name, shortName, rating }) => ({
-        name: shortName || name,
-        rating
-      }));
-    })
-  ];
-});
+function flattenChildren(children: SkillNode[]): string {
+  return children
+    .map((child) =>
+      child.children?.length
+        ? `${child.name} - ${child.children.map(({ name }) => name).join(", ")}`
+        : child.name
+    )
+    .join(", ");
+}
+
+function flattenSkillTree(nodes: SkillNode[]): FlattenedSkill[] {
+  return nodes.flatMap(({ name, shortName, rating, children }) => [
+    { name: shortName || name, rating },
+    ...(children ? flattenSkillTree(children) : [])
+  ]);
+}
+
+const flattenedSkills = computed<FlattenedSkill[]>(() => flattenSkillTree(props.skills));
 </script>

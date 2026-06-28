@@ -278,16 +278,16 @@
         <div class="section__body">
           <ul class="enumeration">
             <li class="enumeration__item">
-              <p class="text-sm">
+              <p class="text-sm leading-relaxed">
                 <span class="font-medium">Skills: </span>
-                <!-- <span class="text-neutral-700 dark:text-neutral-300">
-                  Full-Stack Web Development (Laravel, Filament, PHP, Vue, Nuxt, React, React
-                  Router, React Native, Vuetify, SASS, Tailwind, JavaScript, TypeScript, Test-Driven
-                  Development), Integrations (APIs, SDKs), Database Management, Project Management,
-                  Cloud Services (AWS), Containerization (Docker), Deployments, Server
-                  Administration, Microservices, AI-Assisted Development (Claude Code)
-                </span> -->
-                {{ SKILLS_SUMMARY }}
+                <template v-for="(group, i) in skillGroups" :key="group.label">
+                  <span v-if="i > 0" class="text-neutral-400"> · </span>
+                  <span class="font-semibold">{{ group.label }}</span>
+                  <span v-if="group.items.length" class="text-neutral-700 dark:text-neutral-300">
+                    <span class="mr-[0.3em] text-neutral-400 dark:text-neutral-500"> &rarr;</span
+                    >{{ group.items.join(", ") }}</span
+                  >
+                </template>
               </p>
             </li>
 
@@ -347,7 +347,9 @@
 <script setup lang="ts">
 import { type Certification, DocumentStyle, ToolStyle } from "@/types/resume";
 import ContactInfo from "./ContactInfo.vue";
-import { SKILLS_SUMMARY } from "@/data/skills.ts";
+import { buildSkillsSummaryGroups } from "@/data/skills.ts";
+
+const skillGroups = buildSkillsSummaryGroups();
 
 const certifications = defineModel<Certification[]>("certifications", {
   required: true
