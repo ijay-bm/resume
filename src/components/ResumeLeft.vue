@@ -40,12 +40,13 @@
             </p>
             <p class="about-me-content dark:text-neutral-400 mb-1">
               Shipped production projects, including a tutoring marketplace, a safety check-in app,
-              and a personalized fitness platform.
+              and a personalized fitness platform. Most recently, the sole engineer of a
+              multi-tenant SaaS platform for German municipalities.
             </p>
             <p class="about-me-content dark:text-neutral-400">
-              Experienced in AWS, Docker, microservices, and CI/CD pipelines, with a test-driven
-              workflow (unit, feature, and load testing) and daily use of AI coding tools while
-              keeping code clean and maintainable.
+              Experienced in AWS, Docker, PostgreSQL, microservices, and CI/CD pipelines, with a
+              test-driven workflow (unit, feature, and load testing) and daily use of AI coding
+              tools while keeping code clean and maintainable.
             </p>
           </div>
         </div>
@@ -60,6 +61,53 @@
         </div>
 
         <div class="section__body">
+          <div class="enumeration section__item">
+            <div class="section__item-diamond"></div>
+            <div class="enumeration">
+              <div class="enumeration__row">
+                <span class="enumeration__subheading"
+                  >Full-Stack Software Engineer (Sole Engineer)</span
+                >
+                <span class="enumeration__right-subtitle">Remote (Germany)</span>
+              </div>
+
+              <div class="enumeration__row">
+                <span class="enumeration__heading">Kommunale Exzellenz</span>
+                <span class="enumeration__right-subtitle">Aug 2026 — Oct 2026</span>
+              </div>
+
+              <ul class="enumeration__description">
+                <li class="enumeration__description-item">
+                  Sole engineer of a multi-tenant SaaS platform for German municipalities, holding
+                  every technical role (product planning, technical lead, backend, frontend,
+                  infrastructure) and working directly with the product owner.
+                </li>
+                <li class="enumeration__description-item">
+                  Led a legacy modernization, migrating a Blade monolith to Vue.js 3 and TypeScript
+                  SPAs over a Laravel 12 REST API in a monorepo, rewriting about 90% of the code.
+                </li>
+                <li class="enumeration__description-item">
+                  Built database-per-tenant isolation on PostgreSQL, role-based access control
+                  (RBAC) derived from the organization chart, and a resource booking engine with
+                  conflict detection and approval workflows.
+                </li>
+                <li class="enumeration__description-item">
+                  Grew automated testing from 5 to ~2,600 PHPUnit tests and ~840 Playwright
+                  end-to-end tests, with internationalization (i18n) in five languages.
+                </li>
+                <li class="enumeration__description-item">
+                  Shipped Docker images through a CI/CD pipeline for staging and on-premise
+                  production installs, with 2FA, Content Security Policy, and GDPR compliance as a
+                  design goal.
+                </li>
+                <li class="enumeration__description-item">
+                  Ran AI-assisted development with Claude Code agents, guided by documented
+                  architecture decisions, coding rules, and technical-debt logs.
+                </li>
+              </ul>
+            </div>
+          </div>
+
           <div class="enumeration section__item">
             <div class="section__item-diamond"></div>
             <div class="enumeration">

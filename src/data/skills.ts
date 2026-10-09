@@ -17,6 +17,18 @@ export const SKILLS: SkillNode[] = [
           { name: "PHP", rating: 8, includeInSummary: true },
           { name: "Filament", rating: 7, includeInSummary: true },
           { name: "REST APIs", rating: 7, includeInSummary: true },
+          {
+            name: "Multi-Tenant SaaS Architecture",
+            shortName: "Multi-Tenancy",
+            rating: 5,
+            includeInSummary: true
+          },
+          {
+            name: "Role-Based Access Control (RBAC)",
+            shortName: "RBAC",
+            rating: 5,
+            includeInSummary: true
+          },
           // { name: "Bruno", rating: 8 },
           // { name: "Postman", rating: 1 },
           { name: "Unit/Function Tests", rating: 7 },
@@ -31,6 +43,12 @@ export const SKILLS: SkillNode[] = [
             rating: 1,
             includeInSummary: true,
             children: [{ name: "k6", rating: 1, includeInSummary: true }]
+          },
+          {
+            name: "End-to-End Testing",
+            rating: 5,
+            includeInSummary: true,
+            children: [{ name: "Playwright", rating: 5, includeInSummary: true }]
           },
           {
             name: "Node.js - Express.js",
@@ -51,6 +69,8 @@ export const SKILLS: SkillNode[] = [
         includeInSummary: true,
         children: [
           { name: "Vue.js", rating: 7, includeInSummary: true },
+          { name: "Pinia", rating: 5 },
+          { name: "Vite", rating: 5 },
           { name: "Vuetify", rating: 2 },
           { name: "Nuxt", rating: 2, includeInSummary: true },
           { name: "React", rating: 2, includeInSummary: true },
@@ -60,7 +80,13 @@ export const SKILLS: SkillNode[] = [
           { name: "TypeScript", rating: 8, includeInSummary: true },
           { name: "HTML", rating: 7 },
           { name: "CSS/SASS", rating: 8, includeInSummary: true },
-          { name: "Tailwind", rating: 7, includeInSummary: true }
+          { name: "Tailwind", rating: 7, includeInSummary: true },
+          {
+            name: "Internationalization (i18n)",
+            shortName: "i18n",
+            rating: 5,
+            includeInSummary: true
+          }
           // { name: "Responsive Design", rating: 6 },
           // { name: "BEM", rating: 4 },
           // { name: "Bootstrap", rating: 1 }
@@ -195,7 +221,9 @@ export const SKILLS: SkillNode[] = [
     rating: 8,
     includeInSummary: true,
     children: [
-      { name: "SQL - MySQL/MariaDB", rating: 7, includeInSummary: true }
+      { name: "SQL - MySQL/MariaDB", rating: 7, includeInSummary: true },
+      { name: "PostgreSQL", rating: 5, includeInSummary: true },
+      { name: "Redis", rating: 3, includeInSummary: true }
       // { name: "DBeaver", rating: 3 },
       // { name: "Laravel ORM", rating: 7 },
       // { name: "Laravel Migrations", rating: 7 }
@@ -257,6 +285,9 @@ export const SKILLS: SkillNode[] = [
       // { name: "Kubernetes", rating: 1 },
       { name: "Bitbucket Pipelines", rating: 1 },
       { name: "Github Actions", rating: 1 },
+      { name: "Forgejo Actions", rating: 3 },
+      { name: "Nginx", rating: 3 },
+      { name: "On-Premise Deployment", rating: 3 },
       { name: "Manual Deployment", rating: 1 },
       { name: "WordPress Deployment", rating: 1 }
       // { name: "Microservices Architecture", rating: 1 }
