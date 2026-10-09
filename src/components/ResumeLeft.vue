@@ -65,9 +65,7 @@
             <div class="section__item-diamond"></div>
             <div class="enumeration">
               <div class="enumeration__row">
-                <span class="enumeration__subheading"
-                  >Full-Stack Software Engineer (Sole Engineer)</span
-                >
+                <span class="enumeration__subheading">Full-Stack Software Engineer</span>
                 <span class="enumeration__right-subtitle">Remote (Germany)</span>
               </div>
 

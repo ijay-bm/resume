@@ -1,5 +1,5 @@
 .resume {
-  @apply relative mx-auto flex h-[1122.5px] w-[793.7px];
+  @apply relative mx-auto flex min-h-[1122.5px] w-[793.7px];
 
   .resume__left {
     @apply relative h-full bg-white text-neutral-800 dark:bg-neutral-900 dark:text-neutral-100;
@@ -30,4 +30,43 @@
 
 .about-me-content {
   @apply hidden;
+}
+
+@media print {
+  .resume {
+    @apply min-h-0;
+
+    .resume__left {
+      @apply h-auto;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+    }
+
+    .resume__right {
+      @apply h-auto;
+    }
+  }
+
+  /* On an entry without bullets, a last row's avoid passes up to the section's end and pushes the entry to the next page. */
+  .section__header,
+  .enumeration__row:has(+ .enumeration__row),
+  .enumeration__row:has(+ .enumeration__description) {
+    break-after: avoid;
+  }
+
+  /* Empty in this theme, but the gap after it is a legal break point. */
+  .section__item-diamond {
+    @apply hidden;
+  }
+
+  .enumeration__description-item,
+  .enumeration__item {
+    break-inside: avoid;
+  }
+
+  p,
+  li {
+    orphans: 2;
+    widows: 2;
+  }
 }

@@ -88,6 +88,23 @@ ul {
   @import "./themes/type-c/main.css";
 }
 
+/* Can't nest inside .type-c. The margin stays 0 because the print dialog's Margins setting overrides it; the sheet pads itself instead. */
+@page cv {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  /* On the root, not body: extensions inject elements as siblings of body, and each would start a new, unnamed page. */
+  html:has(> body.type-c) {
+    page: cv;
+  }
+
+  body.type-c {
+    @apply bg-white dark:bg-neutral-900;
+  }
+}
+
 *,
 *:before,
 *:after {
